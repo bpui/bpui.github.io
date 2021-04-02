@@ -1,0 +1,1143 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>swiper — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+          <ul class="menu-sub">
+            
+            
+        
+            
+              <li class="menu-sub">
+                <a href="card.html" class="sidebar-link">card</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="cell.html" class="sidebar-link">cell</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="collapse.html" class="sidebar-link">collapse</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="grid.html" class="sidebar-link">grid</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="imagePreview.html" class="sidebar-link">imagePreview</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="menu.html" class="sidebar-link">menu</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="pagination.html" class="sidebar-link">pagination</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="row_col.html" class="sidebar-link">row_col</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">swiper</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="tabs.html" class="sidebar-link">tabs</a>      
+              </li>
+            
+        
+          </ul>
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E5%BA%93/index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../form/index.html" class="sidebar-link">表单</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../navbarView/index.html" class="sidebar-link">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../picker/index.html" class="sidebar-link">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>swiper</h1>
+  
+  
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><ul>
+<li><a href="#Swiper_Props">Swiper Props</a></li>
+<li><a href="#Swiper_Events">Swiper Events</a></li>
+<li><a href="#Swiper_Methods">Swiper Methods</a></li>
+<li><a href="#Swiper_Slots">Swiper Slots</a></li>
+<li><a href="#SwiperItem_Props">SwiperItem Props</a></li>
+<li><a href="#SwiperItem_Events">SwiperItem Events</a></li>
+<li><a href="#SwiperItem_Slots">SwiperItem Slots</a></li>
+<li><a href="#demo">Demo</a></li>
+</ul>
+<h2 id="Swiper-Props"><a href="#Swiper-Props" class="headerlink" title="Swiper_Props"></a>Swiper_Props</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>options</td>
+<td>object</td>
+<td>否</td>
+<td>配置信息</td>
+</tr>
+</tbody></table>
+<p>options:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> options = &#123;</span><br><span class="line">  direction: <span class="string">&#x27;vertical&#x27;</span>,</span><br><span class="line">  slidesPerView: <span class="number">1</span>,</span><br><span class="line">  spaceBetween: <span class="number">30</span>,</span><br><span class="line">  mousewheel: <span class="literal">true</span>,</span><br><span class="line">  centeredSlides: <span class="literal">true</span>,</span><br><span class="line">  slidesPerColumn: <span class="number">2</span>,</span><br><span class="line">  loop: <span class="literal">true</span>,</span><br><span class="line">  pagination: &#123;</span><br><span class="line">    el: <span class="string">&#x27;.swiper-pagination&#x27;</span>,</span><br><span class="line">    clickable: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  navigation: &#123;</span><br><span class="line">    nextEl: <span class="string">&#x27;.swiper-button-next&#x27;</span>,</span><br><span class="line">    prevEl: <span class="string">&#x27;.swiper-button-prev&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  scrollbar: &#123;</span><br><span class="line">    el: <span class="string">&#x27;.swiper-scrollbar&#x27;</span>,</span><br><span class="line">    hide: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!-- | width | string | 否 | 滑块宽度    |
+| height | string | 否 | 滑块高度 |
+| autoplay | number | 否 | 自动轮播间隔，单位为 ms    number | 
+| duration | number | 否 | 动画时长，单位为 ms <br> 默认值500 |
+| initial-index | number | 否 | 初始位置索引值 |
+| loop | boolean | 否 | 是否开启循环播放<br/> 默认值true |
+| show-indicator | boolean | 否 | 是否显示指示器    <br/> 默认值true |
+| vertical | boolean | 否 | 是否为纵向滚动    <br/>    默认值false | -->
+
+
+<h2 id="Swiper-Events"><a href="#Swiper-Events" class="headerlink" title="Swiper_Events"></a>Swiper_Events</h2><!-- | 名称 | 描述 |
+|-----|------|
+| change: (e) => void | 每一页轮播结束后触发，<br/>e = {index} 当前页的索引 | -->
+
+<h2 id="Swiper-Methods"><a href="#Swiper-Methods" class="headerlink" title="Swiper_Methods"></a>Swiper_Methods</h2><!-- 
+### prev
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc </span>滑动到上一个滑块</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return <span class="type">&#123;number&#125;</span> </span>prevIndex: 上一个滑块的索引</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">prev() : prevIndex</span><br></pre></td></tr></table></figure>
+
+<h3 id="next"><a href="#next" class="headerlink" title="next"></a>next</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc </span>滑动到下一个滑块</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return <span class="type">&#123;number&#125;</span> </span>nextIndex :下一个滑块的索引</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">next() : nextIndex</span><br><span class="line"><span class="string">``</span><span class="string">` --&gt;</span></span><br><span class="line"><span class="string">&lt;!-- </span></span><br><span class="line"><span class="string">### resize</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc </span>重新计算大小</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">resize(): <span class="keyword">void</span></span><br><span class="line"><span class="string">``</span><span class="string">` --&gt;</span></span><br><span class="line"><span class="string">## Swiper_Slots</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">| 名称 | 描述 |</span></span><br><span class="line"><span class="string">|-----|------|</span></span><br><span class="line"><span class="string">| default | 默认slots |</span></span><br><span class="line"><span class="string">| pagination | indicator指示器 |</span></span><br><span class="line"><span class="string">| button-prev | 上一页按钮 |</span></span><br><span class="line"><span class="string">| button-next | 下一页按钮 |</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## SwiperItem_Events</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">| 名称 | 描述 |</span></span><br><span class="line"><span class="string">|-----|------|</span></span><br><span class="line"><span class="string">| click(e): void | 点击swriperItem |</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## SwiperItem_Slots</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">| 名称 | 描述 |</span></span><br><span class="line"><span class="string">|-----|------|</span></span><br><span class="line"><span class="string">| default | 默认slots |</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## demo</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">示例代码.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>xml</span><br><span class="line">&lt;bp-swiper :options=<span class="string">&quot;swiperOption&quot;</span>&gt;</span><br><span class="line">  &lt;bp-swiper-item&gt; <span class="number">1</span> &lt;/bp-swiper-item&gt;</span><br><span class="line">  &lt;bp-swiper-item&gt; <span class="number">2</span> &lt;/bp-swiper-item&gt;</span><br><span class="line">  &lt;bp-swiper-item&gt; <span class="number">3</span> &lt;/bp-swiper-item&gt;</span><br><span class="line">  &lt;bp-swiper-item&gt; <span class="number">4</span> &lt;/bp-swiper-item&gt;</span><br><span class="line">&lt;/bp-swiper&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="index.html">(待定)Other</a></span>
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

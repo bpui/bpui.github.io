@@ -1,0 +1,833 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="manifest.json">
+
+    <link href='font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "/"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="">
+    <div id="mobile-bar" class="top">
+      <a class="menu-button"></a>
+      <a class="logo" href="index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="index.html">
+    <img src="images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="api/index.html" class="nav-link">API</a></li>
+      <li><a href="conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="api/index.html" class="nav-link">API</a></li>
+      <li><a href="conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+  </div>
+
+
+<div class="content  ">
+  
+  
+    <div id="hero">
+  <div class="inner">
+    <!-- <div class="left">
+      <img class="hero-logo" src="<%- relative_url(pagePath, "/images/logo.png") %>">
+    </div> -->
+    <div class="center">
+      <h2 class="vue">UI</h2>
+      <h1>The APIs document<br>of bpui</h1>
+      <p>
+        <a class="button white" href='guide/index.html'>GET STARTED</a><a class="button white" href='api/index.html'>API</a><a class="button gray has-icon"
+          href="https://gitee.com/tjitech/bpui" target="_blank"><svg t="1527148418671" class="icon"
+            style="" viewBox="0 0 1026 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1816"  
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="25.048828125" height="25"><path d="M60.44416 384h908.8L514.84416 992z" fill="#FD6F1A" p-id="1817"></path><path
+              d="M514.84416 992L22.04416 614.4 2.84416 595.2c-6.4-6.4 0-19.2 0-25.6L60.44416 384 514.84416 992zM329.24416 384H706.84416l-192 608L329.24416 384zM214.04416 12.8L329.24416 384H60.44416L175.64416 19.2c6.4-12.8 12.8-19.2 19.2-19.2s12.8 6.4 19.2 12.8zM1026.84416 569.6v25.6c0 6.4-6.4 12.8-12.8 19.2L514.84416 992 969.24416 384l57.6 185.6zM969.24416 384H706.84416L822.04416 19.2c0-12.8 6.4-19.2 12.8-19.2s12.8 6.4 19.2 12.8L969.24416 384z"
+              fill="#E34524" p-id="1818"></path><path
+              d="M514.84416 992L22.04416 614.4 2.84416 595.2c-6.4-6.4 0-19.2 0-25.6L60.44416 384 514.84416 992zM329.24416 384H706.84416l-192 608L329.24416 384z m0 0H60.44416h268.8zM1026.84416 569.6v25.6c0 6.4-6.4 12.8-12.8 19.2L514.84416 992 969.24416 384l57.6 185.6zM969.24416 384H706.84416h262.4z"
+              fill="#FDA50F" p-id="1819"></path><path d="M329.24416 384h371.2L514.84416 992z" fill="#E34524" p-id="1820"></path></svg>GIT</a>
+      </p><p><span style="padding: 10px 20px;background: #eee;border-radius: 5px; width: 200px;     display: inline-block;">>  npm i bpui.js</span></p>
+    </div>
+  </div>
+</div>
+<div id="highlights">
+  <div class="inner">
+    <div class="point">
+      <h2>最新更新</h2>
+      <p>文档初始化</p>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <p>Copyright &copy; 2021 bpui.</p>
+</div>
+
+<script>
+  (function () {
+    var topScrolled = false
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 165 && !topScrolled) {
+        topScrolled = true
+        document.getElementById('mobile-bar').classList.remove('top')
+      } else if (window.pageYOffset <= 165 && topScrolled) {
+        topScrolled = false
+        document.getElementById('mobile-bar').classList.add('top')
+      }
+    })
+  })()
+</script>
+
+  
+
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="js/css.escape.js"></script>
+    <script src="js/common.js"></script>
+
+    <!-- search -->
+    <link href="docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/css/search.css">
+ -->
+
+    <link rel="stylesheet" href="css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

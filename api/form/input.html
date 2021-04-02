@@ -1,0 +1,1333 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Input — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="../other/index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E5%BA%93/index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="index.html" class="sidebar-link">表单</a>
+        
+        
+        
+          <ul class="menu-sub">
+            
+            
+        
+            
+              <li class="menu-sub">
+                <a href="button.html" class="sidebar-link">Button</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="checkbox.html" class="sidebar-link">Checkbox</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">Input</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="radio.html" class="sidebar-link">Radio</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="select.html" class="sidebar-link">Select</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="switch.html" class="sidebar-link">Switch</a>      
+              </li>
+            
+        
+          </ul>
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../navbarView/index.html" class="sidebar-link">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../picker/index.html" class="sidebar-link">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>Input</h1>
+  
+  
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><ul>
+<li><a href="#introduce">Introduce</a></li>
+<li><a href="#props">props</a></li>
+<li><a href="#events">events</a></li>
+<li><a href="#methods">methods</a></li>
+<li><a href="#example">example</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a><ul>
+<li><a href="#%E5%9B%BE%E6%A0%87">图标</a></li>
+<li><a href="#%E6%A0%B7%E5%BC%8F%E7%BB%93%E6%9E%84">样式结构</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p>常规属性</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th>描述</th>
+<th align="center">类型</th>
+<th>可选值</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value / v-model</td>
+<td>绑定值</td>
+<td align="center">string / number</td>
+<td>—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td>类型</td>
+<td align="center">string</td>
+<td>text，textarea, tel, password, email, int, float</td>
+<td align="center">text</td>
+</tr>
+<tr>
+<td align="center">maxlength</td>
+<td>原生属性，最大输入长度</td>
+<td align="center">number</td>
+<td>—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">placeholder</td>
+<td>输入框占位文本</td>
+<td align="center">string</td>
+<td>—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">disabled</td>
+<td>禁用</td>
+<td align="center">boolean</td>
+<td>—</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">readonly</td>
+<td>只读</td>
+<td align="center">boolean</td>
+<td>—</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">required</td>
+<td>是否必须</td>
+<td align="center">boolean</td>
+<td>—</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">rows</td>
+<td>输入框行数，只对 type=”textarea” 有效</td>
+<td align="center">number</td>
+<td>—</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">name</td>
+<td>input名称</td>
+<td align="center">string</td>
+<td>—</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">autocomplete</td>
+<td>自动填充行为</td>
+<td align="center">off,on</td>
+<td>-</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p>扩展属性</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th>描述</th>
+<th align="center">类型</th>
+<th>可选值</th>
+<th align="center">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">max</td>
+<td>数值类型时的最大值</td>
+<td align="center">number</td>
+<td>—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">min</td>
+<td>数值类型时的最小值</td>
+<td align="center">number</td>
+<td>—</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">decimal</td>
+<td>浮点型时的小数位数</td>
+<td align="center">number</td>
+<td>-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">prefixIcon</td>
+<td>前置图标名称</td>
+<td align="center">string</td>
+<td>—</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">suffixIcon</td>
+<td>后置图标名称</td>
+<td align="center">string</td>
+<td>—</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">pattern</td>
+<td>正则表达式</td>
+<td align="center">string</td>
+<td>-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">validator</td>
+<td>数据验证方法,在pattern失败后不会触发</td>
+<td align="center">(text:string, callback:(isValid)=&gt;void)=&gt;void; 由回调方法返回是否正确</td>
+<td>-</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<h2 id="events"><a href="#events" class="headerlink" title="events"></a>events</h2><table>
+<thead>
+<tr>
+<th align="center">事件名称</th>
+<th align="center">说明</th>
+<th align="center">回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">blur</td>
+<td align="center">在 Input 失去焦点时触发</td>
+<td align="center">(event: Event)</td>
+</tr>
+<tr>
+<td align="center">focus</td>
+<td align="center">在 Input 获得焦点时触发</td>
+<td align="center">(event: Event)</td>
+</tr>
+<tr>
+<td align="center">change</td>
+<td align="center">仅在输入框失去焦点或用户按下回车时触发</td>
+<td align="center">(value: string 或 number)</td>
+</tr>
+<tr>
+<td align="center">input</td>
+<td align="center">在 Input 值改变时触发</td>
+<td align="center">(value: string 或 number)</td>
+</tr>
+<tr>
+<td align="center">keydown</td>
+<td align="center">keydown</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">keyup</td>
+<td align="center">keyup</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">error</td>
+<td align="center">输入的信息错误时触发</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">click-icon</td>
+<td align="center">点击前后图标</td>
+<td align="center">(type:string); type为’prefixIcon’或’suffixIcon’</td>
+</tr>
+</tbody></table>
+<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+<th align="center">回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">isValid():boolean</td>
+<td align="center">验证输入是否合法</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">text(str)</td>
+<td align="center">设置文本</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">text():string</td>
+<td align="center">获取文本</td>
+<td align="center">—</td>
+</tr>
+<tr>
+<td align="center">focus():void</td>
+<td align="center">获得焦点</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>示例代码.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-input</span> <span class="attr">value</span>=<span class="string">&quot;content&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- textarea 类型也使用value设置文本内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bp-input</span> <span class="attr">type</span>=<span class="string">&quot;textarea&quot;</span> <span class="attr">value</span>=<span class="string">&quot;content&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p class="codepen" data-height="703" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="VwLbmqd" style="height: 703px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-input">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/VwLbmqd">
+  bpui-input</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>组件使用到的图标有:</p>
+<table>
+<thead>
+<tr>
+<th>图标名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bp-input_warn</td>
+<td>错误信息提示图标; 当前内部此图标为空, 如需要可以进行设置</td>
+</tr>
+</tbody></table>
+<p><em>可以使用<code>bpui.icons.registerSvgIcon</code>方式, 进行组件图标自定义</em></p>
+<h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件的样式结构如下:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-input</span> &#123;</span><br><span class="line">  <span class="comment">/* 前图标 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__prefixIcon</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 文本框 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__inner</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 字数显示 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__counter</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 后图标 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__suffixIcon</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>scss样式文件存放在<code>@bpui/input/style</code> 目录下, 可以复制修改以定制主题</em></p>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="index.html">0表单</a></span>
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

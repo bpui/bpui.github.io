@@ -1,0 +1,1092 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>文本 — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="../other/index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E5%BA%93/index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+          <ul class="menu-sub">
+            
+            
+        
+            
+              <li class="menu-sub">
+                <a href="border.html" class="sidebar-link">Retina边框</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="var.html" class="sidebar-link">公共变量</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">文本</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="device.html" class="sidebar-link">设备识别</a>      
+              </li>
+            
+        
+          </ul>
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../form/index.html" class="sidebar-link">表单</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../navbarView/index.html" class="sidebar-link">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../picker/index.html" class="sidebar-link">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>文本</h1>
+  
+  
+    <p>使用如下示例代码可以对文本进行平滑、省略符等设置.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;@bpui/style&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="comment">// 使得 div下文字平滑.</span></span><br><span class="line">  <span class="keyword">@include</span> bp-smoothing();</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p class="codepen" data-height="437" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="MWwbQBO" style="height: 437px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-style-text">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/MWwbQBO">
+  bpui-style-text</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="bp-smoothing"><a href="#bp-smoothing" class="headerlink" title="bp-smoothing"></a>bp-smoothing</h2><p>设置文字平滑.</p>
+<blockquote>
+<p>除使用mixin外, 还可以使用内置的类 <code>.bp-smoothing</code>.</p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-smoothing();</span><br></pre></td></tr></table></figure>
+
+<h2 id="bp-ellipsis"><a href="#bp-ellipsis" class="headerlink" title="bp-ellipsis"></a>bp-ellipsis</h2><p>设置文字单行缩略.</p>
+<blockquote>
+<p>display属性的设置对缩略有影响; 单行缩略文本需要为 <code>display: block</code>,  <code>display: inline-block</code> 或其他flow-root等允许的值</p>
+</blockquote>
+<blockquote>
+<p>除使用mixin外, 还可以使用内置的类 <code>.bp-ellipsis</code></p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-ellipsis();</span><br></pre></td></tr></table></figure>
+
+<h2 id="bp-ellipsisMultiline"><a href="#bp-ellipsisMultiline" class="headerlink" title="bp-ellipsisMultiline"></a>bp-ellipsisMultiline</h2><p>设置文字多行缩略文本.</p>
+<blockquote>
+<p>display属性的设置对缩略有影响; 多行缩略文本已经设置为 <code>display: -webkit-box</code></p>
+</blockquote>
+<blockquote>
+<p>除使用mixin外, 还可以使用内置的类 <code>.bp-ellipsisMultiline1</code>, <code>.bp-ellipsisMultiline2</code>, … , <code>.bp-ellipsisMultiline8</code> 分别表示最大1~8行的文本缩略.</p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-ellipsisMultiline(最大行数)</span><br></pre></td></tr></table></figure>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="index.html">0基础样式</a></span>
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

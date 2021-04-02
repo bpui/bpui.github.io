@@ -1,0 +1,1071 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>计时器 — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="../other/index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+          <ul class="menu-sub">
+            
+            
+        
+            
+              <li class="menu-sub">
+                <a href="router.html" class="sidebar-link">Router</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="dom.html" class="sidebar-link">dom</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="gesture.html" class="sidebar-link">手势</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">计时器</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="device.html" class="sidebar-link">设备</a>      
+              </li>
+            
+        
+          </ul>
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../form/index.html" class="sidebar-link">表单</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../navbarView/index.html" class="sidebar-link">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../picker/index.html" class="sidebar-link">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>计时器</h1>
+  
+  
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>libs提供了timer工具, 可以用于安全计时器, 防止页面消失后,计时器忘记删除的问题.</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>timer接口如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span> </span></span><br><span class="line"><span class="comment">*    可在组件释放时自动释放所有的timeout计时器.</span></span><br><span class="line"><span class="comment">*     - 在created中:             this.timer = new Timer();</span></span><br><span class="line"><span class="comment">*     - 在beforeDestroy中:       this.timer.dispose();</span></span><br><span class="line"><span class="comment">*     - 在使用计时器的函数中调用:   </span></span><br><span class="line"><span class="comment">                                var t = this.timer.setTimeout(fn, tm);</span></span><br><span class="line"><span class="comment">                                this.timer.clearTimeout(t);</span></span><br><span class="line"><span class="comment">                                this.timer.clearAllTimeout();</span></span><br><span class="line"><span class="comment">*     - 在使用帧动画的函数中调用:   </span></span><br><span class="line"><span class="comment">                                var t = this.timer.requestAnimationFrame(fn);</span></span><br><span class="line"><span class="comment">                                this.timer.cancelAnimationFrame(t);</span></span><br><span class="line"><span class="comment">                                this.timer.clearAllAnimationFrame();</span></span><br><span class="line"><span class="comment">*     - 使用Promise方式启动计时器: (会在对象释放前安全停止)</span></span><br><span class="line"><span class="comment">                                this.timer.sleep(1000)</span></span><br><span class="line"><span class="comment">                                .then(()=&gt;&#123;</span></span><br><span class="line"><span class="comment">                                &#125;);</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Timer</span> </span>&#123;</span><br><span class="line">  constructor();</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span> 注销计时器, 停止并删除所有在运行中的timer.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  dispose():<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: Promise方式计时器.(会在对象释放前安全停止)</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>: Promise</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  sleep(ms:number):Promise&lt;<span class="keyword">void</span>&gt;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 启动计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  setTimeout(fn:()=&gt;<span class="keyword">void</span>, tm:number):NodeJS.Timeout;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearTimeout(t:NodeJS.Timeout):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 启动计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  setInterval(fn:()=&gt;<span class="keyword">void</span>, tm:number):NodeJS.Timeout;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearInterval(t:NodeJS.Timeout):<span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 启动帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  requestAnimationFrame(fn:(tm:number)=&gt;<span class="keyword">void</span>):number;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  cancelAnimationFrame(t:number):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAllTimeout():<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAllInterval():<span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAllAnimationFrame():<span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有计时器与帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAll():<span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>如果在vue中, 自动会在vue对象中注入 <code>$bpTimer</code> 对象. </p>
+<p>可以按如下的方式使用:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// use timer.</span></span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1. timeout.</span></span><br><span class="line">    <span class="built_in">this</span>.$bpTimer.setTimeout(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">      <span class="comment">// do somthing.</span></span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. promise.</span></span><br><span class="line">    <span class="built_in">this</span>.$bpTimer.sleep(<span class="number">1000</span>)</span><br><span class="line">              .then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">                <span class="comment">// do somthing.</span></span><br><span class="line">              &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+  
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="index.html">0基础库</a></span>
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

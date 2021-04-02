@@ -1,0 +1,1093 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>设备 — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="../other/index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+          <ul class="menu-sub">
+            
+            
+        
+            
+              <li class="menu-sub">
+                <a href="router.html" class="sidebar-link">Router</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="dom.html" class="sidebar-link">dom</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="gesture.html" class="sidebar-link">手势</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="timer.html" class="sidebar-link">计时器</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">设备</a>      
+              </li>
+            
+        
+          </ul>
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../form/index.html" class="sidebar-link">表单</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../navbarView/index.html" class="sidebar-link">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../picker/index.html" class="sidebar-link">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>设备</h1>
+  
+  
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>libs提供了device工具, 可用于设备判断检测.</p>
+<p><em>以下方法以<code>bpui.libs.device.xxx</code>方式使用</em></p>
+<h2 id="设备类型判断"><a href="#设备类型判断" class="headerlink" title="设备类型判断"></a>设备类型判断</h2><blockquote>
+<p>除使用脚本方式判断, 也可以使用<a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/device.html">style</a>方式来判断设备.</p>
+</blockquote>
+<p>判断是否是移动端</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>: the browser is mobile.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">browserIsMobile():boolean;</span><br></pre></td></tr></table></figure>
+
+<p>判断是否是iOS</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: the browser is ios.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">browserIsIOS():boolean;</span><br></pre></td></tr></table></figure>
+
+<p>判断是否是手机</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: the browser is phone.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">browserIsPhone():boolean;</span><br></pre></td></tr></table></figure>
+
+<p>判断是否是微信</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: the browser is weixin.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">browserIsWeixin():boolean;</span><br></pre></td></tr></table></figure>
+
+<p>判断是否是ie</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 判断是否是ie.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">browserIsIE():boolean;</span><br></pre></td></tr></table></figure>
+
+<p>获得ie的版本号</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 判断ie版本号.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return </span>number. 非ie返回Number.MAX_SAFE_INTEGER.</span></span><br><span class="line"><span class="comment">  *        如果是 edge 返回 &#x27;edge&#x27;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">browserIEVer(): number|<span class="string">&#x27;edge&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>判断是否支持h5</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: the browser is support html5.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">browserIsSupportHtml5():boolean;</span><br></pre></td></tr></table></figure>
+
+<h2 id="设备震动"><a href="#设备震动" class="headerlink" title="设备震动."></a>设备震动.</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 震动.</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param </span>pattern: 如果为number, 则为震动的持续毫秒数; 如果为number[],则奇数位为震动,偶数位为等待.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">vibrate(pattern: number | number[]): <span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="index.html">0基础库</a></span>
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

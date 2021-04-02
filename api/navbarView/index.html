@@ -1,0 +1,1320 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NavbarView — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="../other/index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E5%BA%93/index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../form/index.html" class="sidebar-link">表单</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="" class="sidebar-link current">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../picker/index.html" class="sidebar-link">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>NavbarView</h1>
+  
+  
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><ul>
+<li><a href="#props">Props</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89navbar">自定义navbar</a></li>
+<li><a href="#routerLink">router-link</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line">bpui.navbarView</span><br></pre></td></tr></table></figure>
+
+<p>navbarView 组件用于对app页面进行导航功能, 可以设置页面堆栈的大小, 以便存储浏览过的页面;</p>
+<p>navbarView是一个单例对象, 全局只能有一个navbarView. 可以使用api进行控制, 而无需使用 ref.</p>
+<blockquote>
+<p>navbarView提供了插件, 注入了变量 <code>$navbar</code> 可以用来调用导航组件方法.</p>
+</blockquote>
+<blockquote>
+<p>history导航模式</p>
+</blockquote>
+<pre><code>为记录路由导航, 在history状态中使用参数 `_` 表示当前的导航标记. 如果项目需要使用名称为_的history状态, 可以设置属性`seqName` 指定另外一个名称.
+
+内部使用`history`模式路由导航, 支持IE10及以上浏览器
+</code></pre>
+<blockquote>
+<p>使用时会覆盖vue-router的相关方法, 项目不能安装vue-router, 否则无法启动;</p>
+</blockquote>
+<pre><code>可以使用vue-router的一些方法, 如: `$router`, `$route`, `router-link`; 
+</code></pre>
+<blockquote>
+<p>路由改变监控 <a href="../%E5%9F%BA%E7%A1%80%E5%BA%93/router.html">IRouter.on(‘routeChanged’)</a></p>
+</blockquote>
+<pre><code>可以使用基础库中的路由方法来监控路由变化
+</code></pre>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cacheSize</td>
+<td>number</td>
+<td></td>
+<td>最大的页面层级, 将保留的page dom个数. (默认为无限制, 初次设置之后修改无效)</td>
+</tr>
+<tr>
+<td>rootPagePath</td>
+<td>string</td>
+<td></td>
+<td>初始页面的路径 (如果不指定, 则默认为 <code>/</code>; (初次设置之后修改无效) )</td>
+</tr>
+<tr>
+<td>rootPageParams</td>
+<td>Object</td>
+<td></td>
+<td>初始页面的参数 (初次设置之后修改无效)</td>
+</tr>
+<tr>
+<td>pageClass</td>
+<td>string 或 array</td>
+<td></td>
+<td>导航视图页面的样式类名或类名数组</td>
+</tr>
+<tr>
+<td>pageBgColor</td>
+<td>string</td>
+<td></td>
+<td>页面背景颜色</td>
+</tr>
+<tr>
+<td>pageAnimation</td>
+<td>string</td>
+<td></td>
+<td>默认转场动画的类名; 内部提供的有:<br>-slide 左右切换<br>-fade 渐变<br>-lift 上下<br>-‘’ 无动画(默认)</td>
+</tr>
+</tbody></table>
+<p>导航条相关属性</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>containStatusBar</td>
+<td>boolean</td>
+<td></td>
+<td>是否包含状态栏. (ios webapp模式为true, 其他默认为false).</td>
+</tr>
+<tr>
+<td>barTextColor</td>
+<td>string</td>
+<td></td>
+<td>导航条左右按钮文本颜色</td>
+</tr>
+<tr>
+<td>barTitleColor</td>
+<td>string</td>
+<td></td>
+<td>导航条标题文本颜色</td>
+</tr>
+<tr>
+<td>barBgColor</td>
+<td>string</td>
+<td></td>
+<td>导航条背景色</td>
+</tr>
+<tr>
+<td>barHidden</td>
+<td>boolean</td>
+<td></td>
+<td>(微信浏览器中忽略这个值; 其他默认为false) 导航栏隐藏状态</td>
+</tr>
+<tr>
+<td>backIconComponent</td>
+<td>Component</td>
+<td></td>
+<td>定义返回按钮的图标;</td>
+</tr>
+</tbody></table>
+<p>加载组件属性</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>errorComponent</td>
+<td>Component</td>
+<td></td>
+<td>加载错误时显示的组件;</td>
+</tr>
+<tr>
+<td>loadingComponent</td>
+<td>Component</td>
+<td></td>
+<td>加载页面时显示的组件;</td>
+</tr>
+<tr>
+<td>loadingDelay</td>
+<td>number</td>
+<td></td>
+<td>延迟显示加载页面; 默认为200</td>
+</tr>
+<tr>
+<td>loadingTimeout</td>
+<td>number</td>
+<td></td>
+<td>加载组件的超时时间; 默认为 Infinity</td>
+</tr>
+</tbody></table>
+<p>特别属性</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>seqName</td>
+<td>string</td>
+<td></td>
+<td>为记录路由而使用的地址查询参数名.(只能指定一次,动态修改无效)</td>
+</tr>
+</tbody></table>
+<h3 id="指定container样式"><a href="#指定container样式" class="headerlink" title="指定container样式."></a>指定container样式.</h3><p>需要对页面最外层container指定样式时, 可以使用下列方式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbarView</span> <span class="attr">pageClass</span>=<span class="string">&quot;containerClass&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">navbarView</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以通过pageClass属性传递容器类名类名数组设置最外层样式.</p>
+<h2 id="events"><a href="#events" class="headerlink" title="events"></a>events</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hiddenChanged(event):void</td>
+<td>导航条隐藏改变事件.</td>
+</tr>
+</tbody></table>
+<p>除事件外, 页面组件还可以定义如下的方法, 导航组件将在适当时触发.</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>viewAppear(popData:any):void</td>
+<td>页面显示, <code>popData</code>为页面pop传递回来的数据. (对navbar的信息设置请写在此方法内).</td>
+</tr>
+<tr>
+<td>viewDisappear():void</td>
+<td>页面即将消失.</td>
+</tr>
+<tr>
+<td>viewClickLeftItem():boolean</td>
+<td>点击左侧按钮触发; 如果明确返回false, 则不进行默认回退处理.</td>
+</tr>
+<tr>
+<td>viewClickRightItem():void</td>
+<td>点击右侧按钮触发.</td>
+</tr>
+</tbody></table>
+<p><em>在<code>viewWillAppear</code>方法中调用navbar相关方法设置navbar时, 设置的状态只会作用于当前的页面; 而所有导航页面的默认状态由navbarView组件创建时的属性和样式决定</em></p>
+<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><h3 id="内置动画类型"><a href="#内置动画类型" class="headerlink" title="内置动画类型"></a>内置动画类型</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type AnimateType = <span class="string">&#x27;slide&#x27;</span>|<span class="string">&#x27;slideOut&#x27;</span>|<span class="string">&#x27;fade&#x27;</span>|<span class="string">&#x27;fadeOut&#x27;</span>|<span class="string">&#x27;lift&#x27;</span>|<span class="string">&#x27;liftOut&#x27;</span>|<span class="string">&#x27;none&#x27;</span>|string,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面平滑滚动用:</span></span><br><span class="line"><span class="built_in">window</span>.scrollTo(&#123; <span class="attr">top</span>: <span class="number">0</span>, <span class="attr">left</span>: <span class="number">0</span>, <span class="attr">behavior</span>: <span class="string">&quot;smooth&quot;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面瞬间滚动用:</span></span><br><span class="line"><span class="built_in">window</span>.scrollTo(&#123; <span class="attr">top</span>: <span class="number">0</span>, <span class="attr">left</span>: <span class="number">0</span>, <span class="attr">behavior</span>: <span class="string">&quot;instant&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用 <code>none</code> 或 ‘’, 表示无动画;</li>
+<li><code>Out</code> 结尾表示回退动画.</li>
+<li>除预设动画外, 可以定义转场动画, 按如下定义动画类:</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * slide 带50%偏移</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="selector-class">.slide-enter</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-enter-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">99999</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-enter-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-leave</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-leave-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-leave-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * slideOut 带50%偏移</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="selector-class">.slideOut-enter</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-enter-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-enter-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-leave</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-leave-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">99999</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-leave-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100vw</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="setBarHiddenForce"><a href="#setBarHiddenForce" class="headerlink" title="setBarHiddenForce"></a>setBarHiddenForce</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 设置可见度 (常规的setBarInfo方法中的hidden对微信无法起作用).</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">setBarHiddenForce(isHidden:boolean): NavbarView;</span><br></pre></td></tr></table></figure>
+
+<h3 id="setBarInfo"><a href="#setBarInfo" class="headerlink" title="setBarInfo"></a>setBarInfo</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 设置导航条信息.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">setBarInfo(cfg:&#123;</span><br><span class="line">  title?: string,</span><br><span class="line">  <span class="comment">/** 标题的文本颜色 */</span></span><br><span class="line">  titleColor?: string,</span><br><span class="line">  <span class="comment">/** 背景色 */</span></span><br><span class="line">  bgColor?: string,</span><br><span class="line">  <span class="comment">/** 是否隐藏(对微信h5无效) */</span></span><br><span class="line">  hidden?: boolean,</span><br><span class="line">&#125;): NavbarView;</span><br></pre></td></tr></table></figure>
+
+<h3 id="getBarInfo"><a href="#getBarInfo" class="headerlink" title="getBarInfo"></a>getBarInfo</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 获取导航条基础信息.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">getBarInfo(): &#123;</span><br><span class="line">  title?: string,</span><br><span class="line">  <span class="comment">/** 标题的文本颜色 */</span></span><br><span class="line">  titleColor?: string,</span><br><span class="line">  <span class="comment">/** 背景色 */</span></span><br><span class="line">  bgColor?: string,</span><br><span class="line">  <span class="comment">/** 是否隐藏 */</span></span><br><span class="line">  hidden?: boolean,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="setBarLeftItem"><a href="#setBarLeftItem" class="headerlink" title="setBarLeftItem"></a>setBarLeftItem</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 设置bar左侧.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>icon: 可以为 Dom, string, vue-obj, vue-component. </span></span><br><span class="line"><span class="comment">  *              - &#x27;&#x27;  : 不显示图标;</span></span><br><span class="line"><span class="comment">  *              - null: 根据auto来自动判断是否显示返回图标.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">setBarLeftItem(cfg:&#123;</span><br><span class="line">  text?: string,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 可以为 Dom, string, vue-obj, vue-component. </span></span><br><span class="line"><span class="comment">    *  - &#x27;&#x27;  : 不显示图标;</span></span><br><span class="line"><span class="comment">    *  - null: 根据auto来自动判断是否显示返回图标.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  icon?: any,</span><br><span class="line">  textColor?: string,</span><br><span class="line">&#125;): NavbarView;</span><br></pre></td></tr></table></figure>
+
+<h3 id="setBarRightItem"><a href="#setBarRightItem" class="headerlink" title="setBarRightItem"></a>setBarRightItem</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 设置bar右侧.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">setBarRightItem(cfg:&#123;</span><br><span class="line">  text?: string,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 可以为 Dom, string, vue-obj, vue-component. </span></span><br><span class="line"><span class="comment">    *  - &#x27;&#x27;  : 不显示图标;</span></span><br><span class="line"><span class="comment">    *  - null: 根据auto来自动判断是否显示返回图标.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  icon?: any,</span><br><span class="line">  textColor?: string,</span><br><span class="line">&#125;): NavbarView;</span><br></pre></td></tr></table></figure>
+
+<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: push a page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>animate: 所有允许的动画, 例如: slide, fade, lift</span></span><br><span class="line"><span class="comment">  *                 &#x27;&#x27;   - 无动画.</span></span><br><span class="line"><span class="comment">  *                 null - 默认动画</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>query: url查询参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>retainPage: 表示是否保留当前的页面组件; 为false时将销毁当前页面的dom.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">push(cfg:&#123;</span><br><span class="line">  path: string,</span><br><span class="line">  query?: &#123; [key: string]: any &#125;,</span><br><span class="line">  animate?:AnimateType,</span><br><span class="line">  data?: any,</span><br><span class="line">&#125;, retainPage?: boolean = <span class="literal">false</span>):<span class="keyword">void</span>;</span><br><span class="line">push(path:string, retainPage?: boolean = <span class="literal">false</span>):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+
+<p>可以使用 <code>bpui.setNavbarDefaultCfg(..)</code> 接口设置默认的retainPage行为.</p>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><p>回退操作可以指定一个 <code>data</code> 数据, 回退时, 前一个页面的 <code>viewAppear</code> 方法将传递这个数据.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop a page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">pop(cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop to top-page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">popToTop(cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop to to route page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>n: 负值表示退后的步数.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>cfg.data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">popTo(n:number, cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: replace current route.</span></span><br><span class="line"><span class="comment">  *        root页面不可被replace; 如果当前是root页面, 则等同于push.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>animate: 所有允许的动画, 例如: slide, fade, lift</span></span><br><span class="line"><span class="comment">  *                 &#x27;&#x27;   - 无动画.</span></span><br><span class="line"><span class="comment">  *                 null - 默认动画</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>query: url查询参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">replace(cfg:&#123;</span><br><span class="line">  path: string,</span><br><span class="line">  query?: &#123; [key: string]: string &#125;,</span><br><span class="line">  animate?:AnimateType,</span><br><span class="line">  data?: any,</span><br><span class="line">&#125;):<span class="keyword">void</span>;</span><br><span class="line">replace(path:string):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义navbar"><a href="#自定义navbar" class="headerlink" title="自定义navbar"></a>自定义navbar</h2><p>提供名为<code>navbar</code>的组件实现自定义navbar</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  自定义内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>自定义navbar可以放置在任意位置, 但只有最后一个navbar会生效; </p>
+<p>使用自定义的navbar后, 依然可以使用 <code>setBarInfo(&#123;hidden:true&#125;)</code> api进行bar的显示控制.</p>
+<h3 id="双向绑定问题"><a href="#双向绑定问题" class="headerlink" title="双向绑定问题"></a>双向绑定问题</h3><p>使用自定义navbar时, 自定义内容必须如果未包含在一个元素内时将无法响应内容改变, 如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  &#123;&#123;str&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>str变化时, 界面无法响应改变;</p>
+<p>需要将内容,至少包裹在一个元素内以能够双向绑定,如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;str&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="routerLink"><a href="#routerLink" class="headerlink" title="routerLink"></a>routerLink</h2><p>除使用方法进行导航外, 还可以使用 <code>router-link</code> 组件;</p>
+<p>系统对 router-link进行了重写; 总体兼容, 但做了一些修改:</p>
+<ul>
+<li>router-link 不支持active-class,exact-active-class属性; tag属性仅能为’a’</li>
+<li>在项目中使用router-link将会正确导航且触发默认动画.</li>
+<li><code>to</code>属性可以不是必选</li>
+<li><code>back</code>: 增加了一个属性 <code>back:Boolean</code> 表示是否回退. (back比to优先) </li>
+<li><code>data</code>: 增加了一个属性 <code>data:any</code> 表示页面切换时附带的数据. (将在传递到 viewAppear 中)</li>
+<li><code>animate</code>: 增加一个<code>animate:String</code>属性表示情景切换时的动画.</li>
+</ul>
+<p>例如</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/page1&quot;</span> <span class="attr">animate</span>=<span class="string">&quot;slide&quot;</span> <span class="attr">data</span>=<span class="string">&quot;附带的数据&quot;</span>&gt;</span>跳转<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:back</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data</span>=<span class="string">&quot;附带的数据&quot;</span>&gt;</span>回退<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/page1&quot;</span> <span class="attr">:replace</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data</span>=<span class="string">&quot;附带的数据&quot;</span>&gt;</span>替换本页面<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>组件中使用到的图标名称都是以 <code>bp-navbar_</code> 开头, 使用到的图标有:</p>
+<table>
+<thead>
+<tr>
+<th>图标名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bp-navbar_arrowLeft</td>
+<td>返回按钮</td>
+</tr>
+<tr>
+<td>bp-navbar_loading</td>
+<td>默认加载组件中的加载图标</td>
+</tr>
+</tbody></table>
+<p><em>可以使用<code>bpui.icons.registerSvgIcon(&#39;bp-navbar_arrowLeft&#39;, &lt;svg file&gt;)</code>方式, 进行组件图标自定义</em></p>
+<h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件的样式结构如下:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-navbarView</span> &#123;</span><br><span class="line">  <span class="comment">/* 导航条 */</span></span><br><span class="line">  <span class="selector-class">.bp-navbarView_bar</span> &#123;</span><br><span class="line">    <span class="selector-class">.bp-navbarView_leftItem</span> &#123;&#125; </span><br><span class="line">    <span class="selector-class">.bp-navbarView_centerItem</span> &#123;&#125;</span><br><span class="line">    <span class="selector-class">.bp-navbarView_rightItem</span> &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/* 页面 */</span></span><br><span class="line">  <span class="selector-class">.bp-navbarView_page</span> &#123;</span><br><span class="line">    <span class="comment">/* 页面内容页 */</span></span><br><span class="line">    &amp;&gt;<span class="selector-tag">div</span> &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>scss样式文件存放在<code>@bpui/navbar-view/style</code> 目录下, 可以复制修改以定制主题</em></p>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

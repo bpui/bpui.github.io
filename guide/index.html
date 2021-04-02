@@ -1,0 +1,935 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Introduction — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../manifest.json">
+
+    <link href='../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "guide"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../index.html">
+    <img src="../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          Guide
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="" class="sidebar-link current">Introduction</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content guide with-sidebar index-guide">
+  
+    <h1>Introduction</h1>
+  
+  
+    <h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>旨在搭建一套简单易用的前端框架, 便于各项目使用, 方便统一; 以解决网络上各种框架不同的设计思路及使用方式的不一致性而造成项目混乱, 且可以随时根据项目需求调整不同的UI组件.</p>
+<p>目前一期项目为innis使用, 使用vuejs进行开发; 后期支持微前端框架时, 再调整为与具体架构无关.</p>
+<p>项目暂时命名为 <code>bpui</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例如: </span><br><span class="line">element-ui 中许多组件不传递 v-model值将报错; </span><br><span class="line">vuetify 会将传入的属性转化为另外的属性而很难深度定制等问题.</span><br></pre></td></tr></table></figure>
+
+<h3 id="框架的设计思路及优先级"><a href="#框架的设计思路及优先级" class="headerlink" title="框架的设计思路及优先级"></a>框架的设计思路及优先级</h3><ol>
+<li>移动优先, 移动端及pc端的使用方式一致.</li>
+<li>框架完整性: 支持大多数常用组件</li>
+<li>易用性: 尽量做到少阅读使用文档时就能够使用. 使用方式向原生组件靠拢.</li>
+<li>兼容性，可扩展性。样式图标独立.</li>
+<li>性能</li>
+<li>支持微信小程序</li>
+<li>微前端</li>
+</ol>
+<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><p>目前主流的IDE为 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">vscode</a></p>
+<p>开始工作前按以下进行一些准备工作.</p>
+<h3 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h3><p>建议搜索并安装如下的扩展插件.</p>
+<ul>
+<li>Babelrc</li>
+<li>Code Outline</li>
+<li>Code Runner</li>
+<li>CSS Class Hint</li>
+<li>Debugger for Chrome</li>
+<li>Git History</li>
+<li>GitLens</li>
+<li>JavaScript (ES6) code snippets</li>
+<li>Node Debug 2</li>
+<li>npm</li>
+<li>npm intellisense</li>
+<li>TSLint</li>
+<li>TypeScript Toolbox</li>
+<li>Vetur</li>
+<li>prettier</li>
+</ul>
+<p><em>可以使用 prettier 进行代码格式化. (ctrl+shift+F 格式化文档, 或 ctrl+K,ctrl+F 格式化选择的代码片段)</em></p>
+<h3 id="code-snippet"><a href="#code-snippet" class="headerlink" title="code snippet"></a>code snippet</h3><p>需要在vscode中设置 javascript, typecript, vue 等文件的 <code>code snippet</code>配置, 以便添加文件版本等内容.</p>
+<p>点击 <code>设置</code>-&gt;<code>用户代码片段</code>, 分别输入 <code>vue.json</code>, <code>javascript.json</code>, <code>typescript.json</code> 设置如下内容.</p>
+<ol>
+<li>设置自文件头版权信息.</li>
+</ol>
+<p><code>bpheader</code> 是快捷键, 键入后会自动输出body字段中的信息.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&quot;bpheader&quot;: &#123;</span><br><span class="line">  &quot;prefix&quot;: &quot;bpheader&quot;,</span><br><span class="line">  &quot;body&quot;: [</span><br><span class="line">    &quot;&#x27;use strict&#x27;;&quot;,</span><br><span class="line">    &quot;&quot;,</span><br><span class="line">    &quot;/**&quot;,</span><br><span class="line">    &quot;* Copyright (c) $&#123;CURRENT_YEAR&#125; Copyright bp All Rights Reserved.&quot;,</span><br><span class="line">    &quot;* Author: yourname&quot;,</span><br><span class="line">    &quot;* Date: $&#123;CURRENT_YEAR&#125;-$&#123;CURRENT_MONTH&#125;-$&#123;CURRENT_DATE&#125; $&#123;CURRENT_HOUR&#125;:$&#123;CURRENT_MINUTE&#125;&quot;,</span><br><span class="line">    &quot;* Desc: $2&quot;,</span><br><span class="line">    <span class="string">&quot;*/&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  &quot;description&quot;: &quot;File header&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>注: <code>vue.json</code> 文件头版权信息注释应该从 <code>/* */</code> 改为  <code>&lt;!-- --&gt;</code></em> </p>
+<p>可以使用 <a href="./codeSnippet/vue.html">vue code snippet</a> 这个完整的snippet.</p>
+<h2 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h2><p>需要按照如下的编码规范进行编码:</p>
+<ol>
+<li>优先使用 <code>typescript</code></li>
+<li>以下按照 <code>.vue</code> 文件按顺序进行代码规范说明</li>
+<li>为保持模块独立性, 尽量不使用 <code>vuex</code>.</li>
+</ol>
+<h3 id="文件头版权说明"><a href="#文件头版权说明" class="headerlink" title="文件头版权说明."></a>文件头版权说明.</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Copyright (c) 2019 Copyright bp All Rights Reserved.</span></span><br><span class="line"><span class="comment">* Author: lipengxiang</span></span><br><span class="line"><span class="comment">* Date: 2019-11-01 22:29</span></span><br><span class="line"><span class="comment">* Desc: </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br></pre></td></tr></table></figure>
+<p>vue文件使用 <code>&lt;!-- --&gt;</code> 注释, ts/js文件使用 <code>/* */</code></p>
+<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h3><p>优先选择typescript.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&lt;script lang=<span class="string">&quot;ts&quot;</span>&gt;</span><br><span class="line">  <span class="keyword">import</span> &#123; Component, Vue, Ref, Watch, Provide, Prop, Emit &#125; <span class="keyword">from</span> <span class="string">&quot;vue-property-decorator&quot;</span>;</span><br><span class="line">  <span class="keyword">import</span> &#123; State, Mutation &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex-class&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用 @Component注解使用组件.</span></span><br><span class="line">@Component(&#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// </span></span><br><span class="line">  <span class="comment">// private data.</span></span><br><span class="line">  privateData: string = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// event 事件.</span></span><br><span class="line">  @Emit()</span><br><span class="line">  <span class="function"><span class="title">demoEvent</span>(<span class="params">param: string</span>)</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// Ref.</span></span><br><span class="line">  @Ref() demoRef1 : HTMLElement;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// state 状态.</span></span><br><span class="line">  @State(<span class="function"><span class="params">state</span>=&gt;</span>state.demo) demo:DEMO_TYPE;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// Prop 属性.</span></span><br><span class="line">  @Prop(&#123; <span class="attr">type</span>: number &#125;) demoProp: number;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// data 数据.</span></span><br><span class="line">  @Provide() demoData:number = <span class="number">1</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// computed.</span></span><br><span class="line">  <span class="keyword">get</span> <span class="title">demoComputed</span>() &#123; <span class="keyword">return</span> xxxx; &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// watch.</span></span><br><span class="line">  @Watch(<span class="string">&#x27;child&#x27;</span>)</span><br><span class="line">  <span class="function"><span class="title">onDemoChanged</span>(<span class="params">val: string, oldVal: string</span>)</span> &#123; &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// lifecycle hook.</span></span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// methods.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@desc</span>: 方法描述.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="title">foo1</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>代码归类</p>
+</blockquote>
+<p>相同类型的代码应该放在一起, 例如, @Prop 属性应该都放置在一起, @Emit 事件触发等放置在一起; 自定义方法放置在一起.</p>
+<p>不要出现代码随意放置的问题.</p>
+<blockquote>
+<p>使用驼峰命名法. </p>
+</blockquote>
+<p>例如 <code>getName</code></p>
+<p>原则上应该以 <code>动词</code> 在前, <code>名称</code> 在后; 便于理解.</p>
+<blockquote>
+<p>名称归类.</p>
+</blockquote>
+<p>当类中的方法较多时, 例如超过10个时, 处理同一个子模块的方法应该<code>前缀统一</code>, 并且<code>放置在一起</code>, 方便后续维护.</p>
+<p>例如: 同一个页面中处理树形结构逻辑代码统一命名,</p>
+<p>tree_onClick,tree_addChildNode, tree_removeNode 等;</p>
+<p>同样, 私有变量以及data同样应该使用这个规则; </p>
+<blockquote>
+<p>事件触发类的方法应该以 <code>on</code> 开头</p>
+</blockquote>
+<p>例如, 按钮click事件触发的方法命名为: <code>onClickLogin</code>, <code>onClickOk</code> 等</p>
+<p>使用on开头表明是由其他触发引起的.</p>
+<blockquote>
+<p>方法注释.</p>
+</blockquote>
+<p>大多数方法都应该以以下方式进行注释</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>: 方法描述.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>p1: 参数1说明.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return </span>返回值说明.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">foo1(p1:string): string &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>异步方法使用如下方式:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>: 方法描述.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>p1: 参数1说明.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return </span>返回值说明.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">async</span> foo1(p1:string): <span class="built_in">Promise</span>&lt;string&gt; &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><p>使用 scss</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&#x27;scss&#x27;</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Git使用规范"><a href="#Git使用规范" class="headerlink" title="Git使用规范"></a>Git使用规范</h2><p>开发中git的使用必须按照如下规则:</p>
+<ul>
+<li><a href="./git/git%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83.html">git使用规范</a></li>
+<li><a href="./git/git%E5%90%88%E5%B9%B6%E6%B5%81%E7%A8%8B.html">git合并规范</a></li>
+</ul>
+<p><a href="../api/index.html">下一步</a></p>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../js/css.escape.js"></script>
+    <script src="../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

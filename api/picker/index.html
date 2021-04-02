@@ -1,0 +1,1236 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Picker — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="../other/index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E5%BA%93/index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../form/index.html" class="sidebar-link">表单</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../navbarView/index.html" class="sidebar-link">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="" class="sidebar-link current">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>Picker</h1>
+  
+  
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>picker组件内部使用了 <code>widget</code> 组件. 拥有widget的所有属性和方法.</p>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p>widget 所有属性.</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>visible</td>
+<td>boolean</td>
+<td></td>
+<td>表示是否显示; 允许使用 <code>visible.sync</code> 进行双向绑定</td>
+</tr>
+<tr>
+<td>mask</td>
+<td>boolean</td>
+<td></td>
+<td>是否显示遮罩层. (默认为 true)</td>
+</tr>
+<tr>
+<td>maskClose</td>
+<td>boolean</td>
+<td></td>
+<td>是否点击遮罩层后关闭. (默认为 false)</td>
+</tr>
+<tr>
+<td>preventEvent</td>
+<td>boolean</td>
+<td></td>
+<td>是否阻止时间传递到遮罩层及以下. (默认为 true)</td>
+</tr>
+<tr>
+<td>pageClass</td>
+<td>String或Array</td>
+<td></td>
+<td>除遮罩层外的内容层的样式类.</td>
+</tr>
+<tr>
+<td>pageStyle</td>
+<td>String或Array或Object</td>
+<td></td>
+<td>除遮罩层外的内容层的样式</td>
+</tr>
+</tbody></table>
+<p>picker相关属性</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-model 或 value</td>
+<td>string,number或Array</td>
+<td></td>
+<td>表示当前picker的值;<br> 如果是单列picker则值为string或number<br>如果列大于1, 则值为数组</td>
+</tr>
+<tr>
+<td>cancelBtnText</td>
+<td>string</td>
+<td></td>
+<td>表示取消按钮文字 (默认为 <code>取消</code>)</td>
+</tr>
+<tr>
+<td>confirmBtnText</td>
+<td>string</td>
+<td></td>
+<td>表示确认按钮文字 (默认为 <code>确认</code>)</td>
+</tr>
+<tr>
+<td>datasource</td>
+<td>Array 或 bp.PickerDataSource 数据源对象</td>
+<td></td>
+<td>数据源</td>
+</tr>
+</tbody></table>
+<h2 id="events"><a href="#events" class="headerlink" title="events"></a>events</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>change(selectValue):void</td>
+<td>当滑动改变界面上选择时触发, 参数为界面上选择的值. (单组数据源为值, 多组数据源为值数据)</td>
+</tr>
+<tr>
+<td>cancel():void</td>
+<td>点击取消按钮或hide()隐藏的事件.</td>
+</tr>
+<tr>
+<td>confirm(picker:bp.Picker):void</td>
+<td>点击确认按钮的事件. (点击确认后, 会将界面上选择的值设置为picker当前的值)</td>
+</tr>
+</tbody></table>
+<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><p>widget的所有方法.</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>show():Promise<void></td>
+<td>显示</td>
+</tr>
+<tr>
+<td>hide():Promise<void></td>
+<td>隐藏</td>
+</tr>
+<tr>
+<td>setSelect(groupIndex, value, trigger = false)</td>
+<td>设置指定组界面上选择的值; trigger将触发change事件</td>
+</tr>
+<tr>
+<td>getSelect(groupIndex = 0)</td>
+<td>获得指定组当前界面上所选择的值</td>
+</tr>
+<tr>
+<td>getValue()</td>
+<td>返回当前picker的值, 单组数据源为值, 多组数据源为值数组</td>
+</tr>
+<tr>
+<td>refreshDatasource(groupIndex, trigger = true)</td>
+<td>手动刷新指定组的数据源, 将触发数据源对象的<code>picker_datasource</code>方法, trigger将触发change事件</td>
+</tr>
+</tbody></table>
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>示例代码.</p>
+<p class="codepen" data-height="730" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="dyoVyVd" style="height: 730px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bp-picker">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/dyoVyVd">
+  bp-picker</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+<h3 id="数组数据源"><a href="#数组数据源" class="headerlink" title="数组数据源."></a>数组数据源.</h3><p>将自动计算datasource中的children数据, 并使用指定的数据源类型来构造单组,双组或三组类型的数据.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> datasource = [&#123;<span class="attr">label</span>:<span class="string">&#x27;1&#x27;</span>,<span class="attr">value</span>:<span class="number">1</span>&#125;, &#123;<span class="attr">label</span>:<span class="string">&#x27;2&#x27;</span>,<span class="attr">value</span>:<span class="number">2</span>&#125;, &#123;<span class="attr">label</span>:<span class="string">&#x27;3&#x27;</span>,<span class="attr">value</span>:<span class="number">3</span>&#125;];</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-picker</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">&quot;value&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:visible.sync</span>=<span class="string">&quot;visible&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:datasource</span>=<span class="string">&quot;datasource&quot;</span> </span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> datasource = <span class="keyword">new</span> bpui.PickerTimeDatasource(&#123;<span class="attr">hourText</span>:<span class="string">&#x27;时&#x27;</span>, <span class="attr">minuteText</span>:<span class="string">&#x27;分&#x27;</span>&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-picker</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">&quot;value&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:visible.sync</span>=<span class="string">&quot;visible&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:datasource</span>=<span class="string">&quot;datasource&quot;</span> </span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> datasource = <span class="keyword">new</span> bpui.PickerDateDatasource();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-picker</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">&quot;value&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:visible.sync</span>=<span class="string">&quot;visible&quot;</span> </span></span><br><span class="line"><span class="tag">  <span class="attr">:datasource</span>=<span class="string">&quot;datasource&quot;</span> </span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="datasource-说明"><a href="#datasource-说明" class="headerlink" title="datasource 说明"></a>datasource 说明</h2><p>数据源是一个实现<code>bp.PickerDataSource</code>接口的类实例对象, 可以以异步方式获取数据.  接口如下:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">type PickerDataSourceValue = string|number;</span><br><span class="line">type PickerDataSourceData = <span class="built_in">Array</span>&lt;&#123;<span class="attr">label</span>:string, <span class="attr">value</span>:PickerDataSourceValue&#125;&gt;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: picker数据源.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">interface PickerDataSource &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 数据源组的个数.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>callback: 由此回调返回数据源组的个数.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  picker_datasource_groups(callback:<span class="function">(<span class="params">groupsCount:number</span>)=&gt;</span><span class="keyword">void</span>):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 返回指定组的数据源</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>callback: 由此回调返回指定组的数据, datasource表示数据源, value表示当前选中的值.</span></span><br><span class="line"><span class="comment">  *       &#123;</span></span><br><span class="line"><span class="comment">            datasource: [&#123;label:&#x27;&#x27;, value:0&#125;, ],  // 数据源.</span></span><br><span class="line"><span class="comment">            value:      0,  // 选择的值.</span></span><br><span class="line"><span class="comment">          &#125;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  picker_datasource(groupIndex:number, </span><br><span class="line">                    picker:Picker, </span><br><span class="line">                    callback:<span class="function">(<span class="params">ds:&#123;datasource:PickerDataSourceData,value:PickerDataSourceValue&#125;</span>)=&gt;</span><span class="keyword">void</span>):<span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 当前选中的值改变后.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  picker_changed(groupIndex:number, <span class="attr">picker</span>:Picker):<span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="预实现数据源类"><a href="#预实现数据源类" class="headerlink" title="预实现数据源类"></a>预实现数据源类</h2><p>系统内部提供了如下几个预先实现的数据源类:</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bp.PickerSingleDatasource</td>
+<td>单组数据源</td>
+</tr>
+<tr>
+<td>bp.PickerDoubleDatasource</td>
+<td>双组数据源, 第二组数据源依赖于第一组数据源的选值 2 &gt; 1</td>
+</tr>
+<tr>
+<td>bp.PickerThreeDatasource</td>
+<td>三组数据源, 同上, 3 &gt; 2 &gt; 1</td>
+</tr>
+<tr>
+<td>bp.PickerTimeDatasource</td>
+<td>时间数据源; 提供时和分的选择</td>
+</tr>
+<tr>
+<td>bp.PickerDateDatasource</td>
+<td>日期数据源; 提供年月日的选择</td>
+</tr>
+</tbody></table>
+<h3 id="PickerSingleDatasource构造方法如下"><a href="#PickerSingleDatasource构造方法如下" class="headerlink" title="PickerSingleDatasource构造方法如下:"></a>PickerSingleDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number </span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
+
+<h3 id="PickerDoubleDatasource构造方法如下"><a href="#PickerDoubleDatasource构造方法如下" class="headerlink" title="PickerDoubleDatasource构造方法如下:"></a>PickerDoubleDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number,</span><br><span class="line">                      children?: Array&lt; &#123;label, value&#125; &gt;</span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
+
+<h3 id="PickerThreeDatasource构造方法如下"><a href="#PickerThreeDatasource构造方法如下" class="headerlink" title="PickerThreeDatasource构造方法如下:"></a>PickerThreeDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number,</span><br><span class="line">                      children?: Array&lt; &#123;label, value, children?&#125; &gt;</span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果直接将 datasource作为属性, 将会自动计算属于1组,2组,3组数据源中哪一个, 并自动构造.</p>
+</blockquote>
+<h3 id="PickerTimeDatasource构造方法如下"><a href="#PickerTimeDatasource构造方法如下" class="headerlink" title="PickerTimeDatasource构造方法如下:"></a>PickerTimeDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new(cfg:&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 小时显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    hourText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 分钟显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    minuteText?:string,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="PickerDateDatasource构造方法如下"><a href="#PickerDateDatasource构造方法如下" class="headerlink" title="PickerDateDatasource构造方法如下:"></a>PickerDateDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">new(cfg:&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 月显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    monthText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 日显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    dateText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年份从哪一年开始</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearFrom?:number,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年份到哪一年结束</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearTo?:number,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><p>picker样式结构如下:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-picker</span> &#123;</span><br><span class="line">  <span class="comment">/* 显示状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__visible</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 隐藏状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__invisible</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 除遮罩层外的对话框内容 */</span></span><br><span class="line">  <span class="selector-class">.bp-widget__content</span> &#123;</span><br><span class="line">    <span class="comment">/* wrap层 */</span></span><br><span class="line">    <span class="selector-class">.bp-widget__contentWrap</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/* 按钮栏 */</span></span><br><span class="line">      <span class="selector-class">.bp-picker__toolbar</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/* picker区域 */</span></span><br><span class="line">      <span class="selector-class">.bp-picker__main</span> &#123;</span><br><span class="line">        <span class="comment">/* 数据组 */</span></span><br><span class="line">        <span class="selector-class">.bp-picker__group</span> &#123;&#125;</span><br><span class="line">        <span class="selector-class">.bp-picker__group</span> &#123;&#125;</span><br><span class="line">        <span class="selector-class">.bp-picker__group</span> &#123;</span><br><span class="line">          <span class="comment">/* 掩码层, 做事件及渐变 */</span></span><br><span class="line">          <span class="selector-class">.bp-picker__mask</span> &#123;&#125;</span><br><span class="line">          <span class="comment">/* 当前选中 */</span></span><br><span class="line">          <span class="selector-class">.bp-picker__indicator</span> &#123;&#125;</span><br><span class="line">          <span class="comment">/* 列表内容 */</span></span><br><span class="line">          <span class="selector-class">.bp-picker__content</span> &#123;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>scss样式文件存放在<code>@bpui/picker/style</code> 目录下, 可以复制修改以定制主题</em></p>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

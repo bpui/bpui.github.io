@@ -1,0 +1,837 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>vue.json code snippet文件 — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "guide"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          Guide
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduction</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content guide with-sidebar vue-guide">
+  
+    <h1>vue.json code snippet文件</h1>
+  
+  
+    <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br></pre></td><td class="code"><pre><span class="line">&#123;  </span><br><span class="line">    <span class="attr">&quot;bpheader&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;bpheader&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;&lt;!--&quot;</span>,</span><br><span class="line">        <span class="string">&quot;/**&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Copyright (c) $&#123;CURRENT_YEAR&#125; Copyright bp All Rights Reserved.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Author: lipengxiang&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Date: $&#123;CURRENT_YEAR&#125;-$&#123;CURRENT_MONTH&#125;-$&#123;CURRENT_DATE&#125; $&#123;CURRENT_HOUR&#125;:$&#123;CURRENT_MINUTE&#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Desc: $1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;*/&quot;</span>,</span><br><span class="line">        <span class="string">&quot; --&gt;&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;bpheader&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;bpc1&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;bpc1&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;//--------------------------------------------------------&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;single line comment&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;bpc2&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;bpc2&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;//--------------------------------------------------------&quot;</span>,</span><br><span class="line">        <span class="string">&quot;// $1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;//--------------------------------------------------------&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;double line comment&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;bpfunc&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;bpfunc&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;/**&quot;</span>,</span><br><span class="line">         <span class="string">&quot;* @desc: $1&quot;</span>,</span><br><span class="line">         <span class="string">&quot;* @return: $2&quot;</span>,</span><br><span class="line">         <span class="string">&quot;*/&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;function comment&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;debug&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;debug&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;console.debug($1);&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;debug&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;log&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;log&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;console.log($1);&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;log&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;error&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;error&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;console.error($1);&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;error&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;warn&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;warn&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;console.warn($1);&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;warn&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;bp-file&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;bp-file&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;&lt;!--&quot;</span>,</span><br><span class="line">        <span class="string">&quot;/**&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Copyright (c) $&#123;CURRENT_YEAR&#125; Copyright bp All Rights Reserved.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Author: lipengxiang&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Date: $&#123;CURRENT_YEAR&#125;-$&#123;CURRENT_MONTH&#125;-$&#123;CURRENT_DATE&#125; $&#123;CURRENT_HOUR&#125;:$&#123;CURRENT_MINUTE&#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Desc: $1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;*/&quot;</span>,</span><br><span class="line">        <span class="string">&quot; --&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;template&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;/template&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;script&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;export default &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  name: &#x27;&#x27;,&quot;</span>,  </span><br><span class="line">        <span class="string">&quot;  components: &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  props: &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  data() &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;    return &#123;&#125;;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  computed: &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  created() &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  beforeDestroy() &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  beforeMount() &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  mounted() &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  methods: &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;,&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;/script&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;style&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;/style&gt;&quot;</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;bp-file-ts&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;prefix&quot;</span>: <span class="string">&quot;bp-file-ts&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;body&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;&lt;!--&quot;</span>,</span><br><span class="line">        <span class="string">&quot;/**&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Copyright (c) $&#123;CURRENT_YEAR&#125; Copyright bp All Rights Reserved.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Author: lipengxiang&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Date: $&#123;CURRENT_YEAR&#125;-$&#123;CURRENT_MONTH&#125;-$&#123;CURRENT_DATE&#125; $&#123;CURRENT_HOUR&#125;:$&#123;CURRENT_MINUTE&#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;* Desc: $1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;*/&quot;</span>,</span><br><span class="line">        <span class="string">&quot; --&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;template&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;/template&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;script lang=\&quot;ts\&quot;&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;import &#123; Component, Vue, Prop, Watch, Provide, &#125; from &#x27;vue-property-decorator&#x27;;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;import &#123; State, Mutation &#125; from &#x27;vuex-class&#x27;;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;@Component(&#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  components: &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&#125;)&quot;</span>,</span><br><span class="line">        <span class="string">&quot;export default class extends Vue &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  //&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // event.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  @Emit()&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  demoEvent(type: string) &#123; &#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;  //&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // state.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // @State(state=&gt;state.demo) demo:DEMO_TYPE;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;  //&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // Prop&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // @Prop(&#123; type: number &#125;) demo: number;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;  //&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // data.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // @Provide() demo:number = 1;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;  //&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // computed.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // get demo() &#123; return xxxx; &#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;  //&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // watch.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // @Watch(&#x27;child&#x27;)&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // onChildChanged(val: string, oldVal: string) &#123; &#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;  //&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  // lifecycle hook.&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  constructor() &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;    super();&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;  mounted() &#123;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;  &quot;</span>,</span><br><span class="line">        <span class="string">&quot;&#125;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&lt;/script&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&quot;</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  
+
+  
+    <div class="guide-links">
+      
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

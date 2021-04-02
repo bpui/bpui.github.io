@@ -1,0 +1,1116 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>手势 — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "api"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          API<sup class="beta">beta</sup>
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+      <li>
+        
+        <a href="../other/index.html" class="sidebar-link">(待定)Other</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduce</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../icon/index.html" class="sidebar-link">图标</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="index.html" class="sidebar-link">基础库</a>
+        
+        
+        
+          <ul class="menu-sub">
+            
+            
+        
+            
+              <li class="menu-sub">
+                <a href="router.html" class="sidebar-link">Router</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="dom.html" class="sidebar-link">dom</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">手势</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="timer.html" class="sidebar-link">计时器</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="device.html" class="sidebar-link">设备</a>      
+              </li>
+            
+        
+          </ul>
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget/index.html" class="sidebar-link">浮动组件</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../form/index.html" class="sidebar-link">表单</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../navbarView/index.html" class="sidebar-link">NavbarView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../picker/index.html" class="sidebar-link">Picker</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../popover/index.html" class="sidebar-link">Popover</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content api with-sidebar ">
+  
+    <h1>手势</h1>
+  
+  
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>bp-lib 重新封装了<code>hammerjs</code>以提供手势处理;</p>
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p class="codepen" data-height="605" data-theme-id="dark" data-default-tab="js,result" data-user="brainpoint" data-slug-hash="poJNKzy" style="height: 605px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-libs-gesture">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/poJNKzy">
+  bpui-libs-gesture</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="手势类定义"><a href="#手势类定义" class="headerlink" title="手势类定义"></a>手势类定义</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 手势.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">interface GestureRecognizer &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@desc</span>: 在指定手势识别失败后才识别到.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  requireFailure(ges:GestureRecognizer):<span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 手势对象.</span></span><br><span class="line"><span class="comment">*       只提供默认的手势, 不提供自定义手势的添加方法.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Gesture</span> </span>&#123;</span><br><span class="line">  <span class="title">constructor</span>(<span class="params">dom:HTMLElement|SVGElement</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加tap手势识别.</span></span><br><span class="line"><span class="comment">  *         只能识别 tapCount=1,2,3 的情景.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>: 对同一个tapCount值, 只能添加一个手势识别对象; 重复添加, 将返回上一次添加的识别对象.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enableTapRecognizer(cfg?:&#123;</span><br><span class="line">    tapCount:<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span></span><br><span class="line">  &#125;):GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消tap手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disableTapRecognizer(cfg:&#123;</span><br><span class="line">    tapCount:<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span></span><br><span class="line">  &#125;): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加pan手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>direction: 只能为left,right,up,down; 不能为组合.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>: 对同一个direction值, 只能添加一个手势识别对象; 重复添加, 将返回上一次添加的识别对象.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enablePanRecognizer(cfg:&#123;</span><br><span class="line">    direction:bp.GestureDirection</span><br><span class="line">  &#125;):GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消pan手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disablePanRecognizer(direction:bp.GestureDirection): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加pinch手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enablePinchRecognizer(): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消pinch手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disablePinchRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加rotate手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enableRotateRecognizer(): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消rotate手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disableRotateRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加press手势识别. 允许设置按压时间等.</span></span><br><span class="line"><span class="comment">  *         只能有一个press手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>duration: 按压时间. ms</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enablePressRecognizer(cfg:&#123;</span><br><span class="line">    duration:number</span><br><span class="line">  &#125;): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消rotate手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disablePressRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加swipe手势识别.</span></span><br><span class="line"><span class="comment">  *         - 相同的pointers值, 只能有一个swipe手势识别.</span></span><br><span class="line"><span class="comment">  *         - 桌面端pointers无效.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enableSwipeRecognizer(cfg?:&#123;</span><br><span class="line">    velocity?:number,  <span class="comment">// (default: 0.3) Minimal velocity required before recognizing, unit is in px per ms.</span></span><br><span class="line">    distance?:number,  <span class="comment">// (default: 10) Minimal distance required before recognizing</span></span><br><span class="line">    pointers?:number,  <span class="comment">// (default: 1)</span></span><br><span class="line">  &#125;): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消swipe手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disableSwipeRecognizer(cfg?:&#123;</span><br><span class="line">    pointers: number,</span><br><span class="line">  &#125;): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 事件监听.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  on(event:<span class="string">&#x27;tap&#x27;</span>|<span class="string">&#x27;pan&#x27;</span>|<span class="string">&#x27;pinch&#x27;</span>|<span class="string">&#x27;rotate&#x27;</span>|<span class="string">&#x27;press&#x27;</span>|<span class="string">&#x27;swipe&#x27;</span>, <span class="attr">handler</span>:bp.GestureListener):Gesture;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 移除事件监听.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>handler: 不传递时, 移除指定类型的所有监听.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  off(event:<span class="string">&#x27;tap&#x27;</span>|<span class="string">&#x27;pan&#x27;</span>|<span class="string">&#x27;pinch&#x27;</span>|<span class="string">&#x27;rotate&#x27;</span>|<span class="string">&#x27;press&#x27;</span>|<span class="string">&#x27;swipe&#x27;</span>, handler?:bp.GestureListener):Gesture;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="手势类型"><a href="#手势类型" class="headerlink" title="手势类型"></a>手势类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tap</td>
+<td>点击, 允许单击/双击/三击</td>
+</tr>
+<tr>
+<td>pan</td>
+<td>平移, 允许单指/双指/三指/四值平移(桌面端只能为1指)</td>
+</tr>
+<tr>
+<td>pinch</td>
+<td>缩放</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>旋转</td>
+</tr>
+<tr>
+<td>press</td>
+<td>延时按压</td>
+</tr>
+<tr>
+<td>swipe</td>
+<td>滑动, 允许单指/双指/三指滑动 (桌面端只能为1指)</td>
+</tr>
+</tbody></table>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><h3 id="tap"><a href="#tap" class="headerlink" title="tap"></a>tap</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ges = <span class="keyword">new</span> bpui.libs.Gesture($(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">ges.enableTapRecognizer(&#123;<span class="attr">tapCount</span>:<span class="number">2</span>&#125;);</span><br><span class="line">ges.on(<span class="string">&#x27;tap&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// double tap.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="swipe"><a href="#swipe" class="headerlink" title="swipe"></a>swipe</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ges = <span class="keyword">new</span> bpui.libs.Gesture($(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">ges.enableSwipeRecognizer();</span><br><span class="line">ges.on(<span class="string">&#x27;swipe&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// swipe event.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="requireFailure"><a href="#requireFailure" class="headerlink" title="requireFailure"></a>requireFailure</h3><p>可以使用此方法对手势识别的优先级进行设置.</p>
+<p>```js<br>import bpui from ‘bpui.js’;</p>
+<p>let ges = new bpui.libs.Gesture($(‘body’)[0]);</p>
+<p>let recognizerSwipe = ges.enableSwipeRecognizer();<br>let recognizerTap = ges.enableTapRecognizer();</p>
+<p>// swipe手势将在tap手势识别失败后才开始识别.<br>recognizerSwipe.requireFailure(recognizerTap);<br>``</p>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="index.html">0基础库</a></span>
+      
+      
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>

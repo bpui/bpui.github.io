@@ -1,0 +1,934 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Git使用规范 — bpui</title>
+    <meta charset="utf-8">
+    <meta name="description" content="bpui Develop Document">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../../images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/icons/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+
+    <meta name="msapplication-TileColor" content="#4fc08d">
+    <meta name="theme-color" content="#4fc08d">
+
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link rel="manifest" href="../../manifest.json">
+
+    <link href='../../font/SourceSansPro_RobotoMono.css' rel='stylesheet' type='text/css'>
+    
+    <link href='../../font/font-awesome.css' rel="stylesheet" type="text/css">
+    <link href='../../font/bpui-icon.css' rel="stylesheet" type="text/css">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="../../css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="../../js/vue.js"></script>
+    
+    
+    
+    
+    <script>window.PAGE_TYPE = "guide"</script>
+    
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body class="docs">
+    <div id="mobile-bar" >
+      <a class="menu-button"></a>
+      <a class="logo" href="../../index.html"></a>
+    </div>
+    
+
+<div id="header">
+  <a id="logo" href="../../index.html">
+    <img src="../../images/logo.png">
+    <span>bpui</span>
+  </a>
+  <ul id="nav">
+    
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+
+
+
+
+<li class="nav-dropdown-container learn">
+  <a class="nav-link">Doc</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><ul>
+      <li><a href="../../guide/index.html" class="nav-link">Guide</a></li>
+      <li><a href="../../api/index.html" class="nav-link">API</a></li>
+      <li><a href="../../conference/index.html" class="nav-link">Conference</a></li>
+      <li><a href="../../RootQuestion/index.html" class="nav-link">RootQuestion</a></li>
+    </ul></li>
+  </ul>
+</li>
+
+
+<li>
+  <a href="../../introduce/index.html" class="nav-link team">Introduce</a>
+</li>
+
+
+
+
+    </ul>
+    <div class="list">
+      
+      
+        <h2>
+          
+          Guide
+        </h2>
+        
+
+
+<ul class="menu-root">
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
+        <a href="../index.html" class="sidebar-link">Introduction</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content guide with-sidebar git使用规范-guide">
+  
+    <h1>Git使用规范</h1>
+  
+  
+    <ol>
+<li><a href="#%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">编码规范</a></li>
+<li><a href="#git%E5%AD%90%E6%A8%A1%E5%9D%97">git子模块</a></li>
+</ol>
+<h2 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h2><p>开发流程为:</p>
+<p>1.<code>编码阶段</code></p>
+<pre><code>克隆代码并且创建分支, 分支名使用`姓名缩写`, 例如:
+</code></pre>
+<blockquote>
+<p>git clone xxxx</p>
+</blockquote>
+<blockquote>
+<p>git checkout -b cl-dev ; 陈利创建的开发分支</p>
+</blockquote>
+<blockquote>
+<p>git checkout -b cl-scrollview ; 陈利创建的针对scrollview开发的分支;</p>
+</blockquote>
+<p>  之后在创建的分支上编码, 不要在master分支上编码;  </p>
+<p>2.<code>提交阶段</code></p>
+<pre><code>从master分支合并最新代码
+</code></pre>
+<blockquote>
+<p><code>fetch</code>: git fetch upstream master </p>
+</blockquote>
+<blockquote>
+<p><code>rebase</code>: git rebse upstream/master </p>
+</blockquote>
+<blockquote>
+<p><code>commit</code>: git add &amp; git commit -m “[feature] 修改日志”</p>
+</blockquote>
+<blockquote>
+<p><code>push</code>: git push (push当前开发分支至远程仓库)</p>
+</blockquote>
+<p>3.<code>pr</code></p>
+<pre><code>登录git网站, 申请pr; 将自己的开发分支内容pr至master分支
+</code></pre>
+<blockquote>
+<p>PR注释请使用前缀进行标注</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>注释前缀</th>
+<th>描述</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[doc]</td>
+<td>文档及配置内容</td>
+<td><code>[doc]</code> 修改配置文件</td>
+</tr>
+<tr>
+<td>[feature]</td>
+<td>新功能</td>
+<td><code>[feature]</code> 个人中心功能</td>
+</tr>
+<tr>
+<td>[bugfix]</td>
+<td>bug修复</td>
+<td><code>[bugfix]</code> 解决首页bug</td>
+</tr>
+<tr>
+<td>[enhancement]</td>
+<td>功能优化</td>
+<td><code>[enhancement]</code> 简化登录请求</td>
+</tr>
+</tbody></table>
+<p>4.<code>避免</code>本地开发多次commit</p>
+<p>当完成一个任务时, 可能需要多天时间; 开发人员经常在一天工作完成后就会做一次代码的 commit, 但是第二天又继续添加了一个 commit, 造成了多个commit意义不明确. </p>
+<p>可以在第一次commit之后使用 <code>--amend</code>参数在原commit上追加内容的方式避免生成多次commit; 在任务完成之后再push到远程. 例如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一次commit (先保存在本地, 不push到远程)</span></span><br><span class="line">git commit -m <span class="string">&quot;[feature] 登录功能&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 隔天做追加</span></span><br><span class="line">git commit --amend</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在任务完成后push到远程.</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>5.<code>代码注释请</code></p>
+<blockquote>
+<p>使用项目相应要求规范</p>
+</blockquote>
+<p>6.每次pr中涉及到<code>修改数据库</code>结构, 需在<code>PR-tasks</code>文件夹下放置修改的内容. </p>
+<blockquote>
+<p>例如, “添加管理员头像” 功能, 在admin表中添加了一个avatar字段, 则需:</p>
+</blockquote>
+<ul>
+<li>在tasks目录下以<code>任务日期</code>建立目录 (如: 创建 PR-tasks/20170505_admin-avatar)</li>
+<li>在创建的目录下放置修改数据库的sql脚本. (如: 放置一个admin.sql, 脚本内容为本次功能修改的数据库内容, insert into admin …), 并且最好能更新doc/database.yum3文件.</li>
+<li>如果任务内容较为复杂, 请在目录下添加说明文件或其他资料.</li>
+</ul>
+<h2 id="git子模块"><a href="#git子模块" class="headerlink" title="git子模块"></a>git子模块</h2><p>使用子模块, 可以方便地将其他commit关联到当前的分支下,而互不影响. 例如, 我们可以将 “文档分支”, “ui” 分支关联到master下, 如此在master分支下便可以查看所其他分支的内容.</p>
+<p>具体可以参考 <a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97">Git-工具-子模块</a></p>
+<h3 id="子模块项目的初始化"><a href="#子模块项目的初始化" class="headerlink" title="子模块项目的初始化"></a>子模块项目的初始化</h3><ol>
+<li>clone代码 <code>git clone https://gitee.com/tjitech/transform_mgr.git</code></li>
+<li>初始化子模块 <code>git submodule init</code></li>
+<li>添加子模块 <code>git submodule add  &lt;respo&gt; &lt;localdir&gt;</code></li>
+<li>拉取子模块代码 <code>git submodule update</code></li>
+<li>当子模块内容被修改时, 项目管理者可以调用 <code>git submodule update --remote</code> 对子模块进行更新</li>
+</ol>
+
+  
+
+  
+    <div class="guide-links">
+      
+      
+      
+      
+        <span style="float: right;"><a href="git%E5%90%88%E5%B9%B6%E6%B5%81%E7%A8%8B.html">Git合并流程</a> →</span>
+      
+    </div>
+  
+
+  <div class="footer">
+  
+  </div>
+</div>
+
+        
+      </div>
+      <script src="../../js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="../../js/css.escape.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <!-- search -->
+    <link href="../../docsearch/docsearch.min.css" rel='stylesheet' type='text/css'>
+
+    <!-- 
+<link rel="stylesheet" href="/../../css/search.css">
+ -->
+
+    <link rel="stylesheet" href="../../css/search.css">
+
+
+    <!-- fastclick -->
+    <script src="../../js/fastclick.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+    </script>
+  </body>
+</html>
