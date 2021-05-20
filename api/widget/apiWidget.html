@@ -993,33 +993,11 @@
   
   
     <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><ul>
-<li><a href="#introduce">Introduce</a></li>
-<li><a href="#methods">methods</a><ul>
-<li><a href="#toast">toast</a></li>
-<li><a href="#%E8%AD%A6%E5%91%8A%E6%A1%86%E5%8F%8A%E7%A1%AE%E8%AE%A4%E6%A1%86">警告框及确认框</a></li>
-<li><a href="#loading">loading</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AD%A6%E5%91%8A%E6%A1%86%E7%BB%84%E4%BB%B6">自定义警告框组件</a><ul>
-<li><a href="#alert%E7%BB%84%E4%BB%B6%E9%9C%80%E8%A6%81%E5%A6%82%E4%B8%8B%E5%86%85%E5%AE%B9">alert组件需要如下内容</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%A1%AE%E8%AE%A4%E6%A1%86%E7%BB%84%E4%BB%B6">自定义确认框组件</a><ul>
-<li><a href="#confirm%E7%BB%84%E4%BB%B6%E9%9C%80%E8%A6%81%E5%A6%82%E4%B8%8B%E5%86%85%E5%AE%B9">confirm组件需要如下内容</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89loading%E7%BB%84%E4%BB%B6">自定义loading组件</a><ul>
-<li><a href="#loading%E7%BB%84%E4%BB%B6%E9%9C%80%E8%A6%81%E5%A6%82%E4%B8%8B%E5%86%85%E5%AE%B9">loading组件需要如下内容</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89toast%E7%BB%84%E4%BB%B6">自定义toast组件</a><ul>
-<li><a href="#toast%E7%BB%84%E4%BB%B6%E9%9C%80%E8%A6%81%E5%A6%82%E4%B8%8B%E5%86%85%E5%AE%B9">toast组件需要如下内容</a></li>
-</ul>
-</li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B5%AE%E5%8A%A8%E7%BB%84%E4%BB%B6">自定义浮动组件</a><ul>
-<li><a href="#%E6%B3%A8%E5%86%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84%E8%A6%81%E6%B1%82">注册的自定义组件的要求</a></li>
-</ul>
-</li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AD%A6%E5%91%8A%E6%A1%86%E7%BB%84%E4%BB%B6">自定义警告框组件</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%A1%AE%E8%AE%A4%E6%A1%86%E7%BB%84%E4%BB%B6">自定义确认框组件</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89loading%E7%BB%84%E4%BB%B6">自定义loading组件</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89toast%E7%BB%84%E4%BB%B6">自定义toast组件</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B5%AE%E5%8A%A8%E7%BB%84%E4%BB%B6">自定义浮动组件</a></li>
 </ul>
 <p>dialog包在初始化时, 会自动向Vue注入一个名为 <code>$bpWidget</code> 的对象, 可以使用此对象进行弹出警告框等操作.</p>
 <p>如:</p>
@@ -1109,7 +1087,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 注册自定义模式对话框组件.</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param </span>name 组件名称, 如果已经存在则覆盖</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return </span>表明注册的名称是否不存在; 如果已经存在则覆盖, 并返回false.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">bpui.registerDialogCustom(name: string, <span class="attr">component</span>: any): boolean;</span><br></pre></td></tr></table></figure>
 
 <p>注册自定义组件后, 可使用如下api进行显示隐藏</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>: 显示.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">bpui.apiWidget.showCustom(name:string):DialogID;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 隐藏</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">bpui.apiWidget.hideCustom(id:DialogID):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@desc</span>: 显示.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>cfg 传递data,props,on等内容.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">bpui.apiWidget.showCustom(name:string, cfg?: &#123; data?: any; props?: any; on?: any; [index: string]: any &#125;):DialogID;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 隐藏</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">bpui.apiWidget.hideCustom(id:DialogID):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
 
 
 <h3 id="注册的自定义组件的要求"><a href="#注册的自定义组件的要求" class="headerlink" title="注册的自定义组件的要求"></a>注册的自定义组件的要求</h3><ul>
