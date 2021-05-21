@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bpui/precache-manifest.2d7986022b9d3c1bdba9204109cc4b0d.js"
+  "/bpui/precache-manifest.3a08dc4358341824cd1b8ae46ffc5a0a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "bpui-demo"});
