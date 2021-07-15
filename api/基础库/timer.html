@@ -570,18 +570,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -719,17 +707,6 @@
     
       <li>
         
-        <a href="../form/index.html" class="sidebar-link">表单</a>
-        
-        
-        
-      </li>
-    
-  
-    
-    
-      <li>
-        
         <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
         
         
@@ -742,8 +719,24 @@
   
     
     
+      <li>
+        
+        <a href="../button/index.html" class="sidebar-link">Button</a>
+        
+        
+        
+      </li>
+    
   
     
+    
+      <li>
+        
+        <a href="../checkbox/index.html" class="sidebar-link">Checkbox</a>
+        
+        
+        
+      </li>
     
   
     
@@ -755,6 +748,9 @@
         
         
       </li>
+    
+  
+    
     
   
     
@@ -792,6 +788,17 @@
   
     
     
+      <li>
+        
+        <a href="../radio/index.html" class="sidebar-link">Radio</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
   
     
     
@@ -801,11 +808,13 @@
   
     
     
-  
-    
-    
-  
-    
+      <li>
+        
+        <a href="../switch/index.html" class="sidebar-link">Switch</a>
+        
+        
+        
+      </li>
     
   
     
@@ -844,12 +853,13 @@
   
   
     <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>libs提供了timer工具, 可以用于安全计时器, 防止页面消失后,计时器忘记删除的问题.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>如果在vue中, 自动会在vue对象中注入 <code>$bpTimer</code> 对象. </p>
+<p>可以按如下的方式使用:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// use timer.</span></span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1. timeout.</span></span><br><span class="line">    <span class="keyword">let</span> t = <span class="built_in">this</span>.$timer.setTimeout(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">      <span class="comment">// do somthing.</span></span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.$timer.clearTimeout(t);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. promise.</span></span><br><span class="line">    <span class="built_in">this</span>.$timer.sleep(<span class="number">1000</span>)</span><br><span class="line">              .then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">                <span class="comment">// do somthing.</span></span><br><span class="line">              &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>timer接口如下:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span> </span></span><br><span class="line"><span class="comment">*    可在组件释放时自动释放所有的timeout计时器.</span></span><br><span class="line"><span class="comment">*     - 在created中:             this.timer = new Timer();</span></span><br><span class="line"><span class="comment">*     - 在beforeDestroy中:       this.timer.dispose();</span></span><br><span class="line"><span class="comment">*     - 在使用计时器的函数中调用:   </span></span><br><span class="line"><span class="comment">                                var t = this.timer.setTimeout(fn, tm);</span></span><br><span class="line"><span class="comment">                                this.timer.clearTimeout(t);</span></span><br><span class="line"><span class="comment">                                this.timer.clearAllTimeout();</span></span><br><span class="line"><span class="comment">*     - 在使用帧动画的函数中调用:   </span></span><br><span class="line"><span class="comment">                                var t = this.timer.requestAnimationFrame(fn);</span></span><br><span class="line"><span class="comment">                                this.timer.cancelAnimationFrame(t);</span></span><br><span class="line"><span class="comment">                                this.timer.clearAllAnimationFrame();</span></span><br><span class="line"><span class="comment">*     - 使用Promise方式启动计时器: (会在对象释放前安全停止)</span></span><br><span class="line"><span class="comment">                                this.timer.sleep(1000)</span></span><br><span class="line"><span class="comment">                                .then(()=&gt;&#123;</span></span><br><span class="line"><span class="comment">                                &#125;);</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Timer</span> </span>&#123;</span><br><span class="line">  constructor();</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span> 注销计时器, 停止并删除所有在运行中的timer.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  dispose():<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: Promise方式计时器.(会在对象释放前安全停止)</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>: Promise</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  sleep(ms:number):Promise&lt;<span class="keyword">void</span>&gt;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 启动计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  setTimeout(fn:()=&gt;<span class="keyword">void</span>, tm:number):NodeJS.Timeout;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearTimeout(t:NodeJS.Timeout):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 启动计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  setInterval(fn:()=&gt;<span class="keyword">void</span>, tm:number):NodeJS.Timeout;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearInterval(t:NodeJS.Timeout):<span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 启动帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  requestAnimationFrame(fn:(tm:number)=&gt;<span class="keyword">void</span>):number;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  cancelAnimationFrame(t:number):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAllTimeout():<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有计时器.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAllInterval():<span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAllAnimationFrame():<span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 清除所有计时器与帧动画.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  clearAll():<span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>如果在vue中, 自动会在vue对象中注入 <code>$bpTimer</code> 对象. </p>
-<p>可以按如下的方式使用:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// use timer.</span></span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1. timeout.</span></span><br><span class="line">    <span class="built_in">this</span>.$bpTimer.setTimeout(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">      <span class="comment">// do somthing.</span></span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. promise.</span></span><br><span class="line">    <span class="built_in">this</span>.$bpTimer.sleep(<span class="number">1000</span>)</span><br><span class="line">              .then(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">                <span class="comment">// do somthing.</span></span><br><span class="line">              &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
   
 
   

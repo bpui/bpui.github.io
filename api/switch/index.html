@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>表单 — bpui</title>
+    <title>Switch — bpui</title>
     <meta charset="utf-8">
     <meta name="description" content="bpui Develop Document">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -94,18 +94,6 @@
       <div id="main" class="fix-sidebar">
         
           
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -683,17 +671,6 @@
     
       <li>
         
-        <a href="" class="sidebar-link current">表单</a>
-        
-        
-        
-      </li>
-    
-  
-    
-    
-      <li>
-        
         <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
         
         
@@ -706,8 +683,24 @@
   
     
     
+      <li>
+        
+        <a href="../button/index.html" class="sidebar-link">Button</a>
+        
+        
+        
+      </li>
+    
   
     
+    
+      <li>
+        
+        <a href="../checkbox/index.html" class="sidebar-link">Checkbox</a>
+        
+        
+        
+      </li>
     
   
     
@@ -719,6 +712,9 @@
         
         
       </li>
+    
+  
+    
     
   
     
@@ -756,6 +752,17 @@
   
     
     
+      <li>
+        
+        <a href="../radio/index.html" class="sidebar-link">Radio</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
   
     
     
@@ -765,11 +772,13 @@
   
     
     
-  
-    
-    
-  
-    
+      <li>
+        
+        <a href="" class="sidebar-link current">Switch</a>
+        
+        
+        
+      </li>
     
   
     
@@ -804,18 +813,79 @@
 
 <div class="content api with-sidebar ">
   
-    <h1>表单</h1>
+    <h1>Switch</h1>
   
   
-    <p>form 包下的组件是表单组件, 用于用户交互输入数据. 例如: button, bp-input 等</p>
-<ul>
-<li><a href="./button.html">button</a></li>
-<li><a href="./checkbox.html">checkbox</a></li>
-<li><a href="./input.html">input</a></li>
-<li><a href="./radio.html">radio</a></li>
-<li><a href="./select.html">select</a></li>
-<li><a href="./switch.html">switch</a></li>
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><ul>
+<li><a href="#introduce">Introduce</a></li>
+<li><a href="#props">props</a></li>
+<li><a href="#events">events</a></li>
+<li><a href="#example">example</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a><ul>
+<li><a href="#%E6%A0%B7%E5%BC%8F%E7%BB%93%E6%9E%84">样式结构</a></li>
 </ul>
+</li>
+</ul>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th>描述</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">value / v-model</td>
+<td>绑定值; 等同于 checked</td>
+<td>boolean</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td align="center">checked</td>
+<td>当前是否勾选</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td align="center">disabled</td>
+<td>是否禁用</td>
+<td>boolean或’disabled’</td>
+<td>—</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<h2 id="events"><a href="#events" class="headerlink" title="events"></a>events</h2><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+<th align="center">回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">change(checked):void</td>
+<td align="center">选中状态改变事件</td>
+<td align="center">更新后的值</td>
+</tr>
+</tbody></table>
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>示例代码.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-switch</span> <span class="attr">v-model</span>=<span class="string">&quot;checked&quot;</span> &gt;</span>normal<span class="tag">&lt;/<span class="name">bp-switch</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bp-switch</span> <span class="attr">disabled</span>=<span class="string">&quot;disabled&quot;</span> &gt;</span>disabled<span class="tag">&lt;/<span class="name">bp-switch</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="wvadGGQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="wvadGGQ">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/wvadGGQ">
+  wvadGGQ</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
+  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件的样式结构如下:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-switch</span> &#123;</span><br><span class="line">  <span class="comment">/* checkbox input部分 */</span></span><br><span class="line">  <span class="selector-class">.bp-switch__input</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/* label部分 */</span></span><br><span class="line">  <span class="selector-class">.bp-switch__label</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>scss样式文件存放在<code>@bpui/switch/style</code> 目录下, 可以复制修改以定制主题</em></p>
 
   
 

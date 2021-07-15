@@ -570,18 +570,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -683,17 +671,6 @@
     
       <li>
         
-        <a href="../form/index.html" class="sidebar-link">表单</a>
-        
-        
-        
-      </li>
-    
-  
-    
-    
-      <li>
-        
         <a href="../actionsheet/index.html" class="sidebar-link">ActionSheet</a>
         
         
@@ -706,8 +683,24 @@
   
     
     
+      <li>
+        
+        <a href="../button/index.html" class="sidebar-link">Button</a>
+        
+        
+        
+      </li>
+    
   
     
+    
+      <li>
+        
+        <a href="../checkbox/index.html" class="sidebar-link">Checkbox</a>
+        
+        
+        
+      </li>
     
   
     
@@ -719,6 +712,9 @@
         
         
       </li>
+    
+  
+    
     
   
     
@@ -756,6 +752,17 @@
   
     
     
+      <li>
+        
+        <a href="../radio/index.html" class="sidebar-link">Radio</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
   
     
     
@@ -765,11 +772,13 @@
   
     
     
-  
-    
-    
-  
-    
+      <li>
+        
+        <a href="../switch/index.html" class="sidebar-link">Switch</a>
+        
+        
+        
+      </li>
     
   
     
@@ -839,6 +848,11 @@
 </blockquote>
 <pre><code>可以使用基础库中的路由方法来监控路由变化
 </code></pre>
+<blockquote>
+<p>可使用全局方法设置配置</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * set navbarview default config.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">bp.setNavbarDefaultCfg(cfg: &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * default retain page dom in `push` method.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  retainPageInPush?: boolean,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * It will refresh page when change routes between different layouts.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  allLayouts?: string[],</span><br><span class="line">&#125;): <span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+
 <h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><table>
 <thead>
 <tr>
@@ -1032,12 +1046,14 @@
 </tr>
 </tbody></table>
 <p><em>在<code>viewWillAppear</code>方法中调用navbar相关方法设置navbar时, 设置的状态只会作用于当前的页面; 而所有导航页面的默认状态由navbarView组件创建时的属性和样式决定</em></p>
-<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><h3 id="内置动画类型"><a href="#内置动画类型" class="headerlink" title="内置动画类型"></a>内置动画类型</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type AnimateType = <span class="string">&#x27;slide&#x27;</span>|<span class="string">&#x27;slideOut&#x27;</span>|<span class="string">&#x27;fade&#x27;</span>|<span class="string">&#x27;fadeOut&#x27;</span>|<span class="string">&#x27;lift&#x27;</span>|<span class="string">&#x27;liftOut&#x27;</span>|<span class="string">&#x27;none&#x27;</span>|string,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面平滑滚动用:</span></span><br><span class="line"><span class="built_in">window</span>.scrollTo(&#123; <span class="attr">top</span>: <span class="number">0</span>, <span class="attr">left</span>: <span class="number">0</span>, <span class="attr">behavior</span>: <span class="string">&quot;smooth&quot;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面瞬间滚动用:</span></span><br><span class="line"><span class="built_in">window</span>.scrollTo(&#123; <span class="attr">top</span>: <span class="number">0</span>, <span class="attr">left</span>: <span class="number">0</span>, <span class="attr">behavior</span>: <span class="string">&quot;instant&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="页面滚动"><a href="#页面滚动" class="headerlink" title="页面滚动"></a>页面滚动</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 页面平滑滚动用:</span></span><br><span class="line"><span class="built_in">window</span>.scrollTo(&#123; <span class="attr">top</span>: <span class="number">0</span>, <span class="attr">left</span>: <span class="number">0</span>, <span class="attr">behavior</span>: <span class="string">&quot;smooth&quot;</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面瞬间滚动用:</span></span><br><span class="line"><span class="built_in">window</span>.scrollTo(&#123; <span class="attr">top</span>: <span class="number">0</span>, <span class="attr">left</span>: <span class="number">0</span>, <span class="attr">behavior</span>: <span class="string">&quot;instant&quot;</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="内置动画类型"><a href="#内置动画类型" class="headerlink" title="内置动画类型"></a>内置动画类型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type AnimateType = <span class="string">&#x27;slide&#x27;</span>|<span class="string">&#x27;slideOut&#x27;</span>|<span class="string">&#x27;fade&#x27;</span>|<span class="string">&#x27;fadeOut&#x27;</span>|<span class="string">&#x27;lift&#x27;</span>|<span class="string">&#x27;liftOut&#x27;</span>|<span class="string">&#x27;none&#x27;</span>|string,</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>使用 <code>none</code> 或 ‘’, 表示无动画;</li>
 <li><code>Out</code> 结尾表示回退动画.</li>
-<li>除预设动画外, 可以定义转场动画, 按如下定义动画类:</li>
+<li>除预设动画外, 可以自定义转场动画; 按如下实例定义slide动画样式类:</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * slide 带50%偏移</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="selector-class">.slide-enter</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-enter-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">99999</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-enter-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-leave</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-leave-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slide-leave-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * slideOut 带50%偏移</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="selector-class">.slideOut-enter</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(-<span class="number">50vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-enter-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-enter-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-leave</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">0vw</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-leave-active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">0.3s</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">99999</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slideOut-leave-to</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateX</span>(<span class="number">100vw</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1054,24 +1070,7 @@
 <h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: push a page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>animate: 所有允许的动画, 例如: slide, fade, lift</span></span><br><span class="line"><span class="comment">  *                 &#x27;&#x27;   - 无动画.</span></span><br><span class="line"><span class="comment">  *                 null - 默认动画</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>query: url查询参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>retainPage: 表示是否保留当前的页面组件; 为false时将销毁当前页面的dom.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">push(cfg:&#123;</span><br><span class="line">  path: string,</span><br><span class="line">  query?: &#123; [key: string]: any &#125;,</span><br><span class="line">  animate?:AnimateType,</span><br><span class="line">  data?: any,</span><br><span class="line">&#125;, retainPage?: boolean = <span class="literal">false</span>):<span class="keyword">void</span>;</span><br><span class="line">push(path:string, retainPage?: boolean = <span class="literal">false</span>):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
 
 <p>可以使用 <code>bpui.setNavbarDefaultCfg(..)</code> 接口设置默认的retainPage行为.</p>
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><p>回退操作可以指定一个 <code>data</code> 数据, 回退时, 前一个页面的 <code>viewAppear</code> 方法将传递这个数据.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop a page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">pop(cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop to top-page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">popToTop(cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop to to route page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>n: 负值表示退后的步数.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>cfg.data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">popTo(n:number, cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: replace current route.</span></span><br><span class="line"><span class="comment">  *        root页面不可被replace; 如果当前是root页面, 则等同于push.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>animate: 所有允许的动画, 例如: slide, fade, lift</span></span><br><span class="line"><span class="comment">  *                 &#x27;&#x27;   - 无动画.</span></span><br><span class="line"><span class="comment">  *                 null - 默认动画</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>query: url查询参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">replace(cfg:&#123;</span><br><span class="line">  path: string,</span><br><span class="line">  query?: &#123; [key: string]: string &#125;,</span><br><span class="line">  animate?:AnimateType,</span><br><span class="line">  data?: any,</span><br><span class="line">&#125;):<span class="keyword">void</span>;</span><br><span class="line">replace(path:string):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="自定义navbar"><a href="#自定义navbar" class="headerlink" title="自定义navbar"></a>自定义navbar</h2><p>提供名为<code>navbar</code>的组件实现自定义navbar</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  自定义内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>自定义navbar可以放置在任意位置, 但只有最后一个navbar会生效; </p>
-<p>使用自定义的navbar后, 依然可以使用 <code>setBarInfo(&#123;hidden:true&#125;)</code> api进行bar的显示控制.</p>
-<h3 id="双向绑定问题"><a href="#双向绑定问题" class="headerlink" title="双向绑定问题"></a>双向绑定问题</h3><p>使用自定义navbar时, 自定义内容必须如果未包含在一个元素内时将无法响应内容改变, 如:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  &#123;&#123;str&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>str变化时, 界面无法响应改变;</p>
-<p>需要将内容,至少包裹在一个元素内以能够双向绑定,如:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;str&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="routerLink"><a href="#routerLink" class="headerlink" title="routerLink"></a>routerLink</h2><p>除使用方法进行导航外, 还可以使用 <code>router-link</code> 组件;</p>
+<h4 id="routerLink"><a href="#routerLink" class="headerlink" title="routerLink"></a>routerLink</h4><p>除使用方法进行导航外, 还可以使用 <code>router-link</code> 组件;</p>
 <p>系统对 router-link进行了重写; 总体兼容, 但做了一些修改:</p>
 <ul>
 <li>router-link 不支持active-class,exact-active-class属性; tag属性仅能为’a’</li>
@@ -1083,6 +1082,23 @@
 </ul>
 <p>例如</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/page1&quot;</span> <span class="attr">animate</span>=<span class="string">&quot;slide&quot;</span> <span class="attr">data</span>=<span class="string">&quot;附带的数据&quot;</span>&gt;</span>跳转<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:back</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data</span>=<span class="string">&quot;附带的数据&quot;</span>&gt;</span>回退<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/page1&quot;</span> <span class="attr">:replace</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data</span>=<span class="string">&quot;附带的数据&quot;</span>&gt;</span>替换本页面<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><p>回退操作可以指定一个 <code>data</code> 数据, 回退时, 前一个页面的 <code>viewAppear</code> 方法将传递这个数据.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop a page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">pop(cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop to top-page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">popToTop(cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: pop to to route page.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>n: 负值表示退后的步数.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>cfg.data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">popTo(n:number, cfg?:&#123;animate?:AnimateType, data?:any&#125;):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: replace current route.</span></span><br><span class="line"><span class="comment">  *        root页面不可被replace; 如果当前是root页面, 则等同于push.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>animate: 所有允许的动画, 例如: slide, fade, lift</span></span><br><span class="line"><span class="comment">  *                 &#x27;&#x27;   - 无动画.</span></span><br><span class="line"><span class="comment">  *                 null - 默认动画</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>query: url查询参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>data: 下一个页面viewAppear 中附带的参数</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">replace(cfg:&#123;</span><br><span class="line">  path: string,</span><br><span class="line">  query?: &#123; [key: string]: string &#125;,</span><br><span class="line">  animate?:AnimateType,</span><br><span class="line">  data?: any,</span><br><span class="line">&#125;):<span class="keyword">void</span>;</span><br><span class="line">replace(path:string):<span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><h2 id="自定义navbar"><a href="#自定义navbar" class="headerlink" title="自定义navbar"></a>自定义navbar</h2><p>提供名为<code>navbar</code>的组件实现自定义navbar</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  自定义内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>自定义navbar可以放置在任意位置, 但只有最后一个navbar会生效; </p>
+<p>使用自定义的navbar后, 依然可以使用 <code>setBarInfo(&#123;hidden:true&#125;)</code> api进行bar的显示控制.</p>
+<h3 id="双向绑定问题"><a href="#双向绑定问题" class="headerlink" title="双向绑定问题"></a>双向绑定问题</h3><p>使用自定义navbar时, 自定义内容必须如果未包含在一个元素内时将无法响应内容改变, 如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  &#123;&#123;str&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>str变化时, 界面无法响应改变;</p>
+<p>需要将内容,至少包裹在一个元素内以能够双向绑定,如:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navbar</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;str&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">navbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>组件中使用到的图标名称都是以 <code>bp-navbar_</code> 开头, 使用到的图标有:</p>
 <table>
