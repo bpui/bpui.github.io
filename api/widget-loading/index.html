@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Radio — bpui</title>
+    <title>Loading — bpui</title>
     <meta charset="utf-8">
     <meta name="description" content="bpui Develop Document">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -826,7 +826,7 @@
     
       <li>
         
-        <a href="../widget-loading/index.html" class="sidebar-link">Loading</a>
+        <a href="" class="sidebar-link current">Loading</a>
         
         
         
@@ -870,7 +870,7 @@
     
       <li>
         
-        <a href="" class="sidebar-link current">Radio</a>
+        <a href="../radio/index.html" class="sidebar-link">Radio</a>
         
         
         
@@ -959,95 +959,45 @@
 
 <div class="content api with-sidebar ">
   
-    <h1>Radio</h1>
+    <h1>Loading</h1>
   
   
-    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><ul>
+    <ul>
 <li><a href="#introduce">Introduce</a></li>
-<li><a href="#props">props</a></li>
-<li><a href="#events">events</a></li>
-<li><a href="#example">example</a></li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a><ul>
-<li><a href="#%E5%9B%BE%E6%A0%87">图标</a></li>
+<li><a href="#methods">methods</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6">自定义组件</a><ul>
+<li><a href="#%E6%B3%A8%E5%86%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E7%9A%84%E8%A6%81%E6%B1%82">注册的自定义组件的要求</a></li>
 <li><a href="#%E6%A0%B7%E5%BC%8F%E7%BB%93%E6%9E%84">样式结构</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p><code>bpRadioGroup</code></p>
-<table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th>描述</th>
-<th>类型</th>
-<th>可选值</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">value / v-model</td>
-<td>绑定值</td>
-<td>string / number / boolean</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td align="center">disabled</td>
-<td>是否禁用</td>
-<td>boolean或’disabled’</td>
-<td>—</td>
-<td>false</td>
-</tr>
-</tbody></table>
-<p><code>bpRadio</code></p>
-<table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th>描述</th>
-<th>类型</th>
-<th>可选值</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">value</td>
-<td>radio的值</td>
-<td>string / number / boolean</td>
-<td>—</td>
-<td>—</td>
-</tr>
-</tbody></table>
-<h2 id="events"><a href="#events" class="headerlink" title="events"></a>events</h2><p><code>bpRadioGroup</code></p>
-<table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">回调参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">change(value):void</td>
-<td align="center">当前组的值改变后的回调</td>
-<td align="center">选中的bpRadio的值</td>
-</tr>
-</tbody></table>
-<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>示例代码.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-radio-group</span> <span class="attr">v-model</span>=<span class="string">&quot;value1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bp-radio</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">bp-radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bp-radio</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">bp-radio</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bp-radio-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>dialog包在初始化时, 会自动向Vue注入一个名为 <code>$bpWidget</code> 的对象, 可以使用此对象进行弹出警告框等操作.</p>
+<p>如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.$bpWidget.showLoading(<span class="string">&#x27;提示信息&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line">bpui.apiWidget.showLoading(<span class="string">&#x27;提示信息&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="mdJmJBj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-radio">
-  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/mdJmJBj">
-  bpui-radio</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
+<p class="codepen" data-height="451" data-theme-id="dark" data-default-tab="js,result" data-user="brainpoint" data-slug-hash="LYVLOYe" style="height: 451px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bp-apiWidget">
+  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/LYVLOYe">
+  bp-apiWidget</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
   on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件的样式结构如下:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-radio</span> &#123;</span><br><span class="line">  <span class="comment">/* radio input部分 */</span></span><br><span class="line">  <span class="selector-class">.bp-radio__input</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/* label部分 */</span></span><br><span class="line">  <span class="selector-class">.bp-radio__label</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 当前是否显示.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">bpui.apiWidget.isLoadingVisible():boolean;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 隐藏</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">bpui.apiWidget.hideLoading():<span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 显示.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">bpui.apiWidget.showLoading(cfg?:string|&#123;</span><br><span class="line">    content?: string,</span><br><span class="line">    <span class="comment">/** 延迟指定的时间后才显示, 但延迟后如果调用了hide, 则不显示 */</span></span><br><span class="line">    delay?: number</span><br><span class="line">&#125;):<span class="keyword">void</span>; </span><br></pre></td></tr></table></figure>
 
-<p><em>scss样式文件存放在<code>@bpui/radio/style</code> 目录下, 可以复制修改以定制主题</em></p>
+<h2 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h2><ul>
+<li>使用api进行自定义组件的注册, api如下:</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 注册警告框等组件.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">bpui.registerDialogComponents(&#123;<span class="attr">loading</span>: component&#125;): <span class="keyword">void</span>;</span><br></pre></td></tr></table></figure>
 
+<p>对<code>loading</code>进行组件注册后, 调用 <code>bpui.apiWidget.showLoading</code> 将会弹出注册的组件.</p>
+<h3 id="注册的自定义组件的要求"><a href="#注册的自定义组件的要求" class="headerlink" title="注册的自定义组件的要求"></a>注册的自定义组件的要求</h3><ul>
+<li>content数据: 表示内容文本</li>
+</ul>
+<p>如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;widget <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bp-loading&quot;</span> :mask=<span class="string">&quot;false&quot;</span> :preventEvent=<span class="string">&quot;true&quot;</span>&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bp-loading__main&quot;</span>&gt;</span><br><span class="line">      &lt;bp-icon name=<span class="string">&quot;loading&quot;</span>/&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;bp-loading__text&quot;</span>&gt;</span><br><span class="line">      &#123;&#123;content&#125;&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/widget&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    components: &#123;</span><br><span class="line">      widget: bpui.bpWidget,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        content: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件显示的样式结构如下:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-widget</span><span class="selector-class">.bp-loading</span>&#123;</span><br><span class="line">  <span class="comment">/* 上侧图标 */</span></span><br><span class="line">  <span class="selector-class">.bp-loading__main</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 下侧文本 */</span></span><br><span class="line">  <span class="selector-class">.bp-loading__text</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   
 
   

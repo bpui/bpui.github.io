@@ -1557,7 +1557,7 @@ ul.demo li {
 }
 @media screen and (max-width: 3000px) {
   .content.with-sidebar {
-    margin-left: 250px;
+    margin-left: 300px;
   }
   #ad {
     z-index: 1;

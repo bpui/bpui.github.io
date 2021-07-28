@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>文本 — bpui</title>
+    <title>Uploader — bpui</title>
     <meta charset="utf-8">
     <meta name="description" content="bpui Develop Document">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -721,39 +721,9 @@
     
       <li>
         
-        <a href="index.html" class="sidebar-link">基础样式</a>
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
         
         
-        
-          <ul class="menu-sub">
-            
-            
-        
-            
-              <li class="menu-sub">
-                <a href="border.html" class="sidebar-link">Retina边框</a>      
-              </li>
-            
-        
-            
-              <li class="menu-sub">
-                <a href="var.html" class="sidebar-link">公共变量</a>      
-              </li>
-            
-        
-            
-              <li class="menu-sub">
-                <a href="" class="sidebar-link current">文本</a>      
-              </li>
-            
-        
-            
-              <li class="menu-sub">
-                <a href="device.html" class="sidebar-link">设备识别</a>      
-              </li>
-            
-        
-          </ul>
         
       </li>
     
@@ -950,9 +920,27 @@
     
       <li>
         
-        <a href="../uploader/index.html" class="sidebar-link">Uploader</a>
+        <a href="" class="sidebar-link current">Uploader</a>
         
         
+        
+          <ul class="menu-sub">
+            
+            
+              <li class="menu-sub">
+                <a href="fileUploader.html" class="sidebar-link">FileUploader</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="imageCropUploader.html" class="sidebar-link">ImageCropUploader</a>      
+              </li>
+            
+        
+            
+        
+          </ul>
         
       </li>
     
@@ -989,42 +977,27 @@
 
 <div class="content api with-sidebar ">
   
-    <h1>文本</h1>
+    <h1>Uploader</h1>
   
   
-    <p>使用如下示例代码可以对文本进行平滑、省略符等设置.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;@bpui/style&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="comment">// 使得 div下文字平滑.</span></span><br><span class="line">  <span class="keyword">@include</span> bp-smoothing();</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p class="codepen" data-height="437" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="MWwbQBO" style="height: 437px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-style-text">
-  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/MWwbQBO">
-  bpui-style-text</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-<h2 id="bp-smoothing"><a href="#bp-smoothing" class="headerlink" title="bp-smoothing"></a>bp-smoothing</h2><p>设置文字平滑.</p>
-<blockquote>
-<p>除使用mixin外, 还可以使用内置的类 <code>.bp-smoothing</code>.</p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-smoothing();</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-ellipsis"><a href="#bp-ellipsis" class="headerlink" title="bp-ellipsis"></a>bp-ellipsis</h2><p>设置文字单行缩略.</p>
-<blockquote>
-<p>display属性的设置对缩略有影响; 单行缩略文本需要为 <code>display: block</code>,  <code>display: inline-block</code> 或其他flow-root等允许的值</p>
-</blockquote>
-<blockquote>
-<p>除使用mixin外, 还可以使用内置的类 <code>.bp-ellipsis</code></p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-ellipsis();</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-ellipsisMultiline"><a href="#bp-ellipsisMultiline" class="headerlink" title="bp-ellipsisMultiline"></a>bp-ellipsisMultiline</h2><p>设置文字多行缩略文本.</p>
-<blockquote>
-<p>display属性的设置对缩略有影响; 多行缩略文本已经设置为 <code>display: -webkit-box</code></p>
-</blockquote>
-<blockquote>
-<p>除使用mixin外, 还可以使用内置的类 <code>.bp-ellipsisMultiline1</code>, <code>.bp-ellipsisMultiline2</code>, … , <code>.bp-ellipsisMultiline8</code> 分别表示最大1~8行的文本缩略.</p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-ellipsisMultiline(最大行数)</span><br></pre></td></tr></table></figure>
+    <h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>提供如下上传组件:</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="./imageUploader.html">FileUploader</a></td>
+<td>任意文件上传; 使用 multipart 方式上传; 上传的是图片则会带预览图</td>
+</tr>
+<tr>
+<td><a href="./imageCropUploader.html">ImageCropUploader</a></td>
+<td>可以在浏览器端进行图片裁剪缩放后上传; 使用 multipart 方式上传</td>
+</tr>
+</tbody></table>
+<h3 id="自定义API"><a href="#自定义API" class="headerlink" title="自定义API"></a>自定义API</h3><p>除预设组件外, 用户可以使用文件上传相关api, 自定义上传组件</p>
 
   
 
@@ -1032,7 +1005,7 @@
     <div class="guide-links">
       
       
-        <span>← <a href="index.html">0基础样式</a></span>
+        <span>← <a href="">Uploader</a></span>
       
       
       

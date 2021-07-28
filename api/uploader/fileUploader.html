@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Checkbox — bpui</title>
+    <title>FileUploader — bpui</title>
     <meta charset="utf-8">
     <meta name="description" content="bpui Develop Document">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -776,7 +776,7 @@
     
       <li>
         
-        <a href="" class="sidebar-link current">Checkbox</a>
+        <a href="../checkbox/index.html" class="sidebar-link">Checkbox</a>
         
         
         
@@ -920,9 +920,27 @@
     
       <li>
         
-        <a href="../uploader/index.html" class="sidebar-link">Uploader</a>
+        <a href="index.html" class="sidebar-link">Uploader</a>
         
         
+        
+          <ul class="menu-sub">
+            
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">FileUploader</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="imageCropUploader.html" class="sidebar-link">ImageCropUploader</a>      
+              </li>
+            
+        
+            
+        
+          </ul>
         
       </li>
     
@@ -959,78 +977,246 @@
 
 <div class="content api with-sidebar ">
   
-    <h1>Checkbox</h1>
+    <h1>FileUploader</h1>
   
   
-    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><ul>
+    <ul>
 <li><a href="#introduce">Introduce</a></li>
 <li><a href="#props">props</a></li>
-<li><a href="#events">events</a></li>
+<li><a href="#events">events</a><ul>
+<li><a href="#%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF">错误信息</a></li>
+</ul>
+</li>
+<li><a href="#methods">methods</a></li>
 <li><a href="#example">example</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%82%E9%85%8D">服务端适配</a></li>
+<li><a href="#%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0">断点续传</a></li>
 <li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a><ul>
 <li><a href="#%E5%9B%BE%E6%A0%87">图标</a></li>
 <li><a href="#%E6%A0%B7%E5%BC%8F%E7%BB%93%E6%9E%84">样式结构</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><table>
+<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>以 multipart/form-data 格式上传; 完整上传原始图片.</p>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p>常规属性</p>
+<table>
 <thead>
 <tr>
-<th align="center">名称</th>
+<th>名称</th>
 <th>描述</th>
-<th>类型</th>
+<th align="center">类型</th>
 <th>可选值</th>
 <th>默认值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">value / v-model</td>
-<td>绑定值; 等同于checked</td>
-<td>boolean</td>
+<td>coverUrl</td>
+<td>封面</td>
+<td align="center">string</td>
 <td>—</td>
 <td>—</td>
 </tr>
 <tr>
-<td align="center">checked</td>
-<td>当前是否勾选</td>
-<td>boolean</td>
-<td>—</td>
-<td>false</td>
+<td>serverUrl</td>
+<td>上传服务器的地址</td>
+<td align="center">string</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td align="center">disabled</td>
+<td>accept</td>
+<td>接受文件的类型</td>
+<td align="center">string</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>maxFileSize</td>
+<td>允许上传的最大文件字节数.0表示无限制</td>
+<td align="center">number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>上传超时</td>
+<td align="center">number</td>
+<td>—</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>disabled</td>
 <td>是否禁用</td>
-<td>boolean或’disabled’</td>
+<td align="center">boolean</td>
 <td>—</td>
 <td>false</td>
+</tr>
+<tr>
+<td>httpHeaders</td>
+<td>上传时的请求headers对象</td>
+<td align="center">map</td>
+<td>—</td>
+<td>-</td>
+</tr>
+<tr>
+<td>crossDomain</td>
+<td>是否跨域</td>
+<td align="center">boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>withCredentials</td>
+<td>是否附带cookie</td>
+<td align="center">boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>breakpointResume</td>
+<td>用于断点续传</td>
+<td align="center">(file: File, crc32: number, cb: (sliceOffset: number) =&gt; void) =&gt; void;</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>tip</td>
+<td>提示文字</td>
+<td align="center">string</td>
+<td>—</td>
+<td>点击上传</td>
+</tr>
+<tr>
+<td>enableDragFile</td>
+<td>打开拖拽文件特性</td>
+<td align="center">boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>textErrFileNotFound</td>
+<td>未选择文件错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>未选择文件!</td>
+</tr>
+<tr>
+<td>textErrFileSizeExceed</td>
+<td>选择的文件大小超出最大值错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>选择的文件大小超出最大值!</td>
+</tr>
+<tr>
+<td>textErrFileHashError</td>
+<td>计算文件哈希值时发生错误错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>计算文件哈希值时发生错误,请重新选择文件!</td>
+</tr>
+<tr>
+<td>textErrNetError</td>
+<td>网络错误错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>网络错误,请稍后重试!</td>
 </tr>
 </tbody></table>
 <h2 id="events"><a href="#events" class="headerlink" title="events"></a>events</h2><table>
 <thead>
 <tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
+<th align="center">事件名称</th>
+<th align="center">说明</th>
 <th align="center">回调参数</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">change(checked):void</td>
-<td align="center">选中状态改变事件</td>
-<td align="center">更新后的值</td>
+<td align="center">uploadSuccess</td>
+<td align="center">上传成功返回图片地址</td>
+<td align="center">(serverData: any)</td>
+</tr>
+<tr>
+<td align="center">uploadProgress</td>
+<td align="center">上传进度</td>
+<td align="center">(percent: number)</td>
+</tr>
+<tr>
+<td align="center">uploadError</td>
+<td align="center">上传出错</td>
+<td align="center">(err: any)</td>
+</tr>
+</tbody></table>
+<h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><p>当上传发生错误时, err会等于下列值:</p>
+<table>
+<thead>
+<tr>
+<th>错误信息</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FILE_NOT_FOUND:<code>string</code></td>
+<td>未选择文件</td>
+</tr>
+<tr>
+<td>FILE_SIZE_EXCEED:<code>string</code></td>
+<td>选择的文件大小超出允许的大小值</td>
+</tr>
+<tr>
+<td>FILE_HASH_ERROR:<code>string</code></td>
+<td>验算文件hash值时出错</td>
+</tr>
+<tr>
+<td>NET_ERROR:<code>string</code></td>
+<td>网络错误</td>
+</tr>
+<tr>
+<td>e:<code>Error</code></td>
+<td>任意的错误对象表明其他错误</td>
+</tr>
+</tbody></table>
+<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">reset()</td>
+<td align="center">重置上传组件</td>
+</tr>
+<tr>
+<td align="center">browseFile()</td>
+<td align="center">打开浏览文件对话框</td>
 </tr>
 </tbody></table>
 <h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>示例代码.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-checkbox</span> <span class="attr">v-model</span>=<span class="string">&quot;checked&quot;</span>&gt;</span>chk1<span class="tag">&lt;/<span class="name">bp-checkbox</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bp-checkbox</span> <span class="attr">checked</span>=<span class="string">&quot;checked&quot;</span> &gt;</span>chk2<span class="tag">&lt;/<span class="name">bp-checkbox</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bp-checkbox</span> <span class="attr">disabled</span>=<span class="string">&quot;disabled&quot;</span> &gt;</span>chk3<span class="tag">&lt;/<span class="name">bp-checkbox</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-file-uploader</span> <span class="attr">serverUrl</span>=<span class="string">&quot;http://127.0.0.1:8080/upload&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p class="codepen" data-height="387" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="mdJmyPr" style="height: 387px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-checkbox">
-  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/mdJmyPr">
-  bpui-checkbox</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h2 id="服务端适配"><a href="#服务端适配" class="headerlink" title="服务端适配"></a>服务端适配</h2><p>客户端请求</p>
+<ul>
+<li><code>multipart/form-data</code> 格式上传; </li>
+<li><code>POST</code> 方法</li>
+<li>会在请求url后添加 ?<code>crc32</code>=xxx&amp;<code>size</code>=xxx&amp;<code>offset</code>=0; 三个查询参数; <ul>
+<li>size: 文件总字节大小</li>
+<li>crc32: 文件hash值</li>
+<li>offset: 当前上传数据的偏移地址.</li>
+</ul>
+</li>
+<li>会将data字符串字段添加到url查询参考中 ?<code>data</code>=xxx;</li>
+</ul>
+<p>服务端响应</p>
+<ul>
+<li>响应内容需为<code>json</code>格式</li>
+</ul>
+<h2 id="断点续传"><a href="#断点续传" class="headerlink" title="断点续传"></a>断点续传</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-file-uploader</span> <span class="attr">:breakpointResume</span>=<span class="string">&quot;handleBreakpointResume&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用breakpointResume属性传递断点续传方法, 在文件开始上传前, 通过回调告知需要开始上传的偏移地址.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleBreakpointResume</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  file: File, </span></span></span><br><span class="line"><span class="function"><span class="params">  crc32: <span class="built_in">number</span>, </span></span></span><br><span class="line"><span class="function"><span class="params">  cb: (sliceOffset: <span class="built_in">number</span>) =&gt; <span class="built_in">void</span></span></span></span><br><span class="line"><span class="function"><span class="params"></span>):<span class="title">void</span> </span>&#123;</span><br><span class="line">  <span class="comment">// check file segment.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// callback.</span></span><br><span class="line">  cb(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>组件中使用到的图标有:</p>
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>组件使用到的图标有:</p>
 <table>
 <thead>
 <tr>
@@ -1039,21 +1225,27 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>bp-checkbox_checked</td>
-<td>选中状态的打钩图标</td>
+<td>bp-uploader_add</td>
+<td>上传组件中的+图标, 表明点击开始选择上传文件</td>
+</tr>
+<tr>
+<td>bp-uploader_cancel</td>
+<td>上传时的取消按钮图标</td>
 </tr>
 </tbody></table>
-<p><em>可以使用<code>bpui.icons.registerSvgIcon(&#39;name&#39;, &lt;svg file&gt;)</code>方式, 进行组件图标自定义</em></p>
+<p><em>可以使用<code>bpui.icons.registerSvgIcon</code>方式, 进行组件图标自定义</em></p>
 <h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件的样式结构如下:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-checkbox</span> &#123;</span><br><span class="line">  <span class="comment">/* checkbox input部分 */</span></span><br><span class="line">  <span class="selector-class">.bp-checkbox__input</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/* label部分 */</span></span><br><span class="line">  <span class="selector-class">.bp-checkbox__label</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-uploader</span> &#123;</span><br><span class="line">  <span class="comment">/* 进度条 */</span></span><br><span class="line">  <span class="selector-class">.bp-uploader__progress</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 主内容块 */</span></span><br><span class="line">  <span class="selector-class">.bp-uploader__file-content-main</span> &#123;</span><br><span class="line">    <span class="comment">/* 图片预览 */</span></span><br><span class="line">    <span class="selector-class">.bp-uploader__cover</span> &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><em>scss样式文件存放在<code>@bpui/checkbox/style</code> 目录下, 可以复制修改以定制主题</em></p>
+<p><em>scss样式文件存放在<code>@bpui/uploder/style</code> 目录下, 可以复制修改以定制主题</em></p>
 
   
 
   
     <div class="guide-links">
       
+      
+        <span>← <a href="index.html">Uploader</a></span>
       
       
       

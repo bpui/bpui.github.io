@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>文本 — bpui</title>
+    <title>ImageCropUploader — bpui</title>
     <meta charset="utf-8">
     <meta name="description" content="bpui Develop Document">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -721,39 +721,9 @@
     
       <li>
         
-        <a href="index.html" class="sidebar-link">基础样式</a>
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
         
         
-        
-          <ul class="menu-sub">
-            
-            
-        
-            
-              <li class="menu-sub">
-                <a href="border.html" class="sidebar-link">Retina边框</a>      
-              </li>
-            
-        
-            
-              <li class="menu-sub">
-                <a href="var.html" class="sidebar-link">公共变量</a>      
-              </li>
-            
-        
-            
-              <li class="menu-sub">
-                <a href="" class="sidebar-link current">文本</a>      
-              </li>
-            
-        
-            
-              <li class="menu-sub">
-                <a href="device.html" class="sidebar-link">设备识别</a>      
-              </li>
-            
-        
-          </ul>
         
       </li>
     
@@ -950,9 +920,27 @@
     
       <li>
         
-        <a href="../uploader/index.html" class="sidebar-link">Uploader</a>
+        <a href="index.html" class="sidebar-link">Uploader</a>
         
         
+        
+          <ul class="menu-sub">
+            
+            
+              <li class="menu-sub">
+                <a href="fileUploader.html" class="sidebar-link">FileUploader</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="" class="sidebar-link current">ImageCropUploader</a>      
+              </li>
+            
+        
+            
+        
+          </ul>
         
       </li>
     
@@ -989,42 +977,245 @@
 
 <div class="content api with-sidebar ">
   
-    <h1>文本</h1>
+    <h1>ImageCropUploader</h1>
   
   
-    <p>使用如下示例代码可以对文本进行平滑、省略符等设置.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;@bpui/style&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="comment">// 使得 div下文字平滑.</span></span><br><span class="line">  <span class="keyword">@include</span> bp-smoothing();</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+    <ul>
+<li><a href="#introduce">Introduce</a></li>
+<li><a href="#props">props</a></li>
+<li><a href="#events">events</a><ul>
+<li><a href="#%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF">错误信息</a></li>
+</ul>
+</li>
+<li><a href="#methods">methods</a></li>
+<li><a href="#example">example</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%82%E9%85%8D">服务端适配</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a><ul>
+<li><a href="#%E5%9B%BE%E6%A0%87">图标</a></li>
+<li><a href="#%E6%A0%B7%E5%BC%8F%E7%BB%93%E6%9E%84">样式结构</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>可以在浏览器端进行图片裁剪缩放后上传.</p>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p>常规属性</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th align="center">类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>coverUrl</td>
+<td>封面</td>
+<td align="center">string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>serverUrl</td>
+<td>上传服务器的地址</td>
+<td align="center">string</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>maxFileSize</td>
+<td>允许上传的最大文件字节数.0表示无限制</td>
+<td align="center">number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>上传超时</td>
+<td align="center">number</td>
+<td>—</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用</td>
+<td align="center">boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>httpHeaders</td>
+<td>上传时的请求headers对象</td>
+<td align="center">map</td>
+<td>—</td>
+<td>-</td>
+</tr>
+<tr>
+<td>crossDomain</td>
+<td>是否跨域</td>
+<td align="center">boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>withCredentials</td>
+<td>是否附带cookie</td>
+<td align="center">boolean</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>tip</td>
+<td>提示文字</td>
+<td align="center">string</td>
+<td>—</td>
+<td>点击上传</td>
+</tr>
+<tr>
+<td>enableDragFile</td>
+<td>打开拖拽文件特性</td>
+<td align="center">boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>textErrFileNotFound</td>
+<td>未选择文件错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>未选择文件!</td>
+</tr>
+<tr>
+<td>textErrFileSizeExceed</td>
+<td>选择的文件大小超出最大值错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>选择的文件大小超出最大值!</td>
+</tr>
+<tr>
+<td>textErrFileHashError</td>
+<td>计算文件哈希值时发生错误错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>计算文件哈希值时发生错误,请重新选择文件!</td>
+</tr>
+<tr>
+<td>textErrNetError</td>
+<td>网络错误错误提示</td>
+<td align="center">string</td>
+<td>-</td>
+<td>网络错误,请稍后重试!</td>
+</tr>
+</tbody></table>
+<h2 id="events"><a href="#events" class="headerlink" title="events"></a>events</h2><table>
+<thead>
+<tr>
+<th align="center">事件名称</th>
+<th align="center">说明</th>
+<th align="center">回调参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">uploadSuccess</td>
+<td align="center">上传成功返回图片地址</td>
+<td align="center">(serverData: any)</td>
+</tr>
+<tr>
+<td align="center">uploadProgress</td>
+<td align="center">上传进度</td>
+<td align="center">(percent: number)</td>
+</tr>
+<tr>
+<td align="center">uploadError</td>
+<td align="center">上传出错</td>
+<td align="center">(err: any)</td>
+</tr>
+</tbody></table>
+<h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><p>当上传发生错误时, err会等于下列值:</p>
+<table>
+<thead>
+<tr>
+<th>错误信息</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FILE_NOT_FOUND:<code>string</code></td>
+<td>未选择文件</td>
+</tr>
+<tr>
+<td>FILE_SIZE_EXCEED:<code>string</code></td>
+<td>选择的文件大小超出允许的大小值</td>
+</tr>
+<tr>
+<td>FILE_HASH_ERROR:<code>string</code></td>
+<td>验算文件hash值时出错</td>
+</tr>
+<tr>
+<td>NET_ERROR:<code>string</code></td>
+<td>网络错误</td>
+</tr>
+<tr>
+<td>e:<code>Error</code></td>
+<td>任意的错误对象表明其他错误</td>
+</tr>
+</tbody></table>
+<h2 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h2><table>
+<thead>
+<tr>
+<th align="center">方法名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">reset()</td>
+<td align="center">重置上传组件</td>
+</tr>
+<tr>
+<td align="center">browseFile()</td>
+<td align="center">打开浏览文件对话框</td>
+</tr>
+</tbody></table>
+<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>示例代码.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-image-crop-uploader</span> <span class="attr">serverUrl</span>=<span class="string">&quot;http://127.0.0.1:8080/upload&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p class="codepen" data-height="437" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="MWwbQBO" style="height: 437px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-style-text">
-  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/MWwbQBO">
-  bpui-style-text</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<h2 id="服务端适配"><a href="#服务端适配" class="headerlink" title="服务端适配"></a>服务端适配</h2><p>客户端请求</p>
+<ul>
+<li><code>multipart/form-data</code> 格式上传; </li>
+<li><code>POST</code> 方法</li>
+<li>会在请求url后添加 ?<code>crc32</code>=xxx&amp;<code>size</code>=xxx; 两个查询参数.</li>
+<li>会将data字符串字段添加到url查询参考中 ?<code>data</code>=xxx;</li>
+</ul>
+<p>服务端响应</p>
+<ul>
+<li>响应内容需为<code>json</code>格式</li>
+</ul>
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>组件使用到的图标有:</p>
+<table>
+<thead>
+<tr>
+<th>图标名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bp-uploader_add</td>
+<td>上传组件中的+图标, 表明点击开始选择上传文件</td>
+</tr>
+<tr>
+<td>bp-uploader_cancel</td>
+<td>上传时的取消按钮图标</td>
+</tr>
+<tr>
+<td>bp-uploader_ok</td>
+<td>上传时的确认按钮图标</td>
+</tr>
+</tbody></table>
+<p><em>可以使用<code>bpui.icons.registerSvgIcon</code>方式, 进行组件图标自定义</em></p>
+<h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件的样式结构如下:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-uploader-image-crop</span> &#123;</span><br><span class="line">  <span class="comment">/* 进度条 */</span></span><br><span class="line">  <span class="selector-class">.bp-uploader-image__progress</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 主内容块 */</span></span><br><span class="line">  <span class="selector-class">.bp-uploader-image__file-content-main</span> &#123;</span><br><span class="line">    <span class="comment">/* 图片预览 */</span></span><br><span class="line">    <span class="selector-class">.bp-uploader-image__cover</span> &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="bp-smoothing"><a href="#bp-smoothing" class="headerlink" title="bp-smoothing"></a>bp-smoothing</h2><p>设置文字平滑.</p>
-<blockquote>
-<p>除使用mixin外, 还可以使用内置的类 <code>.bp-smoothing</code>.</p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-smoothing();</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-ellipsis"><a href="#bp-ellipsis" class="headerlink" title="bp-ellipsis"></a>bp-ellipsis</h2><p>设置文字单行缩略.</p>
-<blockquote>
-<p>display属性的设置对缩略有影响; 单行缩略文本需要为 <code>display: block</code>,  <code>display: inline-block</code> 或其他flow-root等允许的值</p>
-</blockquote>
-<blockquote>
-<p>除使用mixin外, 还可以使用内置的类 <code>.bp-ellipsis</code></p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-ellipsis();</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-ellipsisMultiline"><a href="#bp-ellipsisMultiline" class="headerlink" title="bp-ellipsisMultiline"></a>bp-ellipsisMultiline</h2><p>设置文字多行缩略文本.</p>
-<blockquote>
-<p>display属性的设置对缩略有影响; 多行缩略文本已经设置为 <code>display: -webkit-box</code></p>
-</blockquote>
-<blockquote>
-<p>除使用mixin外, 还可以使用内置的类 <code>.bp-ellipsisMultiline1</code>, <code>.bp-ellipsisMultiline2</code>, … , <code>.bp-ellipsisMultiline8</code> 分别表示最大1~8行的文本缩略.</p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-ellipsisMultiline(最大行数)</span><br></pre></td></tr></table></figure>
+<p><em>scss样式文件存放在<code>@bpui/uploder/style</code> 目录下, 可以复制修改以定制主题</em></p>
 
   
 
@@ -1032,7 +1223,7 @@
     <div class="guide-links">
       
       
-        <span>← <a href="index.html">0基础样式</a></span>
+        <span>← <a href="index.html">Uploader</a></span>
       
       
       

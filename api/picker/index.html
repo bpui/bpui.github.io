@@ -570,6 +570,78 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -680,6 +752,14 @@
   
     
     
+      <li>
+        
+        <a href="../widget-alert/index.html" class="sidebar-link">AlertBox</a>
+        
+        
+        
+      </li>
+    
   
     
     
@@ -707,7 +787,7 @@
     
       <li>
         
-        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        <a href="../widget-confirm/index.html" class="sidebar-link">ConfirmBox</a>
         
         
         
@@ -718,7 +798,35 @@
     
       <li>
         
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
         <a href="../input/index.html" class="sidebar-link">Input</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget-loading/index.html" class="sidebar-link">Loading</a>
         
         
         
@@ -791,6 +899,28 @@
       <li>
         
         <a href="../switch/index.html" class="sidebar-link">Switch</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget-toast/index.html" class="sidebar-link">Toast</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../uploader/index.html" class="sidebar-link">Uploader</a>
         
         
         
@@ -1035,19 +1165,19 @@
 <td>日期数据源; 提供年月日的选择</td>
 </tr>
 </tbody></table>
-<h3 id="PickerSingleDatasource构造方法如下"><a href="#PickerSingleDatasource构造方法如下" class="headerlink" title="PickerSingleDatasource构造方法如下:"></a>PickerSingleDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number </span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
+<h3 id="PickerSingleDatasource构造方法"><a href="#PickerSingleDatasource构造方法" class="headerlink" title="PickerSingleDatasource构造方法"></a>PickerSingleDatasource构造方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number </span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
 
-<h3 id="PickerDoubleDatasource构造方法如下"><a href="#PickerDoubleDatasource构造方法如下" class="headerlink" title="PickerDoubleDatasource构造方法如下:"></a>PickerDoubleDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number,</span><br><span class="line">                      children?: Array&lt; &#123;label, value&#125; &gt;</span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
+<h3 id="PickerDoubleDatasource构造方法"><a href="#PickerDoubleDatasource构造方法" class="headerlink" title="PickerDoubleDatasource构造方法"></a>PickerDoubleDatasource构造方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number,</span><br><span class="line">                      children?: Array&lt; &#123;label, value&#125; &gt;</span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
 
-<h3 id="PickerThreeDatasource构造方法如下"><a href="#PickerThreeDatasource构造方法如下" class="headerlink" title="PickerThreeDatasource构造方法如下:"></a>PickerThreeDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number,</span><br><span class="line">                      children?: Array&lt; &#123;label, value, children?&#125; &gt;</span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
+<h3 id="PickerThreeDatasource构造方法"><a href="#PickerThreeDatasource构造方法" class="headerlink" title="PickerThreeDatasource构造方法"></a>PickerThreeDatasource构造方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new( datasource: Array&lt;&#123; </span><br><span class="line">                      label:string, </span><br><span class="line">                      value:string|number,</span><br><span class="line">                      children?: Array&lt; &#123;label, value, children?&#125; &gt;</span><br><span class="line">                      &#125;&gt; );</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>如果直接将 datasource作为属性, 将会自动计算属于1组,2组,3组数据源中哪一个, 并自动构造.</p>
 </blockquote>
-<h3 id="PickerTimeDatasource构造方法如下"><a href="#PickerTimeDatasource构造方法如下" class="headerlink" title="PickerTimeDatasource构造方法如下:"></a>PickerTimeDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new(cfg:&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 小时显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    hourText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 分钟显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    minuteText?:string,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="PickerTimeDatasource构造方法"><a href="#PickerTimeDatasource构造方法" class="headerlink" title="PickerTimeDatasource构造方法"></a>PickerTimeDatasource构造方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new(cfg:&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 小时显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    hourText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 分钟显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    minuteText?:string,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="PickerDateDatasource构造方法如下"><a href="#PickerDateDatasource构造方法如下" class="headerlink" title="PickerDateDatasource构造方法如下:"></a>PickerDateDatasource构造方法如下:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">new(cfg:&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 月显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    monthText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 日显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    dateText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年份从哪一年开始</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearFrom?:number,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年份到哪一年结束</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearTo?:number,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="PickerDateDatasource构造方法"><a href="#PickerDateDatasource构造方法" class="headerlink" title="PickerDateDatasource构造方法"></a>PickerDateDatasource构造方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">new(cfg:&#123;</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 月显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    monthText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 日显示的文本</span><br><span class="line">    *&#x2F;</span><br><span class="line">    dateText?:string,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年份从哪一年开始</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearFrom?:number,</span><br><span class="line">    &#x2F;**</span><br><span class="line">    * @desc: 年份到哪一年结束</span><br><span class="line">    *&#x2F;</span><br><span class="line">    yearTo?:number,</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 
 <h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><p>picker样式结构如下:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-picker</span> &#123;</span><br><span class="line">  <span class="comment">/* 显示状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__visible</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 隐藏状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__invisible</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 除遮罩层外的对话框内容 */</span></span><br><span class="line">  <span class="selector-class">.bp-widget__content</span> &#123;</span><br><span class="line">    <span class="comment">/* wrap层 */</span></span><br><span class="line">    <span class="selector-class">.bp-widget__contentWrap</span> &#123;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/* 按钮栏 */</span></span><br><span class="line">      <span class="selector-class">.bp-picker__toolbar</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/* picker区域 */</span></span><br><span class="line">      <span class="selector-class">.bp-picker__main</span> &#123;</span><br><span class="line">        <span class="comment">/* 数据组 */</span></span><br><span class="line">        <span class="selector-class">.bp-picker__group</span> &#123;&#125;</span><br><span class="line">        <span class="selector-class">.bp-picker__group</span> &#123;&#125;</span><br><span class="line">        <span class="selector-class">.bp-picker__group</span> &#123;</span><br><span class="line">          <span class="comment">/* 掩码层, 做事件及渐变 */</span></span><br><span class="line">          <span class="selector-class">.bp-picker__mask</span> &#123;&#125;</span><br><span class="line">          <span class="comment">/* 当前选中 */</span></span><br><span class="line">          <span class="selector-class">.bp-picker__indicator</span> &#123;&#125;</span><br><span class="line">          <span class="comment">/* 列表内容 */</span></span><br><span class="line">          <span class="selector-class">.bp-picker__content</span> &#123;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">            <span class="selector-class">.bp-picker__item</span> &#123;&#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

@@ -570,6 +570,78 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -716,6 +788,14 @@
   
     
     
+      <li>
+        
+        <a href="../widget-alert/index.html" class="sidebar-link">AlertBox</a>
+        
+        
+        
+      </li>
+    
   
     
     
@@ -743,7 +823,7 @@
     
       <li>
         
-        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        <a href="../widget-confirm/index.html" class="sidebar-link">ConfirmBox</a>
         
         
         
@@ -754,7 +834,35 @@
     
       <li>
         
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
         <a href="../input/index.html" class="sidebar-link">Input</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget-loading/index.html" class="sidebar-link">Loading</a>
         
         
         
@@ -835,6 +943,28 @@
   
     
     
+      <li>
+        
+        <a href="../widget-toast/index.html" class="sidebar-link">Toast</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../uploader/index.html" class="sidebar-link">Uploader</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
   
     
     
@@ -876,7 +1006,7 @@
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-<h2 id="手势类定义"><a href="#手势类定义" class="headerlink" title="手势类定义"></a>手势类定义</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 手势.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">interface GestureRecognizer &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@desc</span>: 在指定手势识别失败后才识别到.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  requireFailure(ges:GestureRecognizer):<span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 手势对象.</span></span><br><span class="line"><span class="comment">*       只提供默认的手势, 不提供自定义手势的添加方法.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Gesture</span> </span>&#123;</span><br><span class="line">  <span class="title">constructor</span>(<span class="params">dom:HTMLElement|SVGElement</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加tap手势识别.</span></span><br><span class="line"><span class="comment">  *         只能识别 tapCount=1,2,3 的情景.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>: 对同一个tapCount值, 只能添加一个手势识别对象; 重复添加, 将返回上一次添加的识别对象.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enableTapRecognizer(cfg?:&#123;</span><br><span class="line">    tapCount:<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span></span><br><span class="line">  &#125;):GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消tap手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disableTapRecognizer(cfg:&#123;</span><br><span class="line">    tapCount:<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span></span><br><span class="line">  &#125;): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加pan手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>direction: 只能为left,right,up,down; 不能为组合.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span>: 对同一个direction值, 只能添加一个手势识别对象; 重复添加, 将返回上一次添加的识别对象.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enablePanRecognizer(cfg:&#123;</span><br><span class="line">    direction:bp.GestureDirection</span><br><span class="line">  &#125;):GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消pan手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disablePanRecognizer(direction:bp.GestureDirection): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加pinch手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enablePinchRecognizer(): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消pinch手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disablePinchRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加rotate手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enableRotateRecognizer(): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消rotate手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disableRotateRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加press手势识别. 允许设置按压时间等.</span></span><br><span class="line"><span class="comment">  *         只能有一个press手势识别.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>duration: 按压时间. ms</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enablePressRecognizer(cfg:&#123;</span><br><span class="line">    duration:number</span><br><span class="line">  &#125;): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消rotate手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disablePressRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 添加swipe手势识别.</span></span><br><span class="line"><span class="comment">  *         - 相同的pointers值, 只能有一个swipe手势识别.</span></span><br><span class="line"><span class="comment">  *         - 桌面端pointers无效.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  enableSwipeRecognizer(cfg?:&#123;</span><br><span class="line">    velocity?:number,  <span class="comment">// (default: 0.3) Minimal velocity required before recognizing, unit is in px per ms.</span></span><br><span class="line">    distance?:number,  <span class="comment">// (default: 10) Minimal distance required before recognizing</span></span><br><span class="line">    pointers?:number,  <span class="comment">// (default: 1)</span></span><br><span class="line">  &#125;): bp.GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 取消swipe手势识别.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  disableSwipeRecognizer(cfg?:&#123;</span><br><span class="line">    pointers: number,</span><br><span class="line">  &#125;): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 事件监听.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  on(event:<span class="string">&#x27;tap&#x27;</span>|<span class="string">&#x27;pan&#x27;</span>|<span class="string">&#x27;pinch&#x27;</span>|<span class="string">&#x27;rotate&#x27;</span>|<span class="string">&#x27;press&#x27;</span>|<span class="string">&#x27;swipe&#x27;</span>, <span class="attr">handler</span>:bp.GestureListener):Gesture;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 移除事件监听.</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param </span>handler: 不传递时, 移除指定类型的所有监听.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  off(event:<span class="string">&#x27;tap&#x27;</span>|<span class="string">&#x27;pan&#x27;</span>|<span class="string">&#x27;pinch&#x27;</span>|<span class="string">&#x27;rotate&#x27;</span>|<span class="string">&#x27;press&#x27;</span>|<span class="string">&#x27;swipe&#x27;</span>, handler?:bp.GestureListener):Gesture;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="手势类定义"><a href="#手势类定义" class="headerlink" title="手势类定义"></a>手势类定义</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 手势对象.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">interface GestureRecognizer &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 与指定手势同时发生. 在需要同时识别多个手势时使用.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  recognizeWith(otherGes:GestureRecognizer):GestureRecognizer;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@desc</span>: 在指定手势识别失败后才识别到.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  requireFailure(ges:GestureRecognizer):<span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 手势对象.</span></span><br><span class="line"><span class="comment">*       只提供默认的手势, 不提供自定义手势的添加方法.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Gesture</span> </span>&#123;</span><br><span class="line">  <span class="title">constructor</span>(<span class="params">dom:HTMLElement|SVGElement</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 清理所有设置.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    dispose(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 添加tap手势识别.</span></span><br><span class="line"><span class="comment">    *         只能识别 tapCount=1,2,3 的情景.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span>: 对同一个tapCount值, 只能添加一个手势识别对象; 重复添加, 将返回上一次添加的识别对象.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    enableTapRecognizer(cfg?:&#123;</span><br><span class="line">      tapCount:<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span></span><br><span class="line">    &#125;):GestureRecognizer;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 取消tap手势识别.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    disableTapRecognizer(cfg:&#123;</span><br><span class="line">      tapCount:<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span></span><br><span class="line">    &#125;): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 添加pan手势识别.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span>: 对同一个direction值, 只能添加一个手势识别对象; 重复添加, 将返回上一次添加的识别对象.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    enablePanRecognizer(cfg:&#123;</span><br><span class="line">      pointers: <span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>,</span><br><span class="line">    &#125;):GestureRecognizer;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 取消pan手势识别.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    disablePanRecognizer(cfg:&#123;</span><br><span class="line">      pointers: <span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>,</span><br><span class="line">    &#125;): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 添加pinch手势识别.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    enablePinchRecognizer(): GestureRecognizer;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 取消pinch手势识别.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    disablePinchRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 添加rotate手势识别.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    enableRotateRecognizer(): GestureRecognizer;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 取消rotate手势识别.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    disableRotateRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 添加press手势识别. 允许设置按压时间等.</span></span><br><span class="line"><span class="comment">    *         只能有一个press手势识别.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param </span>duration: 按压时间. ms</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    enablePressRecognizer(cfg:&#123;</span><br><span class="line">      duration:number</span><br><span class="line">    &#125;): GestureRecognizer;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 取消rotate手势识别.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    disablePressRecognizer(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 添加swipe手势识别.</span></span><br><span class="line"><span class="comment">    *         - 相同的pointers值, 只能有一个swipe手势识别.</span></span><br><span class="line"><span class="comment">    *         - 桌面端pointers无效.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@description </span>默认手势enable操作会重置默认手势的requireFailure关系.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    enableSwipeRecognizer(cfg?:&#123;</span><br><span class="line">      velocity?:number,  <span class="comment">// (default: 0.3) Minimal velocity required before recognizing, unit is in px per ms.</span></span><br><span class="line">      distance?:number,  <span class="comment">// (default: 10) Minimal distance required before recognizing</span></span><br><span class="line">      pointers?:<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>,  <span class="comment">// (default: 1)</span></span><br><span class="line">    &#125;): GestureRecognizer;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 取消swipe手势识别.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    disableSwipeRecognizer(cfg?:&#123;</span><br><span class="line">      pointers: <span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>,</span><br><span class="line">    &#125;): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 事件监听.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    on(event:<span class="string">&#x27;tap&#x27;</span>|<span class="string">&#x27;pan&#x27;</span>|<span class="string">&#x27;pinch&#x27;</span>|<span class="string">&#x27;rotate&#x27;</span>|<span class="string">&#x27;press&#x27;</span>|<span class="string">&#x27;swipe&#x27;</span>, <span class="attr">handler</span>:GestureListener):Gesture;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@desc</span>: 移除事件监听.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param </span>handler: 不传递时, 移除指定类型的所有监听.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    off(event:<span class="string">&#x27;tap&#x27;</span>|<span class="string">&#x27;pan&#x27;</span>|<span class="string">&#x27;pinch&#x27;</span>|<span class="string">&#x27;rotate&#x27;</span>|<span class="string">&#x27;press&#x27;</span>|<span class="string">&#x27;swipe&#x27;</span>, handler?:GestureListener):Gesture;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="手势类型"><a href="#手势类型" class="headerlink" title="手势类型"></a>手势类型</h2><table>
 <thead>
@@ -910,16 +1040,12 @@
 <td>滑动, 允许单指/双指/三指滑动 (桌面端只能为1指)</td>
 </tr>
 </tbody></table>
-<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><h3 id="tap"><a href="#tap" class="headerlink" title="tap"></a>tap</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ges = <span class="keyword">new</span> bpui.libs.Gesture($(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">ges.enableTapRecognizer(&#123;<span class="attr">tapCount</span>:<span class="number">2</span>&#125;);</span><br><span class="line">ges.on(<span class="string">&#x27;tap&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// double tap.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><h3 id="tap"><a href="#tap" class="headerlink" title="tap"></a>tap</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ges = <span class="keyword">new</span> bpui.libs.Gesture(<span class="built_in">window</span>.document.body);</span><br><span class="line"></span><br><span class="line">ges.enableTapRecognizer(&#123;<span class="attr">tapCount</span>:<span class="number">2</span>&#125;);</span><br><span class="line">ges.on(<span class="string">&#x27;tap&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// double tap.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<h3 id="swipe"><a href="#swipe" class="headerlink" title="swipe"></a>swipe</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ges = <span class="keyword">new</span> bpui.libs.Gesture($(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">ges.enableSwipeRecognizer();</span><br><span class="line">ges.on(<span class="string">&#x27;swipe&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// swipe event.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="swipe"><a href="#swipe" class="headerlink" title="swipe"></a>swipe</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ges = <span class="keyword">new</span> bpui.libs.Gesture(<span class="built_in">window</span>.document.body);</span><br><span class="line"></span><br><span class="line">ges.enableSwipeRecognizer();</span><br><span class="line">ges.on(<span class="string">&#x27;swipe&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// swipe event.</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <h3 id="requireFailure"><a href="#requireFailure" class="headerlink" title="requireFailure"></a>requireFailure</h3><p>可以使用此方法对手势识别的优先级进行设置.</p>
-<p>```js<br>import bpui from ‘bpui.js’;</p>
-<p>let ges = new bpui.libs.Gesture($(‘body’)[0]);</p>
-<p>let recognizerSwipe = ges.enableSwipeRecognizer();<br>let recognizerTap = ges.enableTapRecognizer();</p>
-<p>// swipe手势将在tap手势识别失败后才开始识别.<br>recognizerSwipe.requireFailure(recognizerTap);<br>``</p>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ges = <span class="keyword">new</span> bpui.libs.Gesture(<span class="built_in">window</span>.document.body);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> recognizerSwipe = ges.enableSwipeRecognizer();</span><br><span class="line"><span class="keyword">let</span> recognizerTap = ges.enableTapRecognizer();</span><br><span class="line"></span><br><span class="line"><span class="comment">// swipe手势将在tap手势识别失败后才开始识别.</span></span><br><span class="line">recognizerSwipe.requireFailure(recognizerTap);</span><br></pre></td></tr></table></figure>
   
 
   

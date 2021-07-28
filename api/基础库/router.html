@@ -570,6 +570,78 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -716,6 +788,14 @@
   
     
     
+      <li>
+        
+        <a href="../widget-alert/index.html" class="sidebar-link">AlertBox</a>
+        
+        
+        
+      </li>
+    
   
     
     
@@ -743,7 +823,7 @@
     
       <li>
         
-        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        <a href="../widget-confirm/index.html" class="sidebar-link">ConfirmBox</a>
         
         
         
@@ -754,7 +834,35 @@
     
       <li>
         
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
         <a href="../input/index.html" class="sidebar-link">Input</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget-loading/index.html" class="sidebar-link">Loading</a>
         
         
         
@@ -835,6 +943,28 @@
   
     
     
+      <li>
+        
+        <a href="../widget-toast/index.html" class="sidebar-link">Toast</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../uploader/index.html" class="sidebar-link">Uploader</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
   
     
     
@@ -872,7 +1002,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> bpui <span class="keyword">from</span> <span class="string">&#x27;bpui.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line">bpui.libs.router.push(...);</span><br><span class="line"><span class="comment">// 等同于如下代码.</span></span><br><span class="line"><span class="built_in">this</span>.$router.push(...);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>router接口如下:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">type Directory&lt;T&gt; = &#123; [key: string]: T &#125;;</span><br><span class="line">type Location = &#123;<span class="attr">path</span>: string, query?: Directory&lt;string&gt;, state?: Directory&lt;any&gt; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * router接口. (仅需提供如下接口)</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">interface IRouter &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 历史记录长度 (length名称在ie下不可重定义,故使用pageLength).</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  pageLength:number;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 当前的路由信息.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  currentRoute: bp.Location;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 路由控制. 可由trigger指定是否触发routeChanged通知.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  push( path: string ) : <span class="keyword">void</span>;</span><br><span class="line">  push( path: string, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  push( location: Location ) : <span class="keyword">void</span>;</span><br><span class="line">  push( location: Location, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( path: string ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( path: string, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( location: Location ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( location: Location, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  back() : <span class="keyword">void</span>;</span><br><span class="line">  forward() : <span class="keyword">void</span>;</span><br><span class="line">  go(n: number) : <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 获得对应location的一个页面组件. (返回的是组件类, 而非创建出来的实例)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  getMatchedComponent( </span><br><span class="line">    location: Location, </span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">      *  加载完成. </span></span><br><span class="line"><span class="comment">      *  如果是异步加载,在生成完成时, 可以调用onLoaded将加载完成的组件回传, 下次加载时,将直接返回加载后的组件.</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">    onLoad:<span class="function">(<span class="params">component:any, onLoaded?:(component:any)=&gt;<span class="keyword">void</span></span>)=&gt;</span><span class="keyword">void</span>,</span><br><span class="line">    <span class="comment">/** 匹配不到指定的路由组件. */</span></span><br><span class="line">    onError:<span class="function">(<span class="params">err:<span class="built_in">Error</span></span>)=&gt;</span><span class="keyword">void</span></span><br><span class="line">  ): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 路由改变事件.</span></span><br><span class="line"><span class="comment">    * type 表示路由切换的标记.</span></span><br><span class="line"><span class="comment">    *   1: 表示是replace.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  on(eventType:<span class="string">&#x27;routeChanged&#x27;</span>, <span class="attr">handler</span>:<span class="function">(<span class="params">to:bp.Location, type?:number</span>)=&gt;</span><span class="keyword">void</span>) : <span class="keyword">void</span>;</span><br><span class="line">  off(eventType:<span class="string">&#x27;routeChanged&#x27;</span>, handler?:<span class="function">(<span class="params">to:bp.Location, type?:number</span>)=&gt;</span><span class="keyword">void</span>) : <span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">type Directory&lt;T&gt; = &#123; [key: string]: T &#125;;</span><br><span class="line">type Location = &#123;<span class="attr">path</span>: string, query?: Directory&lt;string&gt;, state?: Directory&lt;any&gt; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * router接口. (仅需提供如下接口)</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">interface IRouter &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 历史记录长度 (length名称在ie下不可重定义,故使用pageLength).</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  pageLength:number;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 当前的路由信息.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  currentRoute: bp.Location;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 路由控制. 可由trigger指定是否触发routeChanged通知.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  push( path: string ) : <span class="keyword">void</span>;</span><br><span class="line">  push( path: string, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  push( location: Location ) : <span class="keyword">void</span>;</span><br><span class="line">  push( location: Location, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( path: string ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( path: string, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( location: Location ) : <span class="keyword">void</span>;</span><br><span class="line">  replace( location: Location, <span class="attr">trigger</span>:boolean ) : <span class="keyword">void</span>;</span><br><span class="line">  back() : <span class="keyword">void</span>;</span><br><span class="line">  forward() : <span class="keyword">void</span>;</span><br><span class="line">  go(n: number) : <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 获得对应location的一个页面组件. (返回的是组件类, 而非创建出来的实例)</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return </span>明确返回false表明匹配不到路由.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  getMatchedComponent( </span><br><span class="line">    location: Location, </span><br><span class="line">    <span class="comment">/** </span></span><br><span class="line"><span class="comment">      *  加载完成. </span></span><br><span class="line"><span class="comment">      *  如果是异步加载,在生成完成时, 可以调用onLoaded将加载完成的组件回传, 下次加载时,将直接返回加载后的组件.</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">    onLoad:<span class="function">(<span class="params">component:any, onLoaded?:(component:any)=&gt;<span class="keyword">void</span></span>)=&gt;</span><span class="keyword">void</span>,</span><br><span class="line">    <span class="comment">/** 匹配不到指定的路由组件. */</span></span><br><span class="line">    onError:<span class="function">(<span class="params">err:<span class="built_in">Error</span></span>)=&gt;</span><span class="keyword">void</span></span><br><span class="line">  ): <span class="keyword">void</span>|<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 路由改变事件.</span></span><br><span class="line"><span class="comment">    * type 表示路由切换的标记.</span></span><br><span class="line"><span class="comment">    *   1: 表示是replace.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  on(eventType:<span class="string">&#x27;routeChanged&#x27;</span>, <span class="attr">handler</span>:<span class="function">(<span class="params">to:bp.Location, type?:number</span>)=&gt;</span><span class="keyword">void</span>) : <span class="keyword">void</span>;</span><br><span class="line">  off(eventType:<span class="string">&#x27;routeChanged&#x27;</span>, handler?:<span class="function">(<span class="params">to:bp.Location, type?:number</span>)=&gt;</span><span class="keyword">void</span>) : <span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="设置第三方router"><a href="#设置第三方router" class="headerlink" title="设置第三方router"></a>设置第三方router</h2><p>可以使用以下方式设置自定义实现的router.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bpui.libs.setupRouter(router: IBPRouter);</span><br></pre></td></tr></table></figure>

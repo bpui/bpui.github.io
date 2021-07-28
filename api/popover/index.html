@@ -570,6 +570,78 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -680,6 +752,14 @@
   
     
     
+      <li>
+        
+        <a href="../widget-alert/index.html" class="sidebar-link">AlertBox</a>
+        
+        
+        
+      </li>
+    
   
     
     
@@ -707,7 +787,7 @@
     
       <li>
         
-        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        <a href="../widget-confirm/index.html" class="sidebar-link">ConfirmBox</a>
         
         
         
@@ -718,7 +798,35 @@
     
       <li>
         
+        <a href="../dialog/index.html" class="sidebar-link">Dialog</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      <li>
+        
         <a href="../input/index.html" class="sidebar-link">Input</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget-loading/index.html" class="sidebar-link">Loading</a>
         
         
         
@@ -791,6 +899,28 @@
       <li>
         
         <a href="../switch/index.html" class="sidebar-link">Switch</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../widget-toast/index.html" class="sidebar-link">Toast</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../uploader/index.html" class="sidebar-link">Uploader</a>
         
         
         
@@ -945,9 +1075,14 @@
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">ref</span>=<span class="string">&quot;btn1&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;visible=true&quot;</span>&gt;</span>显示<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bp-popover</span> <span class="attr">:bind</span>=<span class="string">&quot;$refs.btn1&quot;</span> <span class="attr">:visible</span>=<span class="string">&quot;visible&quot;</span>&gt;</span></span><br><span class="line">  any content</span><br><span class="line"><span class="tag">&lt;/<span class="name">bp-popover</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<ol start="3">
+<li>使用cell样式</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-popover</span> <span class="attr">:bind</span>=<span class="string">&quot;$refs.btn1&quot;</span> <span class="attr">direction</span>=<span class="string">&quot;right&quot;</span> <span class="attr">trigger</span>=<span class="string">&quot;click&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bp-popover__cell&quot;</span>&gt;</span>cell 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bp-popover__cell&quot;</span>&gt;</span>cell 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bp-popover__cell&quot;</span>&gt;</span>cell 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bp-popover__cell&quot;</span>&gt;</span>cell 4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bp-popover__cellWarn&quot;</span>&gt;</span>cell warn<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bp-popover</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
 <h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><p>popover样式结构如下:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-popover</span> &#123;</span><br><span class="line">  <span class="comment">/* 显示状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__visible</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 隐藏状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__invisible</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 除遮罩层外的对话框内容 */</span></span><br><span class="line">  <span class="selector-class">.bp-widget__content</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 主区域 */</span></span><br><span class="line">    <span class="selector-class">.bp-popover__main</span> &#123;</span><br><span class="line">      <span class="comment">/* 箭头 */</span></span><br><span class="line">      <span class="selector-class">.bp-popover__arrow</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/* 箭头不同状态 */</span></span><br><span class="line">      &amp;<span class="selector-attr">[direction^=bottom]</span> &#123;&#125;</span><br><span class="line">      &amp;<span class="selector-attr">[direction^=top]</span> &#123;&#125;</span><br><span class="line">      &amp;<span class="selector-attr">[direction^=left]</span> &#123;&#125;</span><br><span class="line">      &amp;<span class="selector-attr">[direction^=right]</span> &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-popover</span> &#123;</span><br><span class="line">  <span class="comment">/* 显示状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__visible</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 隐藏状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-widget__invisible</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 除遮罩层外的对话框内容 */</span></span><br><span class="line">  <span class="selector-class">.bp-widget__content</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 主区域 */</span></span><br><span class="line">    <span class="selector-class">.bp-popover__main</span> &#123;</span><br><span class="line">      <span class="comment">/* 箭头 */</span></span><br><span class="line">      <span class="selector-class">.bp-popover__arrow</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/* 箭头不同状态 */</span></span><br><span class="line">      &amp;<span class="selector-attr">[direction^=bottom]</span> &#123;&#125;</span><br><span class="line">      &amp;<span class="selector-attr">[direction^=top]</span> &#123;&#125;</span><br><span class="line">      &amp;<span class="selector-attr">[direction^=left]</span> &#123;&#125;</span><br><span class="line">      &amp;<span class="selector-attr">[direction^=right]</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/* cell 样式 */</span></span><br><span class="line">      <span class="selector-class">.bp-popover__cell</span> &#123;&#125;</span><br><span class="line">      <span class="selector-class">.bp-popover__cellWarn</span> &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><em>scss样式文件存放在<code>@bpui/popover/style</code> 目录下, 可以复制修改以定制主题</em></p>
 
