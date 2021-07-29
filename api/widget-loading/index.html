@@ -1005,6 +1005,8 @@
 <h3 id="内部计数"><a href="#内部计数" class="headerlink" title="内部计数"></a>内部计数</h3><ul>
 <li>无论调用<code>showLoading</code>多少次后, 只要调用一次<code>hideLoading</code>就可以隐藏loading</li>
 <li>而调用<code>showLoadingIncrease</code>一次, 就需要相应调用一次<code>hideLoadingDecrease</code>来隐藏</li>
+<li><code>showLoading</code>只能由<code>hideLoading</code>隐藏</li>
+<li><code>showLoadingIncrease</code>只能由<code>hideLoadingDecrease</code>隐藏</li>
 </ul>
 <p>此特性可以用于异步网络请求等场景</p>
 <h2 id="自定义组件"><a href="#自定义组件" class="headerlink" title="自定义组件"></a>自定义组件</h2><ul>
