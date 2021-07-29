@@ -642,6 +642,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -727,6 +739,12 @@
             
               <li class="menu-sub">
                 <a href="dom.html" class="sidebar-link">dom</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="events.html" class="sidebar-link">事件监听器</a>      
               </li>
             
         
@@ -984,6 +1002,9 @@
     
     
   
+    
+    
+  
 </ul>
 
       
@@ -1004,7 +1025,8 @@
 <li><a href="./dom.html">dom基础库</a></li>
 <li><a href="./gesture.html">gesture手势</a></li>
 <li><a href="./router.html">router路由</a></li>
-<li><a href="./timer.html">timer安全计时器</a><h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2></li>
+<li><a href="./timer.html">timer安全计时器</a></li>
+<li><a href="./events.html">eventMgr安全事件监听</a><h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2></li>
 </ul>
 <p>提供vue插件完成一些任务, 在vue初始化时需要使用插件 (如果使用bpui.js包, 会自动注册).<br>引入插件后能完成如下任务:</p>
 <ol>
@@ -1012,6 +1034,8 @@
 <li>非chrome浏览器的滚动动画polyfill</li>
 <li>自动注入 <code>$timer</code> 计时器管理对象到vue对象中.</li>
 <li>自动注入 <code>$bpLibs</code> 对象到vue对象中.</li>
+<li>自动注入 <code>$febs</code> 对象到vue对象中.</li>
+<li>自动注入 <code>$bpEventMgr</code> 对象到vue对象中.</li>
 </ol>
 <p>在vue对象中我们可以这样使用:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 使用计时器</span></span><br><span class="line">  <span class="built_in">this</span>.$timer.setTimeout(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 使用bpLibs对象.</span></span><br><span class="line">  <span class="built_in">this</span>.$bpLibs.dom.isVueObject(<span class="built_in">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

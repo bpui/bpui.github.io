@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Retina边框 — bpui</title>
+    <title>事件监听器 — bpui</title>
     <meta charset="utf-8">
     <meta name="description" content="bpui Develop Document">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -722,18 +722,7 @@
     
       <li>
         
-        <a href="../%E5%9F%BA%E7%A1%80%E5%BA%93/index.html" class="sidebar-link">基础库</a>
-        
-        
-        
-      </li>
-    
-  
-    
-    
-      <li>
-        
-        <a href="index.html" class="sidebar-link">基础样式</a>
+        <a href="index.html" class="sidebar-link">基础库</a>
         
         
         
@@ -743,29 +732,52 @@
         
             
               <li class="menu-sub">
-                <a href="" class="sidebar-link current">Retina边框</a>      
+                <a href="router.html" class="sidebar-link">Router</a>      
               </li>
             
         
             
               <li class="menu-sub">
-                <a href="var.html" class="sidebar-link">公共变量</a>      
+                <a href="dom.html" class="sidebar-link">dom</a>      
               </li>
             
         
             
               <li class="menu-sub">
-                <a href="text.html" class="sidebar-link">文本</a>      
+                <a href="" class="sidebar-link current">事件监听器</a>      
               </li>
             
         
             
               <li class="menu-sub">
-                <a href="device.html" class="sidebar-link">设备识别</a>      
+                <a href="gesture.html" class="sidebar-link">手势</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="timer.html" class="sidebar-link">计时器</a>      
+              </li>
+            
+        
+            
+              <li class="menu-sub">
+                <a href="device.html" class="sidebar-link">设备</a>      
               </li>
             
         
           </ul>
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
+        <a href="../%E5%9F%BA%E7%A1%80%E6%A0%B7%E5%BC%8F/index.html" class="sidebar-link">基础样式</a>
+        
+        
         
       </li>
     
@@ -1004,37 +1016,16 @@
 
 <div class="content api with-sidebar ">
   
-    <h1>Retina边框</h1>
+    <h1>事件监听器</h1>
   
   
-    <p>使用如下示例代码可以在retina屏幕下生成1px的细边框, 用于listView等组件可使得视觉效果更佳.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;@bpui/style&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="comment">// 使用mixin的方式引入.</span></span><br><span class="line">  <span class="keyword">@include</span> bp-thinBorder(<span class="number">#fff</span>);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+    <h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>libs提供了事件监听工具, 可以用于安全添加dom事件监听, 防止页面消失后,忘记移除事件监听方法的问题.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>如果在vue中, 自动会在vue对象中注入 <code>$bpEventMgr</code> 对象. </p>
+<p>可以按如下的方式使用:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Vue</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 在组件销毁时将自动移除事件监听.</span></span><br><span class="line">    <span class="built_in">this</span>.$bpEventMgr.addEventListener(<span class="built_in">window</span>, <span class="string">&#x27;resize&#x27;</span>, <span class="function">()=&gt;</span>&#123;</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<p><em>只有一个mixin会生效</em></p>
-<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="brainpoint" data-slug-hash="wvaomNm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bpui-style-thinBorder">
-  <span>See the Pen <a target="_blank" rel="noopener" href="https://codepen.io/brainpoint/pen/wvaomNm">
-  bpui-style-thinBorder</a> by brainpoint (<a target="_blank" rel="noopener" href="https://codepen.io/brainpoint">@brainpoint</a>)
-  on <a target="_blank" rel="noopener" href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-<h2 id="bp-thinBorder"><a href="#bp-thinBorder" class="headerlink" title="bp-thinBorder"></a>bp-thinBorder</h2><p>全边框</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-thinBorder(颜色值);</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-thinBorderTop"><a href="#bp-thinBorderTop" class="headerlink" title="bp-thinBorderTop"></a>bp-thinBorderTop</h2><p>上边框</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-thinBorderTop(颜色值);</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-thinBorderBottom"><a href="#bp-thinBorderBottom" class="headerlink" title="bp-thinBorderBottom"></a>bp-thinBorderBottom</h2><p>下边框</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-thinBorderBottom(颜色值);</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-thinBorderLeft"><a href="#bp-thinBorderLeft" class="headerlink" title="bp-thinBorderLeft"></a>bp-thinBorderLeft</h2><p>左边框</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-thinBorderLeft(颜色值);</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-thinBorderRight"><a href="#bp-thinBorderRight" class="headerlink" title="bp-thinBorderRight"></a>bp-thinBorderRight</h2><p>右边框</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-thinBorderRight(颜色值);</span><br></pre></td></tr></table></figure>
-
-<h2 id="bp-thinBorderTopLeft"><a href="#bp-thinBorderTopLeft" class="headerlink" title="bp-thinBorderTopLeft"></a>bp-thinBorderTopLeft</h2><p>左上边框</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@include</span> bp-thinBorderTopLeft(颜色值);</span><br></pre></td></tr></table></figure>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>timer接口如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@desc</span>: 事件管理器.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">EventMgr</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@desc</span> 清理所有的事件监听.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  dispose(): EventMgr;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@desc</span> 现存监听数量.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  listenerLength(): number;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 统一处理 addEventListener, attachEvent; 并提供useCapture参数问题.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  addEventListener(domElement:any, event:string, func:any, useCapture?:<span class="keyword">boolean</span>):EventMgr;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@desc</span>: 统一处理 removeEventListener, detachEvent; 并提供useCapture参数问题.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  removeEventListener(domElement:any, event:string, func:any, useCapture?:<span class="keyword">boolean</span>):EventMgr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   
 
@@ -1042,7 +1033,7 @@
     <div class="guide-links">
       
       
-        <span>← <a href="index.html">0基础样式</a></span>
+        <span>← <a href="index.html">0基础库</a></span>
       
       
       
