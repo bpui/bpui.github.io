@@ -982,6 +982,7 @@
 <li><a href="#props">props</a></li>
 <li><a href="#events">events</a></li>
 <li><a href="#example">example</a></li>
+<li><a href="#checkboxgroup">checkboxGroup</a></li>
 <li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a><ul>
 <li><a href="#%E5%9B%BE%E6%A0%87">图标</a></li>
 <li><a href="#%E6%A0%B7%E5%BC%8F%E7%BB%93%E6%9E%84">样式结构</a></li>
@@ -1044,6 +1045,11 @@
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+
+<h2 id="checkboxGroup"><a href="#checkboxGroup" class="headerlink" title="checkboxGroup"></a>checkboxGroup</h2><p>可使用 bpCheckboxGroup 组件将多个checkbox组合起来</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-checkbox-group</span> <span class="attr">v-model</span>=<span class="string">&quot;groupValue&quot;</span> <span class="attr">:disabled</span>=<span class="string">&quot;groupDisable&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bp-checkbox</span>&gt;</span>check1<span class="tag">&lt;/<span class="name">bp-checkbox</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bp-checkbox</span>&gt;</span>check2<span class="tag">&lt;/<span class="name">bp-checkbox</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bp-checkbox</span>&gt;</span>check3<span class="tag">&lt;/<span class="name">bp-checkbox</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bp-checkbox-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中, groupValue是一个数组:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// type of groupValue</span></span><br><span class="line"><span class="built_in">Array</span>&lt;&#123;</span><br><span class="line">  isChecked: boolean,</span><br><span class="line">  label: string,</span><br><span class="line">&#125;&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>组件中使用到的图标有:</p>
 <table>
