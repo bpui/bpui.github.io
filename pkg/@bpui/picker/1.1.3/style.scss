@@ -1,0 +1,1481 @@
+
+
+/**
+* Copyright (c) 2017 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-12 12:05
+* Desc: 
+*/
+
+/* 系统字体 */
+$bpFont: -apple-system-font,"PingFang SC","Microsoft YaHei",sans-serif !default;  
+$bpFontSize: 17px !default;
+
+/* 主色 */
+$bpColorPrimary: #07C160 !default;
+/* 警告色 */
+$bpColorWarn: #FA5151 !default;
+/* 背景色 */
+$bpBgColor: #F7F7F7 !default;
+/* 文本颜色 */
+$bpTextColor: #111 !default;
+/* 副文本颜色 */
+$bpTextColorSecondary: #333 !default;
+/* 链接文本颜色 */
+$bpLinkColor: #576B95 !default;
+/* 边框颜色 */
+$bpBorderColor: rgba(0,0,0,.1) !default;
+
+
+// 不支持圆角
+// -color 使用图片边框的颜色, 会渐变.
+@mixin bp-thinBorderBottom($color) {
+  border-bottom: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: linear-gradient(0deg, $color 49%, transparent 51%, transparent);
+  }
+}
+
+@mixin bp-thinBorderTop($color) {
+  border-top: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-top: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: linear-gradient(180deg, $color 50%, transparent 50%, transparent);
+  }
+}
+
+@mixin bp-thinBorderLeft($color) {
+  border-left: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-left: none;
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-image: linear-gradient(90deg, $color 50%, transparent 50%, transparent);
+  }
+}
+
+@mixin bp-thinBorderRight($color) {
+  border-right: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-right: none;
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: linear-gradient(270deg, $color 49%, transparent 51%, transparent);
+  }
+}
+
+
+@mixin bp-thinBorderTopLeft($color) {
+  border-top: 1px solid $color;
+  border-left: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-top: none;
+    border-left: none;
+    background-size: 100% 1px, 1px 100%;
+    background-repeat: no-repeat;
+    background-position: top, left;
+    background-image: linear-gradient(180deg, $color 50%, transparent 50%, transparent), linear-gradient(90deg, $color 50%, transparent 50%, transparent);
+  }
+}
+
+@mixin bp-thinBorder($color) {
+  border-top: 1px solid $color;
+  border-left: 1px solid $color;
+  border-bottom: 1px solid $color;
+  border-right: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+    background-repeat: no-repeat;
+    background-position: top, left, bottom, right;
+    background-image: linear-gradient(180deg, $color 50%, transparent 50%, transparent), linear-gradient(90deg, $color 50%, transparent 50%, transparent), linear-gradient(0deg, $color 49%, transparent 51%, transparent), linear-gradient(270deg, $color 49%, transparent 51%, transparent);
+  }
+}
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2018-06-13 15:04
+* Desc: 设备自适应.
+*/
+
+/*
+iphone4  320~480
+iphone5  320~568
+iphone6  375~667
+
+iphone6p 414~736
+iphonex  375~812
+
+ipad      768~1024
+ipad pro  1024~1366
+*/
+
+
+/* is phone */
+@mixin bp-isPhone {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+/* is tablet */
+@mixin bp-isTablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+/* Landscape */
+@mixin bp-isLandscape {
+  @media screen and (orientation:landscape) {
+    @content;
+  }
+}
+/* Portrait */
+@mixin bp-isPortrait {
+  @media screen and (orientation:portrait) {
+    @content;
+  }
+}
+
+
+
+
+/**
+ * @desc: 单行缩略.
+ */
+@mixin bp-ellipsis() {
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+/**
+ * @desc: 多行缩略.
+ * @param lines: 指定最多的行数.
+ */
+@mixin bp-ellipsisMultiline($lines) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}
+
+/**
+ * @desc: 平滑字体.
+ */
+@mixin bp-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+
+
+/**
+* Copyright (c) 2017 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-12 12:05
+* Desc: 
+*/
+
+/* 系统字体 */
+$bpFont: -apple-system-font,"PingFang SC","Microsoft YaHei",sans-serif !default;  
+$bpFontSize: 17px !default;
+
+/* 主色 */
+$bpColorPrimary: #07C160 !default;
+/* 警告色 */
+$bpColorWarn: #FA5151 !default;
+/* 背景色 */
+$bpBgColor: #F7F7F7 !default;
+/* 文本颜色 */
+$bpTextColor: #111 !default;
+/* 副文本颜色 */
+$bpTextColorSecondary: #333 !default;
+/* 链接文本颜色 */
+$bpLinkColor: #576B95 !default;
+/* 边框颜色 */
+$bpBorderColor: rgba(0,0,0,.1) !default;
+
+
+// 不支持圆角
+// -color 使用图片边框的颜色, 会渐变.
+@mixin bp-thinBorderBottom($color) {
+  border-bottom: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-bottom: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: linear-gradient(0deg, $color 49%, transparent 51%, transparent);
+  }
+}
+
+@mixin bp-thinBorderTop($color) {
+  border-top: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-top: none;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-image: linear-gradient(180deg, $color 50%, transparent 50%, transparent);
+  }
+}
+
+@mixin bp-thinBorderLeft($color) {
+  border-left: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-left: none;
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-image: linear-gradient(90deg, $color 50%, transparent 50%, transparent);
+  }
+}
+
+@mixin bp-thinBorderRight($color) {
+  border-right: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-right: none;
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: linear-gradient(270deg, $color 49%, transparent 51%, transparent);
+  }
+}
+
+
+@mixin bp-thinBorderTopLeft($color) {
+  border-top: 1px solid $color;
+  border-left: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-top: none;
+    border-left: none;
+    background-size: 100% 1px, 1px 100%;
+    background-repeat: no-repeat;
+    background-position: top, left;
+    background-image: linear-gradient(180deg, $color 50%, transparent 50%, transparent), linear-gradient(90deg, $color 50%, transparent 50%, transparent);
+  }
+}
+
+@mixin bp-thinBorder($color) {
+  border-top: 1px solid $color;
+  border-left: 1px solid $color;
+  border-bottom: 1px solid $color;
+  border-right: 1px solid $color;
+  @media (-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+    background-repeat: no-repeat;
+    background-position: top, left, bottom, right;
+    background-image: linear-gradient(180deg, $color 50%, transparent 50%, transparent), linear-gradient(90deg, $color 50%, transparent 50%, transparent), linear-gradient(0deg, $color 49%, transparent 51%, transparent), linear-gradient(270deg, $color 49%, transparent 51%, transparent);
+  }
+}
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2018-06-13 15:04
+* Desc: 设备自适应.
+*/
+
+/*
+iphone4  320~480
+iphone5  320~568
+iphone6  375~667
+
+iphone6p 414~736
+iphonex  375~812
+
+ipad      768~1024
+ipad pro  1024~1366
+*/
+
+
+/* is phone */
+@mixin bp-isPhone {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+/* is tablet */
+@mixin bp-isTablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+/* Landscape */
+@mixin bp-isLandscape {
+  @media screen and (orientation:landscape) {
+    @content;
+  }
+}
+/* Portrait */
+@mixin bp-isPortrait {
+  @media screen and (orientation:portrait) {
+    @content;
+  }
+}
+
+
+
+
+/**
+ * @desc: 单行缩略.
+ */
+@mixin bp-ellipsis() {
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+/**
+ * @desc: 多行缩略.
+ * @param lines: 指定最多的行数.
+ */
+@mixin bp-ellipsisMultiline($lines) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+}
+
+/**
+ * @desc: 平滑字体.
+ */
+@mixin bp-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+
+/** use for unpkg cdn */
+
+
+@font-face {
+  font-family: 'bpui-icon';
+  src:  url('//unpkg.com/@bpui/libs/icons/font/bpui-icon.eot');
+  src:  url('//unpkg.com/@bpui/libs/icons/font/bpui-icon.eot#iefix') format('embedded-opentype'),
+    url('//unpkg.com/@bpui/libs/icons/font/bpui-icon.ttf') format('truetype'),
+    url('//unpkg.com/@bpui/libs/icons/font/bpui-icon.woff') format('woff'),
+    url('//unpkg.com/@bpui/libs/icons/font/bpui-icon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.bp-icon {
+  font-family: "bpui-icon" !important;
+  speak: never !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+
+  height: 32px;
+  width: 32px;
+  font-size: 32px;
+  white-space: nowrap;
+
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+  display: inline-block !important;
+
+  &:before {
+    display: block !important;
+  }
+}
+
+
+.bp-iconArrowDown:before {
+  content: "\e900";
+}
+.bp-iconArrowLeft:before {
+  content: "\e901";
+}
+.bp-iconArrowRight:before {
+  content: "\e902";
+}
+.bp-iconArrowUp:before {
+  content: "\e903";
+}
+.bp-iconCancel:before {
+  content: "\e904";
+}
+.bp-iconDelete:before {
+  content: "\e905";
+}
+.bp-iconEdit:before {
+  content: "\e906";
+}
+.bp-iconHeart:before {
+  content: "\e907";
+}
+.bp-iconHeartFill:before {
+  content: "\e908";
+  color: #f44335;
+}
+
+
+/** loading frame */
+@-webkit-keyframes bp-iconLoading_animationSpinKeyframes {
+  0% {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg)
+  }
+}
+
+@keyframes bp-iconLoading_animationSpinKeyframes {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+.bp-iconLoading {
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+
+  -webkit-animation: bp-iconLoading_animationSpinKeyframes 1.6s infinite linear;
+  -moz-animation: bp-iconLoading_animationSpinKeyframes 1.6s infinite linear;
+  animation: bp-iconLoading_animationSpinKeyframes 1.6s infinite linear;
+}
+.bp-iconLoading .path1:before {
+  content: "\e909";
+  color: rgb(0, 0, 0);
+  opacity: 0.6 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+}
+.bp-iconLoading .path2:before {
+  content: "\e90a";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.65 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path3:before {
+  content: "\e90b";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.7 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path4:before {
+  content: "\e90c";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.73 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path5:before {
+  content: "\e90d";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.68 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path6:before {
+  content: "\e90e";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.59 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path7:before {
+  content: "\e90f";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.53 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path8:before {
+  content: "\e910";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.48 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path9:before {
+  content: "\e911";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.44 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path10:before {
+  content: "\e912";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.41 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path11:before {
+  content: "\e913";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.38 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLoading .path12:before {
+  content: "\e914";
+  margin-left: -1em !important;
+  color: rgb(0, 0, 0);
+  opacity: 0.35 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+.bp-iconLocation:before {
+  content: "\e915";
+}
+.bp-iconLocationPin:before {
+  content: "\e916";
+}
+.bp-iconMenu:before {
+  content: "\e917";
+}
+.bp-iconMinus:before {
+  content: "\e918";
+}
+.bp-iconMore:before {
+  content: "\e919";
+}
+.bp-iconOk:before {
+  content: "\e91a";
+}
+.bp-iconPlus:before {
+  content: "\e91b";
+}
+.bp-iconSetting:before {
+  content: "\e91c";
+}
+.bp-iconStar:before {
+  content: "\e91d";
+}
+.bp-iconStarFill:before {
+  content: "\e91e";
+  color: #efc75e;
+}
+.bp-iconUser:before {
+  content: "\e91f";
+}
+
+
+html {
+  @include bp-smoothing();
+  font-family: $bpFont;
+  font-size: $bpFontSize;
+}
+
+* {
+  touch-action: manipulation;
+  /* no 300ms delay */
+}
+
+[class|=bp],
+button,
+label {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform-style: flat;
+  transform-style: flat;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  // -webkit-user-select: none;
+  // -khtml-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+}
+
+.bp-ellipsis {
+  @include bp-ellipsis();
+}
+.bp-ellipsisMultiline1 {
+  @extend .bp-ellipsis;
+}
+.bp-ellipsisMultiline2 {
+  @include bp-ellipsisMultiline(2);
+}
+.bp-ellipsisMultiline3 {
+  @include bp-ellipsisMultiline(3);
+}
+.bp-ellipsisMultiline4 {
+  @include bp-ellipsisMultiline(4);
+}
+.bp-ellipsisMultiline5 {
+  @include bp-ellipsisMultiline(5);
+}
+.bp-ellipsisMultiline6 {
+  @include bp-ellipsisMultiline(6);
+}
+.bp-ellipsisMultiline7 {
+  @include bp-ellipsisMultiline(7);
+}
+.bp-ellipsisMultiline8 {
+  @include bp-ellipsisMultiline(8);
+}
+
+.bp-smoothing {
+  @include bp-smoothing();
+}
+
+
+
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-13 15:45
+* Desc: 
+*/
+
+/* 字体 */
+$bpDialogTitleFontSize: 1.1rem !default;
+$bpDialogTitleFontWeight: 400 !default;
+$bpDialogFontSize: 0.9rem !default;
+
+/* 尺寸 */
+$bpDialogRadius: 6px !default;
+
+/* 对话框颜色 */
+$bpDialogBgColor: rgba(255, 255, 255, 0.90) !default;
+$bpDialogTitleColor: darken($bpTextColor, 10%) !default;
+$bpDialogTextColor: $bpTextColor !default;
+$bpDialogCloseColor: #b3b3b3 !default;
+
+$bpDialogAnimateDurtion: 0.1s !default;
+
+/* loading */
+$bpLoadingRadius: 8px !default;
+$bpLoadingBgColor: rgba(43, 43, 43, 0.92) !default;
+$bpLoadingTextColor: #d4d4d4 !default;
+$bpLoadingTargetBgColor: rgba(255, 255, 255, 0.12) !default;
+
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-28 17:01
+* Desc: 
+*/
+
+/** modal 层 */
+.bp-widget {
+
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  overflow: auto;
+
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  
+  position: fixed;
+  opacity: 0;
+  margin: 0 !important;
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: auto !important;
+  background: transparent;
+  display: none;
+  text-align: center;
+  box-sizing: border-box;
+
+  .bp-widget__content {
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100vw;
+
+    pointer-events: all;
+    touch-action: manipulation;
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+
+  &.bp-widget__visible {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s;
+    -moz-transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s;
+    transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s; 
+  }
+
+  &.bp-widget__invisible {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity $bpDialogAnimateDurtion 0s, visibility $bpDialogAnimateDurtion 0s, background-color $bpDialogAnimateDurtion 0s;
+    -moz-transition: opacity $bpDialogAnimateDurtion 0s, visibility $bpDialogAnimateDurtion 0s, background-color $bpDialogAnimateDurtion 0s;
+    transition: opacity $bpDialogAnimateDurtion 0s, visibility $bpDialogAnimateDurtion 0s, background-color $bpDialogAnimateDurtion 0s;
+  }
+}
+
+/** 掩码层 */
+.bp-widget__maskNoAminate {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  transition: none !important;
+}
+
+/** 掩码层 */
+.bp-widget__mask {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/** 掩码层 */
+.bp-widget__maskTmp {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/** 滚动条造成的闪动问题 */
+.bp-widget__fixscroll {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;  /* for safari */
+  position: relative;
+  // padding-right: calc(100vw - 100%) !important;
+}
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-28 17:01
+* Desc: 
+*/
+
+
+.bp-dialog {
+
+  /* safari polyfill */
+  @include bp-isPhone {
+    position: fixed !important;
+    // height: inherit !important;
+    // touch-action: none !important;
+  }
+
+  &.bp-widget__visible {
+    & > div {
+      top: 0px;
+    }
+  }
+
+  &.bp-widget__invisible {
+    & > div {
+      top: -30px;
+    }
+  }
+
+  .bp-widget__content {
+    -webkit-transition-property: top;
+    -moz-transition-property: top;
+    transition-property: top;
+    -webkit-transition-duration: $bpDialogAnimateDurtion;
+    -moz-transition-duration: $bpDialogAnimateDurtion;
+    transition-duration: $bpDialogAnimateDurtion;
+
+    box-shadow: 0px 0px 2px 1px rgba(165, 165, 165, 0.17);
+    min-width: 200px;
+    max-width: 98vw;
+
+    position: relative;
+    text-align: center;
+
+    font-size: $bpDialogFontSize;
+    border-radius: $bpDialogRadius;
+    background-color: $bpDialogBgColor;
+    color: $bpDialogTextColor;
+  }
+
+  .bp-dialog__title {
+    user-select: none;
+    font-size: $bpDialogTitleFontSize;
+    font-weight: $bpDialogTitleFontWeight;
+    padding: 15px 35px 0px 20px;
+    margin-bottom: -6px;
+    text-align: left;
+    color: $bpDialogTitleColor;
+  }
+
+  .bp-dialog__main {
+    padding: 20px 12px 20px;
+  }
+
+  .bp-dialog__foot {
+    height: 47px;
+    @include bp-thinBorderTop($bpBorderColor);
+
+    & > div {
+      height: 100%;
+      width: 100%;
+    }
+
+    button {
+      @include bp-ellipsis();
+      height: 100%;
+      margin: 0;
+
+      &:hover {
+        background-color: rgba(234, 234, 234, 0.5);
+      }
+
+      @include bp-thinBorderRight($bpBorderColor);
+
+      &:last-child {
+        @include bp-thinBorderRight(rgba(0,0,0,0));
+      }
+    }
+    
+    &.bp-dialog__footOneButton {
+      button {
+        width: 100%;
+        min-width: 280px;
+      }
+    }
+    &.bp-dialog__footTwoButton {
+      & > div {
+        display: flex;
+        flex-direction: row;
+      }
+
+      button {
+        width: 50%;
+        min-width: 140px;
+      }
+    }
+    &.bp-dialog__footThreeButton {
+      & > div {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      button {
+        width: 33.33%;
+        min-width: 120px;
+      }
+    }
+  }
+
+  .bp-dialog__close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
+    color: $bpDialogCloseColor;
+  }
+}
+
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-28 17:01
+* Desc: 
+*/
+
+
+.bp-widget.bp-loading {
+  user-select: none;
+  z-index: 3002;
+  
+  .bp-widget__content {
+    width: auto;
+    height: auto;
+    min-height: 100px;
+    max-width: 250px;
+    min-width: 100px;
+    
+    box-shadow: 0px 0px 2px 1px rgba(165, 165, 165, 0.17);
+    position: relative;
+    margin: 9em auto;
+    text-align: center;
+
+    font-size: $bpDialogFontSize;
+    border-radius: $bpLoadingRadius;
+    background-color: $bpLoadingBgColor;
+    color: $bpLoadingTextColor;
+
+    .bp-icon {
+      color: $bpLoadingTextColor;
+      i, i:before {
+        color: $bpLoadingTextColor;
+      }
+    }
+  }
+
+  .bp-loading__main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 10px 30px;
+  }
+
+  .bp-loading__text {
+    padding: 0px 20px 10px 20px;
+  }
+}
+
+
+/**
+  * 显示在具体target上的loading.
+  */
+.bp-widget.bp-loading.bp-loadingTargetClass {
+  position: absolute;
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+  background: $bpLoadingTargetBgColor;
+
+  .bp-widget__content {
+    width: auto;
+    height: auto;
+    min-height: initial;
+    max-width: initial;
+    min-width: initial;
+    box-shadow: none;
+    background-color: rgba(0,0,0,0);
+  }
+}
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-28 17:01
+* Desc: 
+*/
+
+.bp-toast-wrap {
+  z-index: 3002;
+  user-select: none;
+  height: 0px !important;
+  pointer-events: none;
+  touch-action: none;
+  position: fixed !important;
+  top: 0 !important;
+  overflow: visible !important;
+}
+
+.bp-widget.bp-toast {
+  display: flex !important;
+  position: static !important;
+  flex-direction: column !important;
+  align-items: center;
+  top: initial !important;
+  bottom: initial !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: initial !important;
+  overflow: visible !important;
+
+  &.bp-widget__visible {
+    margin-top: 0px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s, margin-top $bpDialogAnimateDurtion 0s;
+    -moz-transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s, margin-top $bpDialogAnimateDurtion 0s;
+    transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s, margin-top $bpDialogAnimateDurtion 0s;
+  }
+
+  &.bp-widget__invisible {
+    margin-top: -40px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s, margin-top $bpDialogAnimateDurtion 0s;
+    -moz-transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s, margin-top $bpDialogAnimateDurtion 0s;
+    transition: opacity $bpDialogAnimateDurtion 0s, visibility 0s 0s, background-color $bpDialogAnimateDurtion 0s, margin-top $bpDialogAnimateDurtion 0s;
+  }
+
+  .bp-widget__content {
+
+    margin: 5px auto 0px auto;
+    width: auto;
+    position: static;
+    // height: auto;
+    // min-height: 40px;
+    max-width: 80vw;
+    min-width: 100px;
+
+    // display: flex;
+    display: block;
+
+    & > div {
+      padding: 5px 10px 5px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      
+      box-shadow: 0px 0px 2px 1px rgba(165, 165, 165, 0.17);
+      position: relative;
+      text-align: center;
+
+      font-size: $bpDialogFontSize;
+      border-radius: $bpLoadingRadius;
+      background-color: $bpLoadingBgColor;
+      color: $bpLoadingTextColor;
+
+      .bp-icon {
+        color: $bpLoadingTextColor;
+        i, i:before {
+          color: $bpLoadingTextColor;
+        }
+      }
+    }
+  }
+
+  .bp-toast__main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 5px 2px 0px;
+  }
+  
+  .bp-toast__text {
+    padding: 5px 0px;
+    word-break: break-all;
+  }
+}
+
+
+.bp-widget.bp-toast__center {
+  user-select: none;
+  display: flex !important;
+  position: fixed !important;
+  flex-direction: column !important;
+  overflow: visible !important;
+  pointer-events: none;
+  touch-action: none;
+  align-items: center;
+  // height: 100vh !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: auto !important;
+  justify-content: center;
+
+  .bp-widget__content {
+    margin: 0px auto 0px auto;
+
+    & > div {
+      min-height: 100px;
+      min-width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: auto;
+      padding: 10px;
+
+      .bp-toast__main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px 10px 20px;
+      }
+
+      .bp-toast__text {
+        padding: 0px;
+
+        &:first-child {
+          line-height: 80px; /* fix ie 10 */
+        }
+      }
+    }
+  }
+}
+
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-13 15:45
+* Desc: 
+*/
+
+/* 字体 */
+$bpPickerToolbarFontSize: 1.0rem !default;
+$bpPickerToolbarFontWeight: 400 !default;
+$bpPickerFontSize: 1.0rem !default;
+
+/* 尺寸 */
+$bpPickerRadius: 6px !default;
+
+/* 对话框颜色 */
+$bpPickerBgColor: rgba(255, 255, 255, 0.90) !default;
+$bpPickerBorderColor: $bpBorderColor !default;
+$bpPickerToolbarColor: darken($bpTextColor, 10%) !default;
+$bpPickerTextColor: $bpTextColor !default;
+
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-28 17:01
+* Desc: 
+*/
+
+/* don't change */
+$bpPickerIndicatorHeight: 40px;
+
+.bp-widget.bp-picker {
+
+  $bpPickerAnimateDurtion: 0.3s;
+
+  overflow-x: hidden;
+
+  &.bp-widget__visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-transition: opacity $bpPickerAnimateDurtion 0s, visibility 0s 0s, background-color $bpPickerAnimateDurtion 0s;
+    -moz-transition: opacity $bpPickerAnimateDurtion 0s, visibility 0s 0s, background-color $bpPickerAnimateDurtion 0s;
+    transition: opacity $bpPickerAnimateDurtion 0s, visibility 0s 0s, background-color $bpPickerAnimateDurtion 0s; 
+ 
+    .bp-widget__contentWrap {
+      bottom: 0px;
+    }
+  }
+
+  &.bp-widget__invisible {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    -webkit-transition: opacity $bpPickerAnimateDurtion 0s, visibility $bpPickerAnimateDurtion 0s, background-color $bpPickerAnimateDurtion 0s;
+    -moz-transition: opacity $bpPickerAnimateDurtion 0s, visibility $bpPickerAnimateDurtion 0s, background-color $bpPickerAnimateDurtion 0s;
+    transition: opacity $bpPickerAnimateDurtion 0s, visibility $bpPickerAnimateDurtion 0s, background-color $bpPickerAnimateDurtion 0s;
+    
+    .bp-widget__contentWrap {
+      bottom: -300px;
+    }
+  }
+
+  .bp-widget__content {
+    position: relative !important;
+    display: flex !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+
+    /* ie polyfill */
+    height: 100vh !important;
+    width: 100vw !important;
+
+    box-sizing: border-box !important;
+
+    /* safari polyfill */
+    @include bp-isPhone {
+      position: fixed !important;
+      height: inherit !important;
+      touch-action: none !important;
+    }
+  }
+
+  .bp-widget__contentWrap {
+    padding-bottom: constant(safe-area-inset-bottom) !important;
+    padding-bottom: env(safe-area-inset-bottom) !important;
+
+    -webkit-transition-property: bottom;
+    -moz-transition-property: bottom;
+    transition-property: bottom;
+    -webkit-transition-duration: $bpPickerAnimateDurtion;
+    -moz-transition-duration: $bpPickerAnimateDurtion;
+    transition-duration: $bpPickerAnimateDurtion;
+
+    user-select: none;
+
+    box-shadow: 0px 0px 2px 1px rgba(165, 165, 165, 0.17);
+    min-width: 200px;
+    max-height: 83vh;
+    position: absolute;
+    width: 100% !important;
+
+    @include bp-isPhone {
+      max-width: 100vw;
+    }
+    @include bp-isTablet {
+      max-width: 500px;
+    }
+
+    bottom: 0;
+    // left: calc(100vw - 100%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    font-size: $bpPickerFontSize;
+    border-radius: $bpPickerRadius;
+    background-color: $bpPickerBgColor;
+    color: $bpPickerTextColor;
+  }
+
+  .bp-picker__toolbar {
+    @include bp-thinBorderBottom($bpPickerBorderColor);
+    user-select: none;
+    min-height: 45px;
+    font-size: $bpPickerToolbarFontSize;
+    font-weight: $bpPickerToolbarFontWeight;
+    padding: 9px 15px;
+    box-sizing: border-box;
+    color: $bpPickerToolbarColor;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      margin: 0;
+      padding: 0;
+    }
+
+    .bp-picker__cancelBtn {
+      color: rgb(136, 136, 136);
+    }
+  }
+
+  /* picker主内容 */
+  .bp-picker__main {
+    display: -webkit-box;
+    display: flex;
+    position: relative;
+    height: $bpPickerIndicatorHeight * 7;
+    overflow: hidden;
+
+    .bp-picker__group {
+      -webkit-box-flex: 1;
+      flex: 1;
+      position: relative;
+      height: 100%;
+
+      .bp-picker__mask {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        top: 0;
+        height: 100%;
+        margin: 0 auto;
+        background: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,.95)),to(hsla(0,0%,100%,.6))),-webkit-gradient(linear,left bottom,left top,from(hsla(0,0%,100%,.95)),to(hsla(0,0%,100%,.6)));
+        background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+        background-position-x: center, center;
+        background-position-y: top, bottom;
+        background-size: 100% $bpPickerIndicatorHeight * 3;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+        background-attachment: initial, initial;
+        background-origin: initial, initial;
+        background-clip: initial, initial;
+        background-color: initial;
+        background: linear-gradient(180deg,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6)),linear-gradient(0deg,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6));
+        background-position: top,bottom;
+        background-size: 100% $bpPickerIndicatorHeight * 3;
+        background-repeat: no-repeat;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+
+      .bp-picker__indicator {
+        touch-action: none!important;
+        pointer-events: none!important;
+        height: $bpPickerIndicatorHeight;  /* don't change */
+        top: $bpPickerIndicatorHeight * 3;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+
+        &:before, &:after {
+          content: " ";
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 1px;
+          color: #e5e5e5;
+          box-sizing: border-box;
+          margin: 0;
+        }
+
+        &:before {
+          top: 0;
+          border-top: 1px solid #e5e5e5;
+          -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+          -webkit-transform: scaleY(.5);
+          transform: scaleY(.5);
+        }
+
+        &:after {
+          bottom: 0;
+          border-bottom: 1px solid #e5e5e5;
+          -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+          -webkit-transform: scaleY(.5);
+          transform: scaleY(.5);
+        }
+      }
+
+      .bp-picker__content {
+        touch-action: none!important;
+        pointer-events: none!important;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        box-sizing: border-box;
+        margin: 0;
+
+        &:before, &:after {
+          box-sizing: border-box;
+          margin: 0;
+        }
+
+        .bp-picker__item {
+          padding: 0;
+          height: $bpPickerIndicatorHeight;
+          line-height: $bpPickerIndicatorHeight;
+          text-align: center;
+          color: #000;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.bp-widget.bp-picker.bp-picker__tablet {
+  .bp-widget__contentWrap {
+    justify-self: center;
+    align-self: center;
+    bottom: auto;
+    top: auto;
+    overflow: hidden;
+  }
+}

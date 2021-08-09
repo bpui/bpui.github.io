@@ -1,0 +1,1064 @@
+@charset "UTF-8";
+/**
+* Copyright (c) 2017 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-12 12:05
+* Desc: 
+*/
+/* 系统字体 */
+/* 主色 */
+/* 警告色 */
+/* 背景色 */
+/* 文本颜色 */
+/* 副文本颜色 */
+/* 链接文本颜色 */
+/* 边框颜色 */
+/**
+ * @desc: 单行缩略.
+ */
+/**
+ * @desc: 多行缩略.
+ * @param lines: 指定最多的行数.
+ */
+/**
+ * @desc: 平滑字体.
+ */
+/** use for unpkg cdn */
+@font-face {
+  font-family: "bpui-icon";
+  src: url("//unpkg.com/@bpui/libs/icons/font/bpui-icon.eot");
+  src: url("//unpkg.com/@bpui/libs/icons/font/bpui-icon.eot#iefix") format("embedded-opentype"), url("//unpkg.com/@bpui/libs/icons/font/bpui-icon.ttf") format("truetype"), url("//unpkg.com/@bpui/libs/icons/font/bpui-icon.woff") format("woff"), url("//unpkg.com/@bpui/libs/icons/font/bpui-icon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.bp-icon {
+  font-family: "bpui-icon" !important;
+  speak: never !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  height: 32px;
+  width: 32px;
+  font-size: 32px;
+  white-space: nowrap;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+  display: inline-block !important;
+}
+.bp-icon:before {
+  display: block !important;
+}
+
+.bp-iconArrowDown:before {
+  content: "";
+}
+
+.bp-iconArrowLeft:before {
+  content: "";
+}
+
+.bp-iconArrowRight:before {
+  content: "";
+}
+
+.bp-iconArrowUp:before {
+  content: "";
+}
+
+.bp-iconCancel:before {
+  content: "";
+}
+
+.bp-iconDelete:before {
+  content: "";
+}
+
+.bp-iconEdit:before {
+  content: "";
+}
+
+.bp-iconHeart:before {
+  content: "";
+}
+
+.bp-iconHeartFill:before {
+  content: "";
+  color: #f44335;
+}
+
+/** loading frame */
+@-webkit-keyframes bp-iconLoading_animationSpinKeyframes {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes bp-iconLoading_animationSpinKeyframes {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.bp-iconLoading {
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  -webkit-animation: bp-iconLoading_animationSpinKeyframes 1.6s infinite linear;
+  -moz-animation: bp-iconLoading_animationSpinKeyframes 1.6s infinite linear;
+  animation: bp-iconLoading_animationSpinKeyframes 1.6s infinite linear;
+}
+
+.bp-iconLoading .path1:before {
+  content: "";
+  color: black;
+  opacity: 0.6 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+}
+
+.bp-iconLoading .path2:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.65 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path3:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.7 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path4:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.73 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path5:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.68 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path6:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.59 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path7:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.53 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path8:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.48 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path9:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.44 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path10:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.41 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path11:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.38 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLoading .path12:before {
+  content: "";
+  margin-left: -1em !important;
+  color: black;
+  opacity: 0.35 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  margin-left: -1em !important;
+}
+
+.bp-iconLocation:before {
+  content: "";
+}
+
+.bp-iconLocationPin:before {
+  content: "";
+}
+
+.bp-iconMenu:before {
+  content: "";
+}
+
+.bp-iconMinus:before {
+  content: "";
+}
+
+.bp-iconMore:before {
+  content: "";
+}
+
+.bp-iconOk:before {
+  content: "";
+}
+
+.bp-iconPlus:before {
+  content: "";
+}
+
+.bp-iconSetting:before {
+  content: "";
+}
+
+.bp-iconStar:before {
+  content: "";
+}
+
+.bp-iconStarFill:before {
+  content: "";
+  color: #efc75e;
+}
+
+.bp-iconUser:before {
+  content: "";
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: -apple-system-font, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 17px;
+}
+
+* {
+  touch-action: manipulation;
+  /* no 300ms delay */
+}
+
+[class|=bp],
+button,
+label {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform-style: flat;
+  transform-style: flat;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+
+.bp-ellipsis, .bp-ellipsisMultiline1 {
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.bp-ellipsisMultiline2 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.bp-ellipsisMultiline3 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.bp-ellipsisMultiline4 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.bp-ellipsisMultiline5 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.bp-ellipsisMultiline6 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.bp-ellipsisMultiline7 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+
+.bp-ellipsisMultiline8 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+}
+
+.bp-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-13 15:45
+* Desc: 
+*/
+/* 按钮组边框色 */
+/* 字体 */
+/* 颜色 */
+/* 实心按钮背景颜色 */
+/** 实心按钮边框色 */
+/** 实心按钮文本色 */
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-24 11:03
+* Desc: 
+*/
+button,
+.bp-btn {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.38rem 0.48rem;
+  margin: 2px;
+  line-height: 1.25em;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-transform: none;
+  overflow: visible;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+  outline-offset: 0;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+button svg, button .bp-icon,
+.bp-btn svg,
+.bp-btn .bp-icon {
+  vertical-align: middle;
+}
+button svg:first-child, button .bp-icon:first-child,
+.bp-btn svg:first-child,
+.bp-btn .bp-icon:first-child {
+  margin-right: 0.24rem;
+}
+button svg:last-child, button .bp-icon:last-child,
+.bp-btn svg:last-child,
+.bp-btn .bp-icon:last-child {
+  margin-left: 0.24rem;
+}
+button:active,
+.bp-btn:active {
+  opacity: 0.6;
+}
+button:disabled,
+.bp-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  touch-action: none;
+  pointer-events: none;
+}
+
+/** default */
+button,
+.bp-btn {
+  color: #07C160;
+}
+button:hover,
+.bp-btn:hover {
+  color: rgba(7, 193, 96, 0.7);
+}
+button.bp-btnBorder,
+.bp-btn.bp-btnBorder {
+  color: #07C160;
+  border: solid 1px rgba(7, 193, 96, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+}
+button.bp-btnBorder:hover,
+.bp-btn.bp-btnBorder:hover {
+  color: rgba(7, 193, 96, 0.6);
+  border: solid 1px rgba(7, 193, 96, 0.4);
+  background-color: rgba(0, 0, 0, 0);
+}
+button.bp-btnSolid, .bp-uploader-image-crop-preview__mobile button.bp-uploader-image-crop-preview__ok,
+.bp-btn.bp-btnSolid,
+.bp-uploader-image-crop-preview__mobile .bp-btn.bp-uploader-image-crop-preview__ok {
+  color: #F7F7F7;
+  background-color: rgba(7, 193, 96, 0.9);
+  border: solid 1px rgba(6, 168, 84, 0.6);
+}
+button.bp-btnSolid:hover, .bp-uploader-image-crop-preview__mobile button.bp-uploader-image-crop-preview__ok:hover,
+.bp-btn.bp-btnSolid:hover,
+.bp-uploader-image-crop-preview__mobile .bp-btn.bp-uploader-image-crop-preview__ok:hover {
+  color: rgba(247, 247, 247, 0.8);
+  background-color: rgba(7, 193, 96, 0.7);
+  border: solid 1px rgba(6, 168, 84, 0.4);
+}
+
+/** each button */
+.bp-btnPrimary, .bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__ok {
+  color: #07C160;
+}
+.bp-btnPrimary:hover, .bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__ok:hover {
+  color: rgba(7, 193, 96, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnPrimary.bp-btnBorder, .bp-uploader-image-crop-preview__mobile .bp-btnBorder.bp-uploader-image-crop-preview__ok {
+  color: #07C160;
+  border: solid 1px rgba(7, 193, 96, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnPrimary.bp-btnBorder:hover, .bp-uploader-image-crop-preview__mobile .bp-btnBorder.bp-uploader-image-crop-preview__ok:hover {
+  color: rgba(7, 193, 96, 0.6);
+  border: solid 1px rgba(7, 193, 96, 0.4);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnPrimary.bp-btnSolid, .bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__ok {
+  color: #F7F7F7;
+  background-color: rgba(7, 193, 96, 0.9);
+  border: solid 1px rgba(6, 168, 84, 0.6);
+}
+.bp-btnPrimary.bp-btnSolid:hover, .bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__ok:hover {
+  color: rgba(247, 247, 247, 0.8);
+  background-color: rgba(7, 193, 96, 0.7);
+  border: solid 1px rgba(6, 168, 84, 0.4);
+}
+
+.bp-btnWarning {
+  color: #FA5151;
+}
+.bp-btnWarning:hover {
+  color: rgba(250, 81, 81, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnWarning.bp-btnBorder {
+  color: #FA5151;
+  border: solid 1px rgba(250, 81, 81, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnWarning.bp-btnBorder:hover {
+  color: rgba(250, 81, 81, 0.6);
+  border: solid 1px rgba(250, 81, 81, 0.4);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnWarning.bp-btnSolid, .bp-uploader-image-crop-preview__mobile .bp-btnWarning.bp-uploader-image-crop-preview__ok {
+  color: #F7F7F7;
+  background-color: rgba(250, 81, 81, 0.9);
+  border: solid 1px rgba(249, 56, 56, 0.6);
+}
+.bp-btnWarning.bp-btnSolid:hover, .bp-uploader-image-crop-preview__mobile .bp-btnWarning.bp-uploader-image-crop-preview__ok:hover {
+  color: rgba(247, 247, 247, 0.8);
+  background-color: rgba(250, 81, 81, 0.7);
+  border: solid 1px rgba(249, 56, 56, 0.4);
+}
+
+.bp-btnInfo {
+  color: gray;
+}
+.bp-btnInfo:hover {
+  color: rgba(128, 128, 128, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnInfo.bp-btnBorder {
+  color: gray;
+  border: solid 1px rgba(128, 128, 128, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnInfo.bp-btnBorder:hover {
+  color: rgba(128, 128, 128, 0.6);
+  border: solid 1px rgba(128, 128, 128, 0.4);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-btnInfo.bp-btnSolid, .bp-uploader-image-crop-preview__mobile .bp-btnInfo.bp-uploader-image-crop-preview__ok {
+  color: #07C160;
+  background-color: rgba(247, 247, 247, 0.9);
+  border: solid 1px rgba(234, 234, 234, 0.6);
+}
+.bp-btnInfo.bp-btnSolid:hover, .bp-uploader-image-crop-preview__mobile .bp-btnInfo.bp-uploader-image-crop-preview__ok:hover {
+  color: rgba(7, 193, 96, 0.8);
+  background-color: rgba(247, 247, 247, 0.7);
+  border: solid 1px rgba(234, 234, 234, 0.4);
+}
+
+/**
+* Copyright (c) 2020 Copyright bp All Rights Reserved.
+* Author: lipengxiang
+* Date: 2020-02-13 15:45
+* Desc: 
+*/
+/* 尺寸 */
+/* 边框 */
+/* 进度 */
+/* 图片 crop 预览 */
+/* 图片 crop 预览 (移动端) */
+.bp-uploader {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: #eee dashed 1px;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 13px;
+  position: relative;
+  cursor: pointer;
+}
+.bp-uploader.bp-uploader__drag, .bp-uploader:hover {
+  border: #07C160 dashed 1px;
+}
+.bp-uploader.bp-uploader__disabled {
+  touch-action: none;
+  pointer-events: none;
+}
+.bp-uploader.bp-uploader__disabled .bp-uploader__file-content-main {
+  opacity: 0.5;
+}
+.bp-uploader .bp-uploader__progress {
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  background: #07C160;
+  transition: width 0.1s;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.bp-uploader .bp-uploader__file-content-main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.bp-uploader .bp-uploader__file-content-main div:first-child, .bp-uploader .bp-uploader__file-content-main div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover {
+  max-width: 95%;
+  max-height: 95%;
+  cursor: pointer;
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file {
+  width: 44px;
+  height: 44px;
+  background-image: url("~@bpui/uploader/icons/svg/default.svg");
+  background-size: 100% 100%;
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=_7z] {
+  background-image: url("~@bpui/uploader/icons/svg/7z.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=csv] {
+  background-image: url("~@bpui/uploader/icons/svg/csv.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=doc] {
+  background-image: url("~@bpui/uploader/icons/svg/doc.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=mov] {
+  background-image: url("~@bpui/uploader/icons/svg/mov.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=mp4] {
+  background-image: url("~@bpui/uploader/icons/svg/mp4.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=pdf] {
+  background-image: url("~@bpui/uploader/icons/svg/pdf.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=ppt] {
+  background-image: url("~@bpui/uploader/icons/svg/ppt.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=psd] {
+  background-image: url("~@bpui/uploader/icons/svg/psd.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=rar] {
+  background-image: url("~@bpui/uploader/icons/svg/rar.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=svg] {
+  background-image: url("~@bpui/uploader/icons/svg/svg.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=txt] {
+  background-image: url("~@bpui/uploader/icons/svg/txt.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=xls] {
+  background-image: url("~@bpui/uploader/icons/svg/xls.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover.bp-uploader__cover__file[data-type=zip] {
+  background-image: url("~@bpui/uploader/icons/svg/zip.svg");
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__cover__file__name {
+  margin-top: 10px;
+  text-align: center;
+  padding: 0 5px;
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__add-icon {
+  color: #999;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  touch-action: none;
+  flex-direction: column;
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__add-icon:after {
+  margin-top: 15px;
+  content: "将文件拖到此处, 或点击上传";
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__add-icon[data-action^=uploading]:after {
+  margin-top: 15px;
+  content: "点击取消";
+}
+.bp-uploader .bp-uploader__file-content-main .bp-uploader__uploading-icon-file {
+  display: none !important;
+}
+.bp-uploader:hover .bp-uploader__uploading-icon-file {
+  display: flex !important;
+}
+.bp-uploader:hover .bp-uploader__uploading-icon-filetype {
+  display: none !important;
+}
+
+.bp-uploader-image-crop {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: #eee dashed 1px;
+  border-radius: 6px;
+  overflow: visible;
+  font-size: 13px;
+  position: relative;
+  cursor: pointer;
+}
+.bp-uploader-image-crop.bp-uploader-image__drag, .bp-uploader-image-crop:hover {
+  border: #07C160 dashed 1px;
+}
+.bp-uploader-image-crop.bp-uploader-image__disabled {
+  touch-action: none;
+  pointer-events: none;
+}
+.bp-uploader-image-crop.bp-uploader-image__disabled .bp-uploader-image__file-content-main {
+  opacity: 0.5;
+}
+.bp-uploader-image-crop .bp-uploader-image__progress {
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  background: #07C160;
+  transition: width 0.1s;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.bp-uploader-image-crop .bp-uploader-image__file-content-main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.bp-uploader-image-crop .bp-uploader-image__file-content-main .bp-uploader-image__cover {
+  max-width: 95%;
+  max-height: 95%;
+  cursor: pointer;
+}
+.bp-uploader-image-crop .bp-uploader-image__file-content-main .bp-uploader-image__add-icon {
+  color: #999;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  touch-action: none;
+  flex-direction: column;
+}
+.bp-uploader-image-crop .bp-uploader-image__file-content-main .bp-uploader-image__add-icon:after {
+  margin-top: 15px;
+  content: "将文件拖到此处, 或点击上传";
+}
+.bp-uploader-image-crop .bp-uploader-image__file-content-main .bp-uploader-image__add-icon[data-action^=uploading]:after {
+  margin-top: 15px;
+  content: "点击取消";
+}
+
+.bp-uploader-image-crop-preview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cancel, .bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__ok {
+  position: absolute;
+  top: 10px;
+  color: #a9a9b2;
+  cursor: pointer;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cancel:hover, .bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__ok:hover {
+  color: #dfdfe2;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__ok {
+  right: 10px;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cancel {
+  left: 10px;
+}
+.bp-uploader-image-crop-preview canvas {
+  border: solid #404040 1px;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect {
+  cursor: move;
+  border: #07C160 dotted 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #07C160;
+  opacity: 0.7;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=n] {
+  cursor: n-resize;
+  top: -10px;
+  left: 50%;
+  bottom: initial;
+  right: initial;
+  margin-left: -10px;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=s] {
+  cursor: s-resize;
+  top: initial;
+  left: 50%;
+  bottom: -10px;
+  right: initial;
+  margin-left: -10px;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=w] {
+  cursor: w-resize;
+  top: 50%;
+  left: -10px;
+  bottom: initial;
+  right: initial;
+  margin-top: -10px;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=e] {
+  cursor: e-resize;
+  top: 50%;
+  left: initial;
+  bottom: initial;
+  right: -10px;
+  margin-top: -10px;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=ne] {
+  cursor: ne-resize;
+  top: -10px;
+  left: initial;
+  bottom: initial;
+  right: -10px;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=nw] {
+  cursor: nw-resize;
+  top: -10px;
+  left: -10px;
+  bottom: initial;
+  right: initial;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=sw] {
+  cursor: sw-resize;
+  top: initial;
+  left: -10px;
+  bottom: -10px;
+  right: initial;
+}
+.bp-uploader-image-crop-preview .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=se] {
+  cursor: se-resize;
+  top: initial;
+  left: initial;
+  bottom: -10px;
+  right: -10px;
+}
+
+.bp-uploader-image-crop-preview__mobile {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cancel, .bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__ok {
+  position: absolute;
+  top: 10px;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cancel {
+  color: #fff;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cancel:hover {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cancel:after {
+  content: "取消";
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__ok:after {
+  content: "确认";
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__ok {
+  right: 10px;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cancel {
+  left: 10px;
+}
+.bp-uploader-image-crop-preview__mobile canvas {
+  border: solid #404040 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cliprect {
+  cursor: move;
+  border: #07C160 dotted 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #07C160;
+  opacity: 0.7;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=n] {
+  cursor: n-resize;
+  top: -10px;
+  left: 50%;
+  bottom: initial;
+  right: initial;
+  margin-left: -10px;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=s] {
+  cursor: s-resize;
+  top: initial;
+  left: 50%;
+  bottom: -10px;
+  right: initial;
+  margin-left: -10px;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=w] {
+  cursor: w-resize;
+  top: 50%;
+  left: -10px;
+  bottom: initial;
+  right: initial;
+  margin-top: -10px;
+}
+.bp-uploader-image-crop-preview__mobile .bp-uploader-image-crop-preview__cliprect .bp-uploader-image-crop-preview__cliprect__horn[data-direction=e] {
+  cursor: e-resize;
+  top: 50%;
+  left: initial;
+  bottom: initial;
+  right: -10px;
+  margin-top: -10px;
+}
