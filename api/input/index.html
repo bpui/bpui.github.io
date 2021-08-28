@@ -654,6 +654,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
@@ -921,6 +933,17 @@
     
       <li>
         
+        <a href="../tableView/index.html" class="sidebar-link">TableView</a>
+        
+        
+        
+      </li>
+    
+  
+    
+    
+      <li>
+        
         <a href="../widget-toast/index.html" class="sidebar-link">Toast</a>
         
         
@@ -1132,6 +1155,13 @@
 <td align="center"></td>
 </tr>
 <tr>
+<td align="center">clearable</td>
+<td>清除图标</td>
+<td align="center"></td>
+<td>-</td>
+<td align="center"></td>
+</tr>
+<tr>
 <td align="center">pattern</td>
 <td>正则表达式</td>
 <td align="center">string</td>
@@ -1142,6 +1172,13 @@
 <td align="center">validator</td>
 <td>数据验证方法,在pattern失败后不会触发</td>
 <td align="center">(text:string, callback:(isValid)=&gt;void)=&gt;void; 由回调方法返回是否正确</td>
+<td>-</td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td align="center">errorText</td>
+<td>输入错误后的文本,会传递到<code>error</code>回调方法中</td>
+<td align="center">string</td>
 <td>-</td>
 <td align="center">-</td>
 </tr>
@@ -1187,7 +1224,7 @@
 <tr>
 <td align="center">error</td>
 <td align="center">输入的信息错误时触发</td>
-<td align="center">—</td>
+<td align="center">(inputObj:Vue, errorText:string)</td>
 </tr>
 <tr>
 <td align="center">click-icon</td>
@@ -1223,6 +1260,11 @@
 <td align="center">获得焦点</td>
 <td align="center">-</td>
 </tr>
+<tr>
+<td align="center">markError():void</td>
+<td align="center">标记为输入错误状态, 当输入内容改变后按验证规则进行验证.</td>
+<td align="center">-</td>
+</tr>
 </tbody></table>
 <h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p>示例代码.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bp-input</span> <span class="attr">value</span>=<span class="string">&quot;content&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- textarea 类型也使用value设置文本内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bp-input</span> <span class="attr">type</span>=<span class="string">&quot;textarea&quot;</span> <span class="attr">value</span>=<span class="string">&quot;content&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1247,10 +1289,14 @@
 <td>bp-input_warn</td>
 <td>错误信息提示图标; 当前内部此图标为空, 如需要可以进行设置</td>
 </tr>
+<tr>
+<td>bp-input_clear</td>
+<td>清除输入图标</td>
+</tr>
 </tbody></table>
 <p><em>可以使用<code>bpui.icons.registerSvgIcon</code>方式, 进行组件图标自定义</em></p>
 <h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>组件的样式结构如下:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-input</span> &#123;</span><br><span class="line">  <span class="comment">/* 前图标 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__prefixIcon</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 文本框 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__inner</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 字数显示 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__counter</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 后图标 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__suffixIcon</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-input</span> &#123;</span><br><span class="line">  <span class="comment">/* 前后图标 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__prefixIcon</span> &#123;&#125;</span><br><span class="line">  <span class="selector-class">.bp-input__suffixIcon</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 前后文本 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__prefixLabel</span> &#123;&#125;</span><br><span class="line">  <span class="selector-class">.bp-input__suffixLabel</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 清除图标 */</span></span><br><span class="line">  <span class="selector-class">.bp-input_clearIcon</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 文本框 */</span></span><br><span class="line">  <span class="selector-tag">input</span><span class="selector-class">.bp-input__inner</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* focus 状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-input__focus</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* 错误输入的警告状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-input__warn</span> &#123;&#125;</span><br><span class="line">  <span class="comment">/* disable 状态 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-input__disabled</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* textare 多行文本 */</span></span><br><span class="line">  &amp;<span class="selector-class">.bp-input__textarea</span> &#123;</span><br><span class="line">    <span class="comment">/* 多行文本清除图标 */</span></span><br><span class="line">    <span class="selector-class">.bp-input_clearIcon</span> &#123;&#125;</span><br><span class="line">    <span class="comment">/* 文本框 */</span></span><br><span class="line">    <span class="selector-class">.bp-input__inner</span> &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/* 字数显示 */</span></span><br><span class="line">  <span class="selector-class">.bp-input__counter</span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><em>scss样式文件存放在<code>@bpui/input/style</code> 目录下, 可以复制修改以定制主题</em></p>
 
