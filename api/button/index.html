@@ -1019,17 +1019,22 @@
 </thead>
 <tbody><tr>
 <td align="center">bp-btnPrimary</td>
-<td align="center">主按钮, button标签不填类名, 默认为主按钮</td>
+<td align="center">主按钮, button标签不填类名</td>
 </tr>
 <tr>
 <td align="center">bp-btnInfo</td>
-<td align="center">信息按钮</td>
+<td align="center">信息按钮 (默认)</td>
 </tr>
 <tr>
 <td align="center">bp-btnWarning</td>
 <td align="center">警告按钮</td>
 </tr>
 </tbody></table>
+<p>除了使用类名, 还可以使用属性, 例如以下效果一致.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;bp-btnPrimary&quot;</span>&gt;</span>primary<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">primary</span>&gt;</span>primary<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;bp-btnWarning&quot;</span>&gt;</span>primary<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">warning</span>&gt;</span>warning<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>以下类可以与上述类名组合</p>
 <table>
 <thead>
@@ -1043,7 +1048,7 @@
 <td align="center">带边框的按钮; 默认按钮不带边框</td>
 </tr>
 <tr>
-<td align="center">bp-btnSolid</td>
+<td align="center">bp-btnFill</td>
 <td align="center">使用文字颜色来做为背景色, 实心填充按钮</td>
 </tr>
 </tbody></table>
@@ -1061,10 +1066,7 @@
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 
-<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>系统只默认提供了, primary, info, warning以及包含边框的样式, 其他类型样式请自行定义, 如:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bp-btnXXX</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="variable">$color</span>: <span class="number">#ddd</span>;</span><br><span class="line">  <span class="variable">$solidTextColor</span>: <span class="number">#aaa</span>;</span><br><span class="line">  <span class="variable">$solidBgColor</span>: <span class="number">#aaa</span>;</span><br><span class="line">  <span class="variable">$solidBorderColor</span>: <span class="number">#aaa</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$color</span>;</span><br><span class="line"></span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: rgba(<span class="variable">$color</span>, .<span class="number">7</span>);</span><br><span class="line">    <span class="attribute">background-color</span>: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &amp;<span class="selector-class">.bp-btnBorder</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$color</span>;</span><br><span class="line">    <span class="attribute">border</span>: solid <span class="number">1px</span> rgba(<span class="variable">$color</span>, .<span class="number">6</span>);</span><br><span class="line">    <span class="attribute">background-color</span>: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">      <span class="attribute">color</span>: rgba(<span class="variable">$color</span>, .<span class="number">6</span>);</span><br><span class="line">      <span class="attribute">border</span>: solid <span class="number">1px</span> rgba(<span class="variable">$color</span>, .<span class="number">4</span>);</span><br><span class="line">      <span class="attribute">background-color</span>: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  &amp;<span class="selector-class">.bp-btnSolid</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$solidTextColor</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: rgba(<span class="variable">$solidBgColor</span>, .<span class="number">9</span>);</span><br><span class="line">    <span class="attribute">border</span>: solid <span class="number">1px</span> rgba(<span class="variable">$solidBorderColor</span>, .<span class="number">6</span>);</span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">      <span class="attribute">color</span>: rgba(<span class="variable">$solidTextColor</span>, .<span class="number">8</span>);</span><br><span class="line">      <span class="attribute">background-color</span>: rgba(<span class="variable">$solidBgColor</span>, .<span class="number">7</span>);</span><br><span class="line">      <span class="attribute">border</span>: solid <span class="number">1px</span> rgba(<span class="variable">$solidBorderColor</span>, .<span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>系统只默认提供了, primary, info, warning以及包含边框的样式, 其他类型样式请自行定义</p>
 <p><em>scss样式文件存放在<code>@bpui/button/style</code> 目录下, 可以复制修改以定制主题</em></p>
 
   
